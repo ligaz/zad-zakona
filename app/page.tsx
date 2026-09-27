@@ -23,11 +23,11 @@ export default function Home() {
     <div className="pb-10">
       {/* HERO */}
       <section className="py-10 text-center sm:py-14">
-        <h1 className="mx-auto mt-4 max-w-2xl text-4xl font-black tracking-tight sm:text-5xl">
+        <h1 className="mx-auto mt-4 max-w-2xl text-4xl font-black tracking-tight dark:text-white sm:text-5xl">
           Всеки закон има история. <br className="hidden sm:block" />
-          <span className="text-zinc-500">Ние я показваме.</span>
+          <span className="text-zinc-500 dark:text-zinc-400">Ние я показваме.</span>
         </h1>
-        <p className="mx-auto mt-4 max-w-xl text-zinc-600">
+        <p className="mx-auto mt-4 max-w-xl text-zinc-600 dark:text-zinc-400">
           Като дневник на държавата: какво се промени, защо, кой гласува „за“ и кой управляваше тогава —
           обяснено на разбираем език.
         </p>
@@ -67,8 +67,8 @@ export default function Home() {
 
       {/* FEED */}
       <section className="mt-10">
-        <h2 className="text-xl font-extrabold">
-          Последни промени <span className="font-normal text-zinc-400">({items.length})</span>
+        <h2 className="text-xl font-extrabold dark:text-white">
+          Последни промени <span className="font-normal text-zinc-400 dark:text-zinc-500">({items.length})</span>
         </h2>
         <div className="mt-4 space-y-3">
           {items.slice(0, shown).map((a) => {
@@ -79,12 +79,12 @@ export default function Home() {
                 href={`/promeni/${a.id}`}
                 eyebrow={
                   <>
-                    <span className="font-bold text-zinc-900">{law.short}</span>
+                    <span className="font-bold text-zinc-900 dark:text-zinc-100">{law.short}</span>
                     <span>·</span>
                     <span>{bg(a.dateAdopted)}</span>
                     <span>·</span>
                     <span>{a.dv}</span>
-                    {a.verified && <span className="font-semibold text-emerald-600">✓</span>}
+                    {a.verified && <span className="font-semibold text-emerald-600 dark:text-emerald-400">✓</span>}
                   </>
                 }
                 title={a.shortTitle}
@@ -96,14 +96,14 @@ export default function Home() {
             );
           })}
           {items.length === 0 && (
-            <p className="rounded-2xl border border-dashed p-8 text-center text-sm text-zinc-500">
+            <p className="rounded-2xl border border-dashed border-zinc-300 p-8 text-center text-sm text-zinc-500 dark:border-zinc-600 dark:text-zinc-400">
               Няма резултати. Опитай с друга дума или изчисти филтрите.
             </p>
           )}
           {items.length > shown && (
             <button
               onClick={() => setShown((s) => s + 50)}
-              className="w-full rounded-2xl border border-zinc-300 p-3 text-sm font-bold text-zinc-700 hover:border-accent"
+              className="w-full rounded-2xl border border-zinc-300 p-3 text-sm font-bold text-zinc-700 hover:border-accent dark:border-zinc-600 dark:text-zinc-200 dark:hover:border-accentlight"
             >
               Покажи още ({items.length - shown} остават)
             </button>
@@ -118,10 +118,10 @@ export default function Home() {
           ["🗳️", "Кой гласува", "За/против по партии — кой подкрепи и кой се опъна."],
           ["🏛️", "Кой управляваше", "Кое НС, кое правителство и кой премиер стоят зад промяната."],
         ].map(([e, t, d]) => (
-          <div key={t} className="rounded-2xl bg-zinc-50 p-4">
+          <div key={t} className="rounded-2xl bg-zinc-50 p-4 dark:bg-zinc-900">
             <p className="text-2xl">{e}</p>
-            <p className="mt-1 font-bold">{t}</p>
-            <p className="mt-1 text-sm text-zinc-600">{d}</p>
+            <p className="mt-1 font-bold dark:text-white">{t}</p>
+            <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{d}</p>
           </div>
         ))}
       </section>

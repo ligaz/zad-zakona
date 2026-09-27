@@ -123,8 +123,8 @@ export default function Aktove() {
   if (laws.length === 0) {
     return (
       <div className="max-w-2xl py-12">
-        <h1 className="text-3xl font-black">Актове от 2021 насам</h1>
-        <p className="mt-3 rounded-2xl border border-dashed p-6 text-sm text-zinc-500">
+        <h1 className="text-3xl font-black dark:text-white">Актове от 2021 насам</h1>
+        <p className="mt-3 rounded-2xl border border-dashed border-zinc-300 p-6 text-sm text-zinc-500 dark:border-zinc-600 dark:text-zinc-400">
           ⏳ Автоматичното изброяване на всички актове от parliament.bg тече в
           момента (<code className="font-mono text-xs">scripts/enumerate-acts.mjs</code>).
           След като завърши и сайтът се прегенерира, тук ще има пълен списък на
@@ -164,7 +164,7 @@ export default function Aktove() {
         ))}
       </FilterChipRow>
 
-      <p className="mt-2 text-[11px] text-zinc-400">
+      <p className="mt-2 text-[11px] text-zinc-400 dark:text-zinc-500">
         Цветовете са на управляващите партии; сиво = служебно правителство.
       </p>
 
@@ -175,11 +175,11 @@ export default function Aktove() {
           </FilterChip>
         ))}
       </FilterChipRow>
-      <div className="mt-3 flex items-center gap-2 text-xs text-zinc-500">
+      <div className="mt-3 flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400">
         {(year !== null || ns !== null || kind !== "Всички" || sub !== "Всички" || q) && (
           <button
             onClick={() => { setYear(null); setNs(null); setKind("Всички"); setSub("Всички"); setQ(""); }}
-            className="underline hover:text-accent"
+            className="underline hover:text-accent dark:hover:text-accentlight"
           >
             Изчисти филтрите ✕
           </button>
@@ -220,7 +220,7 @@ export default function Aktove() {
               external={!det}
               eyebrow={
                 <>
-                  <span className="font-bold text-zinc-900">{eyebrowLabel}</span>
+                  <span className="font-bold text-zinc-900 dark:text-zinc-100">{eyebrowLabel}</span>
                   <span>·</span>
                   <span>{a.date ? bg(a.date) : ""}</span>
                   <span>·</span>
@@ -238,13 +238,13 @@ export default function Aktove() {
           );
         })}
         {items.length === 0 && (
-          <p className="rounded-2xl border border-dashed p-8 text-center text-sm text-zinc-500">
+          <p className="rounded-2xl border border-dashed border-zinc-300 p-8 text-center text-sm text-zinc-500 dark:border-zinc-600 dark:text-zinc-400">
             Няма резултати. Опитай с друга дума или изчисти филтрите.
           </p>
         )}
       </div>
       {items.length > 300 && (
-        <p className="mt-2 text-xs text-zinc-400">Показани са първите 300 — уточни търсенето.</p>
+        <p className="mt-2 text-xs text-zinc-400 dark:text-zinc-500">Показани са първите 300 — уточни търсенето.</p>
       )}
     </div>
   );

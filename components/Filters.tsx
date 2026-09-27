@@ -20,7 +20,7 @@ export function FilterSearch({
       value={value}
       onChange={(e) => onChange(e.target.value)}
       placeholder={placeholder}
-      className="mt-4 w-full rounded-xl border border-zinc-300 px-4 py-2.5 text-base outline-none focus:border-accent sm:max-w-xl sm:text-sm"
+      className="mt-4 w-full rounded-xl border border-zinc-300 bg-white px-4 py-2.5 text-base text-zinc-900 outline-none focus:border-accent dark:border-zinc-600 dark:bg-zinc-900 dark:text-zinc-100 dark:placeholder:text-zinc-500 sm:max-w-xl sm:text-sm"
     />
   );
 }
@@ -41,7 +41,7 @@ export function FilterChip({
       className={`rounded-full border px-3.5 py-1.5 text-xs font-medium touch-manipulation transition-colors ${
         active
           ? "border-accent bg-accent text-white cursor-default"
-          : "border-zinc-300 text-zinc-600 hover:border-zinc-500 hover:text-accent active:bg-zinc-100 cursor-pointer"
+          : "border-zinc-300 text-zinc-600 hover:border-zinc-500 hover:text-accent active:bg-zinc-100 cursor-pointer dark:border-zinc-600 dark:text-zinc-300 dark:hover:border-zinc-400 dark:hover:text-accentlight dark:active:bg-zinc-800"
       }`}
     >
       {children}

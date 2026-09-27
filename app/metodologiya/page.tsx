@@ -19,16 +19,16 @@ export const metadata: Metadata = {
 export default function Metodologiya() {
   return (
     <div className="max-w-2xl pb-10">
-      <p className="pt-6 text-sm text-zinc-500">
+      <p className="pt-6 text-sm text-zinc-500 dark:text-zinc-400">
         <Link href="/" className="hover:underline">← Начало</Link>
       </p>
       <h1 className="mt-4 text-3xl font-black">Как работим</h1>
-      <p className="mt-2 text-zinc-600">
+      <p className="mt-2 text-zinc-600 dark:text-zinc-400">
         Откъде идва всяка цифра на тази страница — и как се обновява сайтът.
       </p>
 
       <h2 className="mt-8 font-bold">1. Безплатно и бързо</h2>
-      <p className="mt-2 text-sm leading-relaxed text-zinc-700">
+      <p className="mt-2 text-sm leading-relaxed text-zinc-700 dark:text-zinc-300">
         Законите се променят рядко (нов брой на Държавен вестник излиза няколко
         пъти седмично). Затова сайтът няма скъпи сървъри и бази данни — цялата
         информация се пази в обикновени файлове и сайтът се обновява при всяка
@@ -36,7 +36,7 @@ export default function Metodologiya() {
       </p>
 
       <h2 className="mt-6 font-bold">2. Официални източници</h2>
-      <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-zinc-700">
+      <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-zinc-700 dark:text-zinc-300">
         <li><b>parliament.bg → Законопроекти:</b> кой внася закона, мотивите, номерът му, комисии, доклади.</li>
         <li><b>parliament.bg → Закони:</b> кога е приет и кой законопроект стои зад него.</li>
         <li><b>dv.parliament.bg → Държавен вестник:</b> официалният текст на промените — сравняваме го член по член („преди“ и „сега“).</li>
@@ -45,7 +45,7 @@ export default function Metodologiya() {
       </ul>
 
       <h2 className="mt-6 font-bold">3. Обновяване всяка седмица</h2>
-      <ol className="mt-2 list-decimal space-y-1 pl-5 text-sm text-zinc-700">
+      <ol className="mt-2 list-decimal space-y-1 pl-5 text-sm text-zinc-700 dark:text-zinc-300">
         <li>Всяка неделя проверяваме новите броеве на Държавен вестник.</li>
         <li>Новите промени се изтеглят автоматично, а човек ги преглежда една по една.</li>
         <li>За всяка промяна пишем обяснение на прост език.</li>
@@ -53,7 +53,7 @@ export default function Metodologiya() {
       </ol>
 
       <h2 className="mt-6 font-bold">4. Какво има днес?</h2>
-      <p className="mt-2 text-sm text-zinc-700">
+      <p className="mt-2 text-sm text-zinc-700 dark:text-zinc-300">
         {visibleLaws.length} закона и {visibleAmendments.length} изменения, от които {verifiedCount} са сверени с
         Държавен вестник (зелен знак „✓ Проверено“). Всяка страница
         показва историята на промените, сравнение „преди/сега“, гласуването по
@@ -64,14 +64,14 @@ export default function Metodologiya() {
       </p>
 
       <h2 className="mt-6 font-bold">5. Какво следва</h2>
-      <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-zinc-700">
+      <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-zinc-700 dark:text-zinc-300">
         <li>Пълно сравнение по членове за всеки закон.</li>
         <li>Известия по имейл „твоят закон се промени“.</li>
         <li>Търсене и филтри по депутат-вносител.</li>
       </ul>
 
       <h2 className="mt-6 font-bold">6. Кой направи сайта?</h2>
-      <p className="mt-2 text-sm leading-relaxed text-zinc-700">
+      <p className="mt-2 text-sm leading-relaxed text-zinc-700 dark:text-zinc-300">
         Сайтът е направен с помощта на изкуствен интелект
         (Muse Spark 1.3). Данните сверяваме с официални източници, но
         в текстовете и кода може да има неточности. Ако забележиш грешка —

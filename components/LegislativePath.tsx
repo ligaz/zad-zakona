@@ -103,12 +103,12 @@ export function LegislativePath({ amendment: a }: { amendment: Amendment }) {
             <li key={s.key} className="relative flex gap-3 pb-4 last:pb-0">
               <span className="relative w-3.5 shrink-0 self-stretch" aria-hidden="true">
                 <span
-                  className={`absolute left-1/2 top-0 w-0.5 -translate-x-1/2 bg-zinc-200 ${
+                  className={`absolute left-1/2 top-0 w-0.5 -translate-x-1/2 bg-zinc-200 dark:bg-zinc-700 ${
                     isLast ? "bottom-0" : "-bottom-4"
                   }`}
                 />
                 <span
-                  className={`absolute left-1/2 top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white shadow ${
+                  className={`absolute left-1/2 top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white shadow dark:border-zinc-900 ${
                     s.tone === "veto"
                       ? "bg-rose-500"
                       : s.tone === "done"
@@ -122,39 +122,39 @@ export function LegislativePath({ amendment: a }: { amendment: Amendment }) {
               <div
                 className={`flex min-h-[64px] flex-1 flex-col justify-center rounded-xl border px-3 py-2 ${
                   s.tone === "veto"
-                    ? "border-rose-200 bg-rose-50"
+                    ? "border-rose-200 bg-rose-50 dark:border-rose-900 dark:bg-rose-950/50"
                     : s.tone === "pending" || s.tone === "na"
-                      ? "border-dashed border-zinc-200 bg-zinc-50/50"
-                      : "border-zinc-200 bg-white"
+                      ? "border-dashed border-zinc-200 bg-zinc-50/50 dark:border-zinc-700 dark:bg-zinc-900/50"
+                      : "border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-900"
                 }`}
               >
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
-                  <p className={`text-sm font-bold ${s.tone === "veto" ? "text-rose-700" : s.tone === "pending" || s.tone === "na" ? "text-zinc-400" : "text-zinc-900"}`}>
+                  <p className={`text-sm font-bold ${s.tone === "veto" ? "text-rose-700 dark:text-rose-300" : s.tone === "pending" || s.tone === "na" ? "text-zinc-400 dark:text-zinc-500" : "text-zinc-900 dark:text-zinc-100"}`}>
                     {s.tone === "veto" ? "🔴 " : ""}{s.label}
                   </p>
-                  <p className="text-xs tabular-nums text-zinc-500">
+                  <p className="text-xs tabular-nums text-zinc-500 dark:text-zinc-400">
                     {s.date ? bg(s.date) : "—"}
                     {gap !== null && gap > 0 && (
-                      <span className="ml-2 rounded-full bg-zinc-100 px-2 py-0.5 font-semibold text-zinc-600">
+                      <span className="ml-2 rounded-full bg-zinc-100 px-2 py-0.5 font-semibold text-zinc-600 dark:bg-zinc-700 dark:text-zinc-300">
                         +{gap} {gap === 1 ? "ден" : "дни"}
                       </span>
                     )}
                     {gap === 0 && (
-                      <span className="ml-2 rounded-full bg-zinc-100 px-2 py-0.5 font-semibold text-zinc-600">
+                      <span className="ml-2 rounded-full bg-zinc-100 px-2 py-0.5 font-semibold text-zinc-600 dark:bg-zinc-700 dark:text-zinc-300">
                         същия ден
                       </span>
                     )}
                   </p>
                 </div>
                 {s.sub && (
-                  <p className="mt-0.5 text-xs text-zinc-500">
+                  <p className="mt-0.5 text-xs text-zinc-500 dark:text-zinc-400">
                     {s.sub}{" "}
                     {s.key === "veto" && a.veto?.motivesUrl && (
                       <a
                         href={a.veto.motivesUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="font-semibold text-rose-700 underline hover:text-rose-900"
+                        className="font-semibold text-rose-700 underline hover:text-rose-900 dark:text-rose-300 dark:hover:text-rose-200"
                       >
                         Мотивите на президента →
                       </a>

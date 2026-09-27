@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="bg">
-      <body className="min-h-screen bg-white font-sans text-zinc-900 antialiased">
+      <body className="min-h-screen bg-white font-sans text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-100">
         <Header />
         <main className="mx-auto max-w-5xl px-4">{children}</main>
         <Footer />

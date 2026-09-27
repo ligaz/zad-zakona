@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { PartyVote } from "@/lib/types";
 import { partyColor, seatOrder } from "@/lib/parties";
 
-const C = { za: "#10b981", protiv: "#f43f5e", vazdrzhal: "#a1a1aa", empty: "#e4e4e7" };
+const C = { za: "#10b981", protiv: "#f43f5e", vazdrzhal: "#a1a1aa", empty: "var(--chart-empty)" };
 
 interface Cell {
   x: number;
@@ -647,10 +647,10 @@ export function ParliamentChart({
   const filterCount = voteFilter === "за" ? zaTotal : voteFilter === "против" ? protivTotal : vzdTotal;
   const filterStyle =
     voteFilter === "за"
-      ? "bg-emerald-50 text-emerald-900"
+      ? "bg-emerald-50 text-emerald-900 dark:bg-emerald-950 dark:text-emerald-200"
       : voteFilter === "против"
-        ? "bg-rose-50 text-rose-900"
-        : "bg-zinc-100 text-zinc-700";
+        ? "bg-rose-50 text-rose-900 dark:bg-rose-950 dark:text-rose-200"
+        : "bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300";
   const filterWord = voteFilter === "за" ? "За" : voteFilter === "против" ? "Против" : "Въздържали се";
   const votedByParty = [...groups]
     .filter((g) => g.party)
@@ -669,10 +669,10 @@ export function ParliamentChart({
       <div className="mb-3 flex flex-wrap items-center gap-1.5 text-xs font-medium">
         {(
           [
-            { key: null, label: `Всички (${total})`, cls: "border-zinc-300 text-zinc-600" },
-            { key: "за", label: `За (${zaTotal})`, cls: "border-emerald-300 text-emerald-700" },
-            { key: "против", label: `Против (${protivTotal})`, cls: "border-rose-300 text-rose-700" },
-            { key: "въздържал се", label: `Въздържали се (${vzdTotal})`, cls: "border-zinc-300 text-zinc-500" },
+            { key: null, label: `Всички (${total})`, cls: "border-zinc-300 text-zinc-600 dark:border-zinc-600 dark:text-zinc-300" },
+            { key: "за", label: `За (${zaTotal})`, cls: "border-emerald-300 text-emerald-700 dark:text-emerald-400" },
+            { key: "против", label: `Против (${protivTotal})`, cls: "border-rose-300 text-rose-700 dark:text-rose-400" },
+            { key: "въздържал се", label: `Въздържали се (${vzdTotal})`, cls: "border-zinc-300 text-zinc-500 dark:border-zinc-600 dark:text-zinc-400" },
           ] as const
         ).map((f) => (
           <button
@@ -683,7 +683,7 @@ export function ParliamentChart({
               if (f.key === null) setPartySel(null);
             }}
             className={`rounded-full border px-3 py-1 cursor-pointer touch-manipulation select-none ${
-              voteFilter === f.key ? "border-accent bg-accent text-white" : `bg-white ${f.cls}`
+              voteFilter === f.key ? "border-accent bg-accent text-white" : `bg-white dark:bg-zinc-900 ${f.cls}`
             }`}
           >
             {f.label}
@@ -733,7 +733,7 @@ export function ParliamentChart({
       </div>
       <div className="w-full shrink-0 sm:w-52">
         {anonymous ? (
-          <p className="rounded-xl border border-dashed border-zinc-300 p-3 text-xs text-zinc-500">
+          <p className="rounded-xl border border-dashed border-zinc-300 p-3 text-xs text-zinc-500 dark:border-zinc-600 dark:text-zinc-400">
             Без поименна разбивка — стенограмата съдържа само общите тотали.
           </p>
         ) : (
@@ -756,8 +756,8 @@ export function ParliamentChart({
                     {p.party} <b className="tabular-nums">({p.n})</b>
                   </span>
                   <span className="flex shrink-0 items-center gap-1.5">
-                    <span className={`text-[11px] tabular-nums ${partySel === p.party ? "text-zinc-300" : "text-zinc-500"}`}>
-                      <b className="text-emerald-600">{p.za}</b>/<b className="text-rose-600">{p.protiv}</b>/{p.vazdrzhal}
+                    <span className={`text-[11px] tabular-nums ${partySel === p.party ? "text-zinc-300" : "text-zinc-500 dark:text-zinc-400"}`}>
+                      <b className="text-emerald-600 dark:text-emerald-400">{p.za}</b>/<b className="text-rose-600 dark:text-rose-400">{p.protiv}</b>/{p.vazdrzhal}
                     </span>
                     <i
                       className="inline-block h-3 w-3 shrink-0 rounded-full"
@@ -765,7 +765,7 @@ export function ParliamentChart({
                     />
                   </span>
                 </span>
-                <span className="mt-1 block h-1.5 overflow-hidden rounded-full bg-zinc-100">
+                <span className="mt-1 block h-1.5 overflow-hidden rounded-full bg-zinc-100 dark:bg-zinc-700">
                   <span className="flex h-full overflow-hidden rounded-full" style={{ width: `${wPct}%` }}>
                     <i className="h-full bg-emerald-500" style={{ width: `${p.n ? (p.za / p.n) * 100 : 0}%` }} />
                     <i className="h-full bg-rose-500" style={{ width: `${p.n ? (p.protiv / p.n) * 100 : 0}%` }} />

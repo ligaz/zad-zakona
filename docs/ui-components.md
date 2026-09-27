@@ -27,10 +27,15 @@
    (`grep` за името) преди да я направиш.
 4. Акцентният цвят е theme token `accent` (`#1e3a8a`, дефиниран в
    `app/globals.css`). Не се ползват директни `blue-*` класове за акценти.
+   За текст върху тъмен фон: `accentlight` (`dark:text-accentlight`).
 5. Клиентският bundle е критичен за мобилни устройства: клиентските
    страници импортират директно малките JSON файлове (`@/data/laws.json`,
    `@/data/acts-index.json`), **никога** barrel-а `@/lib/data` (дърпа
    ~6.5MB amendments+index и чупи интеракциите на телефон).
+6. Тъмен режим: всеки цветови клас носи `dark:` двойник
+   (`text-zinc-600` → `dark:text-zinc-400`, `bg-white` →
+   `dark:bg-zinc-900`, `border-zinc-200` → `dark:border-zinc-700` и т.н.).
+   Без изключения — проверява се със screenshot в dark mode.
 
 ## Документи
 
