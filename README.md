@@ -4,60 +4,87 @@
 > Данните се сверяват с официални източници, но кодът и текстовете
 > може да съдържат неточности. Намериш ли грешка — кажи ни.
 
-Статичен сайт (Next.js, `output: "export"`) — без база, безплатен хостинг
-(GitHub Pages / Cloudflare Pages / Netlify / Vercel).
+🌐 **Live:** https://zad-zakona.com
+📦 **Repo:** https://github.com/ligaz/zad-zakona
 
-## Данни
+Статичен сайт (Next.js, `output: "export"`) — без база и без сървъри.
+Деплой: всеки push в `master` → GitHub Actions build → GitHub Pages
+(`.github/workflows/deploy.yml`). PR-ите минават CI проверки
+(`.github/workflows/ci.yml`).
 
-Живеят в `data/` като JSON — преглеждаеми в git, обновяват се ръчно/полуавтоматично:
+## Структура
 
-- `data/assemblies.json` — НС-та 40–52: управляващи, премиер, президент
-- `data/laws.json` — закони + списък с изменения (нови → стари)
-- `data/amendments.json` — всяко изменение: ДВ, дати, вносител, мотиви,
-  гласуване, diff преди/след, `verified` флаг и `sources` (ДВ/законопроект/новини)
+```text
+app/
+  page.tsx                 Начална: hero + кутии + feed (последни 10)
+  layout.tsx               Root layout, SEO metadata, viewport
+  icon.svg                 Favicon (§ върху парламентарно синьо)
+  opengraph-image.tsx      OG картинка 1200×630 (генерира се при build)
+  sitemap.ts / robots.ts   Генерират се при build
+  zakoni/page.tsx          Списък закони (client, лек bundle)
+  zakoni/[id]/page.tsx     Закон + timeline на измененията
+  aktove/page.tsx          Индекс на актовете (client, лек bundle)
+  promeni/[id]/page.tsx    Детайл на изменение/решение
+  metodologiya/page.tsx    Как работим
+components/
+  Filters.tsx              FilterSearch, FilterChip, FilterChipRow (единствени!)
+  Viz.tsx                  ActCard, PageHeader, VoteBar, ContextBadge, PartyBreakdown
+  LegislativePath.tsx      Пътят на акта (Приет → Указ → ДВ → В сила)
+  ParliamentChart.tsx      Зала 240 места (геометрията е фиксирана!)
+  CoalitionDots.tsx        Точки на коалицията
+  Header.tsx               Header + Footer
+lib/
+  data.ts                  Loader + helpers (само за сървъра!)
+  types.ts                 Типове + HIDDEN_LAW_IDS
+  parties.ts               Цветове и подредба на партиите (единствен източник)
+  site.ts                  SITE_URL (https://zad-zakona.com)
+data/
+  laws.json                183 закона (8 групи решения/ратификации са скрити от /zakoni)
+  amendments.json          1542 курирани детайла (verified, shortTitle, summary, changes, votes)
+  acts-index.json          3879 записа от parliament.bg API (+detailId/card полета за картите)
+  assemblies.json          НС 40–52: управляващи, премиер, президент
+docs/
+  ui-components.md         Задължителни правила за UI компоненти
+  data-pipeline.md         Извличане и сверка на данни
+  parliament-chart.md      Спецификация на залата (НЕ се пипа без одобрение)
+scripts/
+  check-dv.mjs             Седмична проверка за нови броеве на ДВ (npm run check:dv)
+  enumerate-acts.mjs       Изброяване на актове от parliament.bg API
+  fetch-act-details.mjs    Вотове, вносители, стенограми
+  resolve-dv-mat.mjs       Истински ДВ idMat връзки
+  merge-curated.mjs        Merge на курирани закони/решения
+  ...                      Виж docs/data-pipeline.md за пълния процес
+```
 
-`lib/data.ts` е само loader + helpers. Типове: `lib/types.ts`.
+## Правила (задължителни)
+
+1. Нов филтърен UI или картичка — само общите компоненти (виж
+   `docs/ui-components.md`). Без локални копия.
+2. Клиентските страници импортират директно малките JSON файлове,
+   **никога** `@/lib/data` (~6.5MB в bundle-а чупи мобилните устройства).
+3. Всеки цветови клас носи `dark:` двойник. Акцентът е token `accent`.
+4. Само проверени данни от първични източници (parliament.bg, ДВ).
+   Никога измислени вотове, дати или мотиви.
+
+## Команди
+
+```bash
+npm run dev          # dev сървър → http://localhost:4000
+npm run build        # статичен export в out/
+npm run lint         # eslint (0 errors)
+npm run check:dv     # нови броеве на ДВ + покритие
+```
 
 ## Седмично обновяване
 
 ```bash
-npm run check:dv   # показва новите броеве на ДВ + покритието в data/
+npm run check:dv
 ```
 
-После по чеклиста, който скриптът принтира: сверка на ДВ текста, мотивите
-и стенограмата → нов обект в `data/amendments.json` → `npm run build` → push.
+После по чеклиста, който скриптът принтира: сверка на ДВ текста,
+мотивите и стенограмата → нов обект в `data/amendments.json` →
+`npm run build` → push (deployment-ът е автоматичен).
 
-## Getting Started (Next.js)
+## Лиценз
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT — виж [LICENSE](LICENSE).

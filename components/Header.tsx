@@ -55,7 +55,7 @@ export function Footer() {
             Как работим — как събираме и проверяваме данните →
           </Link>
           <a
-            href="https://github.com"
+            href="https://github.com/ligaz/zad-zakona"
             target="_blank"
             rel="noreferrer"
             className="underline hover:text-zinc-800 dark:hover:text-zinc-200"
