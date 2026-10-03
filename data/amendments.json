@@ -96710,5 +96710,87 @@
     },
     "decreeNo": "№ 304",
     "dateDecree": "2026-09-14"
+  },
+  {
+    "id": "act-167564",
+    "lawId": "zakon-za-aktsizite-i-danachnite-skladove",
+    "shortTitle": "Нулев акциз за газта до края на 2026",
+    "fullTitle": "Закон за допълнение на Закона за акцизите и данъчните складове",
+    "dv": "ДВ, бр. 90/2026",
+    "dvLink": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246125",
+    "dateAdopted": "2026-09-25",
+    "dateDV": "2026-09-30",
+    "assemblyId": "52-ns",
+    "vnositel": "Стефан Белчев, Константин Проданов, Светла Коджабашева",
+    "vnositelType": "депутати",
+    "billSignatura": "52-654-01-149",
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/167564",
+    "votes": {
+      "za": 154,
+      "protiv": 3,
+      "vazdrzhal": 6
+    },
+    "votesByParty": [
+      {
+        "party": "ПБ",
+        "za": 117,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ГЕРБ-СДС",
+        "za": 0,
+        "protiv": 3,
+        "vazdrzhal": 6
+      },
+      {
+        "party": "ДПС",
+        "za": 13,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДБ",
+        "za": 12,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ПП",
+        "za": 2,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "Възраждане",
+        "za": 10,
+        "protiv": 0,
+        "vazdrzhal": 0
+      }
+    ],
+    "votesVerified": true,
+    "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/undefined/ID/11178",
+    "changes": [
+      {
+        "member": "§ 6д (нов)",
+        "after": "До 31 декември 2026 г. акцизът върху втечнен нефтен газ (LPG) и природен газ за моторни горива е 0.",
+        "plain": "Газта за коли остава без акциз до края на годината."
+      }
+    ],
+    "summary": "Депутати предлагат и парламентът приема нулев акциз за LPG и природен газ за коли до 31 декември 2026 г. Законът влиза в сила от 1 октомври 2026 г.",
+    "tags": [
+      "акцизи",
+      "горива",
+      "LPG"
+    ],
+    "detailLevel": "full",
+    "verified": true,
+    "dateEffective": "2026-10-01",
+    "decreeNo": "№ 310",
+    "dateDecree": "2026-09-29",
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246125",
+      "bill": "https://www.parliament.bg/bg/bills/ID/167564"
+    }
   }
 ]
