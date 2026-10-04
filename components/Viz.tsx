@@ -12,14 +12,16 @@ export function PageHeader({
   title,
   description,
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   description: string;
 }) {
   return (
     <>
-      <p className="text-xs font-semibold uppercase tracking-wide text-zinc-400 dark:text-zinc-500">{eyebrow}</p>
-      <h1 className="mt-1 text-3xl font-black tracking-tight dark:text-white">{title}</h1>
+      {eyebrow && (
+        <p className="text-xs font-semibold uppercase tracking-wide text-zinc-400 dark:text-zinc-500">{eyebrow}</p>
+      )}
+      <h1 className={`${eyebrow ? "mt-1 " : ""}text-3xl font-black tracking-tight dark:text-white`}>{title}</h1>
       <p className="mt-2 max-w-2xl text-sm text-zinc-600 dark:text-zinc-400">{description}</p>
     </>
   );

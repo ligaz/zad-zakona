@@ -67,9 +67,11 @@ export default async function AmendmentPage({ params }: { params: Promise<{ id: 
         }}
       />
       <p className="pt-6 text-sm text-zinc-500 dark:text-zinc-400">
-        <Link href="/" className="hover:underline">← Начало</Link>
+        <Link href="/" className="hover:underline">Начало</Link>
         {" · "}
-        <Link href={`/zakoni/${law.id}`} className="hover:underline">{law.name} — всички изменения</Link>
+        <Link href="/zakoni" className="hover:underline">Закони</Link>
+        {" · "}
+        <Link href={`/zakoni/${law.id}`} className="hover:underline">{law.name}</Link>
       </p>
 
       <p className="mt-4 text-xs text-zinc-500 dark:text-zinc-400">

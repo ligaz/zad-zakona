@@ -28,9 +28,8 @@ export default function Zakoni() {
 
   return (
     <div className="pb-10">
-      <section className="py-8">
+      <section className="pb-8 pt-4">
         <PageHeader
-          eyebrow="Всички закони · по азбучен ред"
           title={`Закони (${sorted.length})`}
           description="Всеки закон с историята на измененията си — какво се промени, кой гласува и кой управляваше."
         />
