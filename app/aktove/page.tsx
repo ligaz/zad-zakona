@@ -136,9 +136,8 @@ export default function Aktove() {
 
   return (
     <div className="pb-10">
-      <section className="py-8">
+      <section className="pb-8 pt-4">
         <PageHeader
-          eyebrow="Автоматичен индекс · източник: parliament.bg API"
           title={`Актове от 2021 насам (${items.length})`}
           description={`${laws.length} приети акта с брой на Държавен вестник, най-новите напред.`}
         />
