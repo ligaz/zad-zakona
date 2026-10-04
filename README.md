@@ -1,4 +1,4 @@
-# Зад Закона — историята на промените в българските закони
+# <img src="app/icon.svg" alt="Иконка на Зад Закона" width="64" align="left" /> Зад Закона — историята на промените в българските закони
 
 > Сайтът е vibe-coded с Muse Spark 1.3 (с AI помощ).
 > Данните се сверяват с официални източници, но кодът и текстовете
@@ -19,6 +19,7 @@ app/
   page.tsx                 Начална: hero + кутии + feed (последни 10)
   layout.tsx               Root layout, SEO metadata, viewport
   icon.svg                 Favicon (§ върху парламентарно синьо)
+  favicon.ico              Класически fallback за браузъри (16/32/48)
   opengraph-image.tsx      OG картинка 1200×630 (генерира се при build)
   sitemap.ts / robots.ts   Генерират се при build
   zakoni/page.tsx          Списък закони (client, лек bundle)

@@ -65,9 +65,11 @@ export default async function LawPage({ params }: { params: Promise<{ id: string
         }}
       />
       <p className="pt-6 text-sm text-zinc-500 dark:text-zinc-400">
-        <Link href="/" className="hover:underline">← Всички закони</Link>
+        <Link href="/" className="hover:underline">Начало</Link>
+        {" · "}
+        <Link href="/zakoni" className="hover:underline">Закони</Link>
       </p>
-      <p className="mt-4 text-[11px] font-semibold uppercase tracking-wide text-zinc-400 dark:text-zinc-500 dark:text-zinc-400">
+      <p className="mt-4 text-[11px] font-semibold uppercase tracking-wide text-zinc-400 dark:text-zinc-500">
         {law.category} · Първо приет {law.firstAdopted} г.
       </p>
       <h1 className="mt-1 break-words text-3xl font-black tracking-tight sm:text-4xl">{law.name}</h1>

@@ -52,7 +52,7 @@ export function Footer() {
             Актове
           </Link>
           <Link href="/metodologiya" className="underline hover:text-zinc-800 dark:hover:text-zinc-200">
-            Как работим — как събираме и проверяваме данните →
+            Как работим
           </Link>
           <a
             href="https://github.com/ligaz/zad-zakona"
