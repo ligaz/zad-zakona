@@ -1,10 +1,13 @@
 /**
  * Разрешава истинските ДВ idMat за актовете: търсене по брой+година в ДВ,
  * после мачване акт→материал по заглавие.
- * Употреба: node scripts/resolve-dv-mat.mjs [--only year,iss,...] [--out file]
+ * Употреба: node scripts/resolve-dv-mat.mjs [--only year,iss,...] [--out file] [--jobs 3]
  * Изход: /tmp/dv-materials.json (issue -> [{idMat, section, title}])
+ * Паралелни worker-и по броеве (JSF заявките в рамките на един брой остават
+ * последователни — viewstate веригата го изисква).
  */
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
+import { readJsonArrayStream, writeJsonDictFile, serialSaver, argVal } from "./json-io.mjs";
 
 const UA = "Mozilla/5.0 (zad-zakona-resolve/0.1)";
 const BASE = "https://dv.parliament.bg/DVWeb/searchDV.faces";
@@ -69,38 +72,52 @@ async function searchIssue(iss, year) {
 }
 
 async function main() {
-  const idx = JSON.parse(readFileSync("data/acts-index.json", "utf8"));
+  const idx = [];
+  for await (const x of readJsonArrayStream("data/acts-index.json")) idx.push(x);
   const issues = [...new Set(
     idx.filter((x) => x.dv_iss && x.dv_year && x.dv_year >= 2021)
       .map((x) => `${x.dv_year},${x.dv_iss}`)
   )].sort();
-  const only = process.argv.includes("--only")
-    ? new Set(process.argv.slice(process.argv.indexOf("--only") + 1).filter((x) => !x.startsWith("--") && x.includes(",")))
-    : null;
-  const OUT = process.argv.includes("--out")
-    ? process.argv[process.argv.indexOf("--out") + 1]
-    : DEFAULT_OUT;
+  const argv = process.argv.slice(2);
+  const oi = argv.indexOf("--only");
+  let only = null;
+  if (oi >= 0) {
+    only = new Set();
+    for (const x of argv.slice(oi + 1)) {
+      if (x.startsWith("--")) break;
+      if (x.includes(",")) only.add(x);
+    }
+  }
+  const OUT = argVal(argv, "--out", DEFAULT_OUT);
+  const JOBS = Math.max(1, Number(argVal(argv, "--jobs", "3")) || 3);
   const done = existsSync(OUT) ? JSON.parse(readFileSync(OUT, "utf8")) : {};
   // при --out worker-ите четат и общия напредък, за да прескачат готовите
   // (но не и при --only тестове)
   if (!only && OUT !== DEFAULT_OUT && existsSync(DEFAULT_OUT)) {
     Object.assign(done, JSON.parse(readFileSync(DEFAULT_OUT, "utf8")));
   }
-  console.log(`issues: ${issues.length}, done: ${Object.keys(done).length}`);
-  for (const key of issues) {
-    if (only && !only.has(key)) continue;
-    if (done[key]) continue;
-    try {
-      const [year, iss] = key.split(",");
-      const mats = await searchIssue(iss, year);
-      done[key] = mats;
-      console.log(`ok ${key}: ${mats.length} материала`);
-    } catch (e) {
-      console.log(`ERR ${key}: ${e.message}`);
+  const queue = issues.filter((key) => (!only || only.has(key)) && !done[key]);
+  console.log(`issues: ${issues.length}, нови: ${queue.length}, workers: ${JOBS}, done: ${Object.keys(done).length}`);
+  const save = serialSaver(() => writeJsonDictFile(OUT, done));
+  let qi = 0;
+  async function worker() {
+    for (;;) {
+      const i = qi++;
+      if (i >= queue.length) return;
+      const key = queue[i];
+      try {
+        const [year, iss] = key.split(",");
+        const mats = await searchIssue(iss, year);
+        done[key] = mats;
+        console.log(`ok ${key}: ${mats.length} материала`);
+      } catch (e) {
+        console.log(`ERR ${key}: ${e.message}`);
+      }
+      await save();
+      await sleep(1500);
     }
-    writeFileSync(OUT, JSON.stringify(done));
-    await sleep(1500);
   }
+  await Promise.all(Array.from({ length: Math.min(JOBS, Math.max(1, queue.length)) }, worker));
   console.log("saved", Object.keys(done).length);
 }
 main();
