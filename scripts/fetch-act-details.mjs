@@ -1,10 +1,13 @@
 /**
  * Пълен pipeline за актове: bill → стенограма (2-ро гласуване) → вот (CSV/XLSX)
  * → сверка с обявлението в стенограмата → детайли (членове, указ, вносител).
- * Употреба: node scripts/fetch-act-details.mjs --out FILE --only ID [ID...]
+ * Употреба: node scripts/fetch-act-details.mjs --out FILE --only ID [ID...] --jobs 3
  *   (без --only: всички с ДВ от 2021+, прескача готовите в OUT)
+ *   --jobs N: паралелни worker-а (default 3; учтиво към parliament.bg: 900ms между
+ *   актовете + 400ms между заявките на worker, retry с backoff при 429/5xx).
  */
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
+import { readJsonArrayStream, writeJsonDictFile, serialSaver } from "./json-io.mjs";
 import { inflateRawSync } from "node:zlib";
 
 const UA = "zad-zakona-details/0.1";
@@ -397,28 +400,58 @@ async function processAct(x) {
 }
 
 async function main() {
-  const idx = JSON.parse(readFileSync("data/acts-index.json", "utf8"))
-    .filter((x) => x.dv_iss && x.dv_year && x.dv_year >= 2021);
-  const ai = process.argv.indexOf("--only");
-  const only = ai >= 0 ? new Set(process.argv.slice(ai + 1).filter((x) => !x.startsWith("--")).map(Number)) : null;
-  const OUT = process.argv.includes("--out") ? process.argv[process.argv.indexOf("--out") + 1] : "/tmp/act-details.json";
-  const done = existsSync(OUT) ? JSON.parse(readFileSync(OUT, "utf8")) : {};
-  let n = 0;
-  for (const x of idx) {
-    if (only && !only.has(x.id)) continue;
-    if (!only && done[x.id]) continue;
-    try {
-      done[x.id] = await processAct(x);
-      const p = done[x.id].pick;
-      console.log(`${p ? (done[x.id].verified ? "OK  " : "QUAR") : "MISS"} ${x.id} ${p ? JSON.stringify(p.votes) : ""} ${(p?.topic || "").slice(0, 60)}`);
-    } catch (e) {
-      done[x.id] = { actId: x.id, error: e.message };
-      console.log(`ERR ${x.id} ${e.message}`);
-    }
-    if (++n % 10 === 0) writeFileSync(OUT, JSON.stringify(done));
-    await sleep(900);
+  const argv = process.argv.slice(2);
+  if (argv.includes("--help") || argv.includes("-h")) {
+    console.log("Употреба: node scripts/fetch-act-details.mjs [--out FILE] [--only ID...] [--jobs N]");
+    console.log("  --only спира до следващия --флаг; --jobs default 3 (учтиво към parliament.bg)");
+    return;
   }
-  writeFileSync(OUT, JSON.stringify(done));
+  const val = (name, def) => {
+    const i = argv.indexOf(name);
+    return i >= 0 && argv[i + 1] && !argv[i + 1].startsWith("--") ? argv[i + 1] : def;
+  };
+  const idx = [];
+  for await (const x of readJsonArrayStream("data/acts-index.json")) {
+    if (x.dv_iss && x.dv_year && x.dv_year >= 2021) idx.push(x);
+  }
+  const ai = argv.indexOf("--only");
+  let only = null;
+  if (ai >= 0) {
+    only = new Set();
+    for (const x of argv.slice(ai + 1)) {
+      if (x.startsWith("--")) break;
+      const n = Number(x);
+      if (Number.isFinite(n)) only.add(n);
+    }
+  }
+  const OUT = val("--out", "/tmp/act-details.json");
+  const JOBS = Math.max(1, Number(val("--jobs", "3")) || 3);
+  // Dict resume остава буфериран нарочно — dedup `done[id]` иска random-access.
+  const done = existsSync(OUT) ? JSON.parse(readFileSync(OUT, "utf8")) : {};
+  const queue = idx.filter((x) => (only ? only.has(x.id) : !done[x.id]));
+  console.log(`Старт: ${queue.length} акта, workers: ${JOBS} (учтиво: 900ms между актовете + 400ms между заявките на worker)`);
+  let n = 0;
+  let next = 0;
+  const save = serialSaver(() => writeJsonDictFile(OUT, done));
+  async function worker() {
+    for (;;) {
+      const i = next++;
+      if (i >= queue.length) return;
+      const x = queue[i];
+      try {
+        done[x.id] = await processAct(x);
+        const p = done[x.id].pick;
+        console.log(`${p ? (done[x.id].verified ? "OK  " : "QUAR") : "MISS"} ${x.id} ${p ? JSON.stringify(p.votes) : ""} ${(p?.topic || "").slice(0, 60)}`);
+      } catch (e) {
+        done[x.id] = { actId: x.id, error: e.message };
+        console.log(`ERR ${x.id} ${e.message}`);
+      }
+      if (++n % 10 === 0) await save();
+      await sleep(900);
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(JOBS, Math.max(1, queue.length)) }, worker));
+  await save();
   console.log("saved", Object.keys(done).length);
 }
 main();

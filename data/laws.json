@@ -109,6 +109,8 @@
     "firstAdopted": "2014",
     "category": "Външна политика",
     "amendments": [
+      "act-167549",
+      "act-167518",
       "act-167526",
       "act-167516",
       "act-167468",
@@ -504,6 +506,7 @@
     "firstAdopted": "2022",
     "category": "Правосъдие",
     "amendments": [
+      "act-167503",
       "act-166491",
       "act-165653",
       "act-165089",
@@ -630,6 +633,7 @@
     "firstAdopted": "2024",
     "category": "Икономика",
     "amendments": [
+      "act-167535",
       "act-166582",
       "act-164703"
     ]

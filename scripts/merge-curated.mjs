@@ -96,6 +96,19 @@ const asmFor = (ds) => {
   return null;
 };
 
+// НС номер → plenary ID в parliament.bg URL-ите (като NS_API във fetch скриптовете).
+const NS_PLEN = { 44: 52, 45: 55, 46: 56, 47: 57, 48: 58, 49: 59, 50: 60, 51: 61, 52: 62 };
+// Поправя workerски линкове с нерезолвната НС: .../ns/undefined/ID/11165.
+const fixStenLink = (link, assemblyId) => {
+  if (!String(link || "").includes("/ns/undefined/")) return link;
+  const api = NS_PLEN[Number(String(assemblyId || "").split("-")[0])];
+  if (!api) {
+    console.warn(`  ! stenogramLink без НС мапинг: ${link} (${assemblyId})`);
+    return link;
+  }
+  return link.replace("/ns/undefined/", `/ns/${api}/`);
+};
+
 let nNew = 0, nRat = 0;
 const haveAmend = new Set(amendments.map((a) => a.id));
 // ratifikatsii entry предварително (ползва се в цикъла)
@@ -173,7 +186,7 @@ for (const o of merged) {
     if (x.votesByParty?.length) rec.votesByParty = x.votesByParty;
     rec.votesVerified = x.votesVerified ?? true;
   }
-  if (x.stenogramLink) rec.stenogramLink = x.stenogramLink;
+  if (x.stenogramLink) rec.stenogramLink = fixStenLink(x.stenogramLink, rec.assemblyId);
   if (x.vnositel) {
     rec.vnositel = x.vnositel;
     if (x.vnositelType) rec.vnositelType = x.vnositelType;
