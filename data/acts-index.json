@@ -12154,21 +12154,21 @@
   "dv_idmat": 10800,
   "dv_mat": 171578,
   "votes": {
-   "za": 126,
+   "za": 122,
    "protiv": 0,
    "vazdrzhal": 0
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ПП",
-    "za": 55,
+    "za": 56,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ГЕРБ-СДС",
-    "za": 12,
+    "za": 9,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -12180,19 +12180,19 @@
    },
    {
     "party": "ИТН",
-    "za": 20,
+    "za": 21,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ДБ",
-    "za": 12,
+    "za": 10,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
-    "za": 10,
+    "za": 9,
     "protiv": 0,
     "vazdrzhal": 0
    }
@@ -12636,34 +12636,28 @@
   "dv_idmat": 10800,
   "dv_mat": 171576,
   "votes": {
-   "za": 117,
-   "protiv": 11,
-   "vazdrzhal": 1
+   "za": 108,
+   "protiv": 1,
+   "vazdrzhal": 10
   },
   "votesVerified": true,
   "votesByParty": [
    {
     "party": "ПП",
-    "za": 49,
-    "protiv": 0,
-    "vazdrzhal": 0
-   },
-   {
-    "party": "ГЕРБ-СДС",
-    "za": 20,
-    "protiv": 0,
-    "vazdrzhal": 0
-   },
-   {
-    "party": "ДПС",
-    "za": 0,
+    "za": 53,
     "protiv": 0,
     "vazdrzhal": 1
    },
    {
-    "party": "БСП",
-    "za": 22,
+    "party": "ГЕРБ-СДС",
+    "za": 6,
     "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "БСП",
+    "za": 21,
+    "protiv": 1,
     "vazdrzhal": 0
    },
    {
@@ -12674,15 +12668,15 @@
    },
    {
     "party": "ДБ",
-    "za": 9,
+    "za": 11,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 11,
-    "vazdrzhal": 0
+    "protiv": 0,
+    "vazdrzhal": 9
    }
   ],
   "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/57/ID/10640",
@@ -15283,18 +15277,50 @@
   "dv_idmat": 10844,
   "dv_mat": 174063,
   "votes": {
-   "za": 106,
-   "protiv": 1,
-   "vazdrzhal": 14
+   "za": 100,
+   "protiv": 0,
+   "vazdrzhal": 5
   },
-  "votesVerified": "partial",
-  "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/57/ID/10669",
+  "votesVerified": true,
+  "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/57/ID/10667",
   "vnositel": "Министерски съвет",
   "vnositelType": "МС",
   "detailId": "act-164171",
   "cardShort": "Ратификации",
   "cardTitle": "Ратифицира се споразумение с Австрия за прекратяване на…",
-  "cardSummary": "Ратифицира се споразумение с Австрия за прекратяване на двустранния договор за взаимно насърчаване и защита на инвестициите от 1997 г. Прекратяването следва европейските правила за подобни договори вътре в съюза."
+  "cardSummary": "Ратифицира се споразумение с Австрия за прекратяване на двустранния договор за взаимно насърчаване и защита на инвестициите от 1997 г. Прекратяването следва европейските правила за подобни договори вътре в съюза.",
+  "votesByParty": [
+   {
+    "party": "ПП",
+    "za": 60,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "БСП",
+    "za": 15,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ИТН",
+    "za": 12,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ДБ",
+    "za": 13,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "Възраждане",
+    "za": 0,
+    "protiv": 0,
+    "vazdrzhal": 5
+   }
+  ]
  },
  {
   "id": 164172,
@@ -21287,15 +21313,15 @@
   "dv_idmat": 10984,
   "dv_mat": 181904,
   "votes": {
-   "za": 141,
-   "protiv": 49,
+   "za": 167,
+   "protiv": 0,
    "vazdrzhal": 0
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 60,
+    "za": 44,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -21307,37 +21333,31 @@
    },
    {
     "party": "ДПС",
-    "za": 17,
+    "za": 20,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
-    "za": 0,
-    "protiv": 26,
+    "za": 27,
+    "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 0,
-    "protiv": 23,
+    "za": 13,
+    "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ДБ",
-    "za": 16,
+    "za": 13,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БВ",
-    "za": 4,
-    "protiv": 0,
-    "vazdrzhal": 0
-   },
-   {
-    "party": "независими",
-    "za": 1,
+    "za": 7,
     "protiv": 0,
     "vazdrzhal": 0
    }
@@ -21431,57 +21451,51 @@
   "dv_idmat": 10984,
   "dv_mat": 181903,
   "votes": {
-   "za": 186,
-   "protiv": 3,
-   "vazdrzhal": 3
+   "za": 160,
+   "protiv": 0,
+   "vazdrzhal": 0
   },
   "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 50,
-    "protiv": 1,
-    "vazdrzhal": 1
+    "za": 51,
+    "protiv": 0,
+    "vazdrzhal": 0
    },
    {
     "party": "ПП",
-    "za": 46,
-    "protiv": 2,
+    "za": 41,
+    "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 24,
+    "za": 16,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
-    "za": 24,
+    "za": 25,
     "protiv": 0,
-    "vazdrzhal": 2
+    "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 18,
+    "za": 11,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ДБ",
-    "za": 14,
+    "za": 10,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БВ",
-    "za": 9,
-    "protiv": 0,
-    "vazdrzhal": 0
-   },
-   {
-    "party": "независими",
-    "za": 1,
+    "za": 6,
     "protiv": 0,
     "vazdrzhal": 0
    }
@@ -24237,39 +24251,39 @@
   "dv_idmat": 11098,
   "dv_mat": 185400,
   "votes": {
-   "za": 172,
+   "za": 182,
    "protiv": 0,
    "vazdrzhal": 0
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 52,
+    "za": 53,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП",
-    "za": 47,
+    "za": 46,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 24,
-    "protiv": 0,
-    "vazdrzhal": 0
-   },
-   {
-    "party": "Възраждане",
     "za": 23,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
+    "party": "Възраждане",
+    "za": 25,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
     "party": "БСП",
-    "za": 6,
+    "za": 14,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -24281,7 +24295,7 @@
    },
    {
     "party": "БВ",
-    "za": 8,
+    "za": 9,
     "protiv": 0,
     "vazdrzhal": 0
    }
@@ -26388,55 +26402,55 @@
   "dv_mat": 185825,
   "votes": {
    "za": 130,
-   "protiv": 46,
-   "vazdrzhal": 1
+   "protiv": 18,
+   "vazdrzhal": 2
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 58,
+    "za": 52,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП",
-    "za": 40,
-    "protiv": 1,
+    "za": 34,
+    "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 17,
+    "za": 14,
     "protiv": 0,
-    "vazdrzhal": 1
+    "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
-    "za": 1,
-    "protiv": 25,
+    "za": 18,
+    "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 1,
-    "protiv": 16,
-    "vazdrzhal": 0
+    "za": 0,
+    "protiv": 18,
+    "vazdrzhal": 2
    },
    {
     "party": "ДБ",
-    "za": 13,
+    "za": 10,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БВ",
-    "za": 0,
-    "protiv": 4,
+    "za": 2,
+    "protiv": 0,
     "vazdrzhal": 0
    }
   ],
-  "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/58/ID/10740",
+  "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/58/ID/10744",
   "vnositel": "Министерски съвет",
   "vnositelType": "МС",
   "detailId": "act-164645",
@@ -31389,29 +31403,29 @@
   "dv_idmat": 11360,
   "dv_mat": 199994,
   "votes": {
-   "za": 93,
-   "protiv": 27,
-   "vazdrzhal": 3
+   "za": 116,
+   "protiv": 28,
+   "vazdrzhal": 0
   },
   "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 47,
+    "za": 46,
     "protiv": 0,
-    "vazdrzhal": 1
+    "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 28,
+    "za": 41,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 23,
-    "vazdrzhal": 1
+    "protiv": 28,
+    "vazdrzhal": 0
    },
    {
     "party": "ДПС",
@@ -31421,15 +31435,15 @@
    },
    {
     "party": "БСП",
-    "za": 5,
+    "za": 10,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ИТН",
-    "za": 0,
-    "protiv": 4,
-    "vazdrzhal": 1
+    "za": 6,
+    "protiv": 0,
+    "vazdrzhal": 0
    }
   ],
   "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/59/ID/10810",
@@ -34419,21 +34433,21 @@
   "dv_idmat": 11404,
   "dv_mat": 201987,
   "votes": {
-   "za": 140,
+   "za": 131,
    "protiv": 0,
-   "vazdrzhal": 37
+   "vazdrzhal": 44
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 44,
+    "za": 47,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 57,
+    "za": 49,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -34441,23 +34455,23 @@
     "party": "Възраждане",
     "za": 0,
     "protiv": 0,
-    "vazdrzhal": 35
+    "vazdrzhal": 34
    },
    {
     "party": "ДПС",
-    "za": 28,
+    "za": 25,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 3,
+    "za": 0,
     "protiv": 0,
-    "vazdrzhal": 2
+    "vazdrzhal": 10
    },
    {
     "party": "ИТН",
-    "za": 8,
+    "za": 10,
     "protiv": 0,
     "vazdrzhal": 0
    }
@@ -34878,46 +34892,46 @@
   "dv_idmat": 11299,
   "dv_mat": 197925,
   "votes": {
-   "za": 73,
-   "protiv": 31,
-   "vazdrzhal": 7
+   "za": 142,
+   "protiv": 53,
+   "vazdrzhal": 1
   },
   "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 18,
+    "za": 62,
     "protiv": 0,
-    "vazdrzhal": 3
+    "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 33,
+    "za": 55,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 31,
-    "vazdrzhal": 4
+    "protiv": 36,
+    "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 5,
+    "za": 25,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 14,
-    "protiv": 0,
-    "vazdrzhal": 0
+    "za": 0,
+    "protiv": 10,
+    "vazdrzhal": 1
    },
    {
     "party": "ИТН",
-    "za": 3,
-    "protiv": 0,
+    "za": 0,
+    "protiv": 7,
     "vazdrzhal": 0
    }
   ],
@@ -34941,47 +34955,47 @@
   "dv_idmat": 11299,
   "dv_mat": 197926,
   "votes": {
-   "za": 123,
-   "protiv": 32,
-   "vazdrzhal": 1
+   "za": 135,
+   "protiv": 46,
+   "vazdrzhal": 5
   },
   "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 57,
-    "protiv": 1,
+    "za": 60,
+    "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 39,
+    "za": 49,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 28,
-    "vazdrzhal": 1
+    "protiv": 33,
+    "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 16,
+    "za": 26,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 8,
-    "protiv": 0,
+    "za": 0,
+    "protiv": 13,
     "vazdrzhal": 0
    },
    {
     "party": "ИТН",
-    "za": 3,
-    "protiv": 3,
-    "vazdrzhal": 0
+    "za": 0,
+    "protiv": 0,
+    "vazdrzhal": 5
    }
   ],
   "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/59/ID/10795",
@@ -38768,46 +38782,46 @@
   "dv_idmat": 11339,
   "dv_mat": 199800,
   "votes": {
-   "za": 99,
-   "protiv": 28,
+   "za": 119,
+   "protiv": 36,
    "vazdrzhal": 0
   },
   "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 33,
+    "za": 42,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 37,
+    "za": 49,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 22,
+    "protiv": 26,
     "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 16,
+    "za": 17,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 12,
+    "za": 11,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ИТН",
-    "za": 1,
-    "protiv": 6,
+    "za": 0,
+    "protiv": 10,
     "vazdrzhal": 0
    }
   ],
@@ -38894,21 +38908,21 @@
   "dv_idmat": 11404,
   "dv_mat": 202060,
   "votes": {
-   "za": 165,
-   "protiv": 21,
+   "za": 164,
+   "protiv": 15,
    "vazdrzhal": 0
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 68,
+    "za": 69,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 62,
+    "za": 60,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -38921,13 +38935,7 @@
    {
     "party": "БСП",
     "za": 0,
-    "protiv": 20,
-    "vazdrzhal": 0
-   },
-   {
-    "party": "независими",
-    "za": 0,
-    "protiv": 1,
+    "protiv": 15,
     "vazdrzhal": 0
    }
   ],
@@ -40884,41 +40892,41 @@
   "dv_idmat": 11484,
   "dv_mat": 206606,
   "votes": {
-   "za": 92,
-   "protiv": 16,
-   "vazdrzhal": 3
+   "za": 99,
+   "protiv": 19,
+   "vazdrzhal": 7
   },
   "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 41,
+    "za": 44,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 37,
+    "za": 36,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 16,
+    "protiv": 17,
     "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 14,
+    "za": 19,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
     "za": 0,
-    "protiv": 0,
-    "vazdrzhal": 1
+    "protiv": 2,
+    "vazdrzhal": 5
    },
    {
     "party": "ИТН",
@@ -40972,18 +40980,56 @@
   "dv_idmat": 11546,
   "dv_mat": 212883,
   "votes": {
-   "za": 146,
-   "protiv": 0,
-   "vazdrzhal": 0
+   "za": 97,
+   "protiv": 46,
+   "vazdrzhal": 5
   },
-  "votesVerified": "partial",
-  "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/59/ID/10887",
+  "votesVerified": true,
+  "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/59/ID/10886",
   "vnositel": "Министерски съвет",
   "vnositelType": "МС",
   "detailId": "act-165127",
   "cardShort": "Ратификации",
   "cardTitle": "България дава доброволен принос от 60 000 евро за участие в…",
-  "cardSummary": "България дава доброволен принос от 60 000 евро за участие в Програмата на ОИСР за Украйна. Споразумението урежда плащането и участието на страната в програмата."
+  "cardSummary": "България дава доброволен принос от 60 000 евро за участие в Програмата на ОИСР за Украйна. Споразумението урежда плащането и участието на страната в програмата.",
+  "votesByParty": [
+   {
+    "party": "ГЕРБ-СДС",
+    "za": 50,
+    "protiv": 1,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ПП-ДБ",
+    "za": 44,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ДПС",
+    "za": 2,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "Възраждане",
+    "za": 1,
+    "protiv": 30,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "БСП",
+    "za": 0,
+    "protiv": 13,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ИТН",
+    "za": 0,
+    "protiv": 2,
+    "vazdrzhal": 5
+   }
+  ]
  },
  {
   "id": 165128,
@@ -41520,27 +41566,27 @@
   "dv_idmat": 11518,
   "dv_mat": 209844,
   "votes": {
-   "za": 154,
+   "za": 153,
    "protiv": 0,
    "vazdrzhal": 32
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 54,
+    "za": 49,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 54,
+    "za": 55,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 26,
+    "za": 27,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -41552,7 +41598,7 @@
    },
    {
     "party": "БСП",
-    "za": 10,
+    "za": 12,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -41953,45 +41999,45 @@
   "dv_idmat": 11504,
   "dv_mat": 209840,
   "votes": {
-   "za": 123,
-   "protiv": 5,
-   "vazdrzhal": 52
+   "za": 139,
+   "protiv": 15,
+   "vazdrzhal": 26
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 47,
+    "za": 57,
     "protiv": 0,
-    "vazdrzhal": 1
+    "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 2,
-    "protiv": 5,
-    "vazdrzhal": 49
+    "za": 0,
+    "protiv": 15,
+    "vazdrzhal": 26
    },
    {
     "party": "ДПС",
-    "za": 26,
+    "za": 29,
     "protiv": 0,
-    "vazdrzhal": 1
+    "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
-    "za": 30,
+    "za": 32,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 10,
+    "za": 11,
     "protiv": 0,
-    "vazdrzhal": 1
+    "vazdrzhal": 0
    },
    {
     "party": "ИТН",
-    "za": 8,
+    "za": 10,
     "protiv": 0,
     "vazdrzhal": 0
    }
@@ -42464,47 +42510,47 @@
   "dv_idmat": 11404,
   "dv_mat": 201800,
   "votes": {
-   "za": 101,
-   "protiv": 32,
-   "vazdrzhal": 7
+   "za": 119,
+   "protiv": 18,
+   "vazdrzhal": 33
   },
   "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 41,
-    "protiv": 0,
+    "za": 52,
+    "protiv": 1,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 41,
+    "za": 43,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 27,
-    "vazdrzhal": 0
+    "protiv": 0,
+    "vazdrzhal": 33
    },
    {
     "party": "ДПС",
-    "za": 14,
+    "za": 24,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 4,
-    "protiv": 4,
-    "vazdrzhal": 3
+    "za": 0,
+    "protiv": 9,
+    "vazdrzhal": 0
    },
    {
     "party": "ИТН",
-    "za": 1,
-    "protiv": 1,
-    "vazdrzhal": 4
+    "za": 0,
+    "protiv": 8,
+    "vazdrzhal": 0
    }
   ],
   "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/59/ID/10834",
@@ -42527,18 +42573,56 @@
   "dv_idmat": 11404,
   "dv_mat": 201801,
   "votes": {
-   "za": 120,
-   "protiv": 15,
-   "vazdrzhal": 33
+   "za": 137,
+   "protiv": 57,
+   "vazdrzhal": 1
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/59/ID/10834",
   "vnositel": "Министерски съвет",
   "vnositelType": "МС",
   "detailId": "act-165174",
   "cardShort": "Данъчно-осигурителния процесуален кодекс",
   "cardTitle": "Заплатата е защитена от запор",
-  "cardSummary": "Запорът върху трудово възнаграждение вече пази пълната минимална заплата плюс половината разлика до средната брутна заплата. Безкасовите плащания към бюджета минават и през виртуален ПОС. Важно за длъжници и счетоводители."
+  "cardSummary": "Запорът върху трудово възнаграждение вече пази пълната минимална заплата плюс половината разлика до средната брутна заплата. Безкасовите плащания към бюджета минават и през виртуален ПОС. Важно за длъжници и счетоводители.",
+  "votesByParty": [
+   {
+    "party": "ГЕРБ-СДС",
+    "za": 55,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ПП-ДБ",
+    "za": 53,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "Възраждане",
+    "za": 0,
+    "protiv": 35,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ДПС",
+    "za": 29,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "БСП",
+    "za": 0,
+    "protiv": 16,
+    "vazdrzhal": 1
+   },
+   {
+    "party": "ИТН",
+    "za": 0,
+    "protiv": 6,
+    "vazdrzhal": 0
+   }
+  ]
  },
  {
   "id": 165175,
@@ -42552,15 +42636,15 @@
   "dv_idmat": 11404,
   "dv_mat": 201970,
   "votes": {
-   "za": 138,
-   "protiv": 39,
-   "vazdrzhal": 19
+   "za": 145,
+   "protiv": 40,
+   "vazdrzhal": 0
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 54,
+    "za": 52,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -42573,25 +42657,25 @@
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 32,
-    "vazdrzhal": 1
+    "protiv": 34,
+    "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 31,
+    "za": 28,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 0,
+    "za": 12,
     "protiv": 0,
-    "vazdrzhal": 18
+    "vazdrzhal": 0
    },
    {
     "party": "ИТН",
     "za": 0,
-    "protiv": 7,
+    "protiv": 6,
     "vazdrzhal": 0
    }
   ],
@@ -42615,46 +42699,46 @@
   "dv_idmat": 11404,
   "dv_mat": 201968,
   "votes": {
-   "za": 95,
-   "protiv": 38,
-   "vazdrzhal": 3
+   "za": 125,
+   "protiv": 51,
+   "vazdrzhal": 0
   },
   "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 36,
+    "za": 49,
     "protiv": 0,
-    "vazdrzhal": 1
+    "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 33,
+    "za": 52,
     "protiv": 0,
-    "vazdrzhal": 1
+    "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 33,
+    "protiv": 32,
     "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 19,
-    "protiv": 0,
+    "za": 24,
+    "protiv": 1,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 7,
-    "protiv": 2,
-    "vazdrzhal": 1
+    "za": 0,
+    "protiv": 10,
+    "vazdrzhal": 0
    },
    {
     "party": "ИТН",
     "za": 0,
-    "protiv": 3,
+    "protiv": 8,
     "vazdrzhal": 0
    }
   ],
@@ -43169,46 +43253,46 @@
   "dv_idmat": 11484,
   "dv_mat": 206761,
   "votes": {
-   "za": 149,
-   "protiv": 6,
+   "za": 161,
+   "protiv": 0,
    "vazdrzhal": 0
   },
   "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 61,
-    "protiv": 1,
+    "za": 53,
+    "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 40,
+    "za": 38,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
-    "za": 0,
-    "protiv": 1,
-    "vazdrzhal": 0
-   },
-   {
-    "party": "ДПС",
     "za": 26,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
+    "party": "ДПС",
+    "za": 23,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
     "party": "БСП",
-    "za": 16,
+    "za": 11,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ИТН",
-    "za": 6,
-    "protiv": 4,
+    "za": 10,
+    "protiv": 0,
     "vazdrzhal": 0
    }
   ],
@@ -44169,21 +44253,21 @@
   "dv_idmat": 11598,
   "dv_mat": 214322,
   "votes": {
-   "za": 174,
+   "za": 177,
    "protiv": 0,
    "vazdrzhal": 0
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 61,
+    "za": 60,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 38,
+    "za": 42,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -44195,19 +44279,19 @@
    },
    {
     "party": "Възраждане",
-    "za": 26,
+    "za": 28,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 11,
+    "za": 10,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ИТН",
-    "za": 7,
+    "za": 6,
     "protiv": 0,
     "vazdrzhal": 0
    }
@@ -45196,46 +45280,46 @@
   "dv_idmat": 11438,
   "dv_mat": 202167,
   "votes": {
-   "za": 88,
-   "protiv": 46,
-   "vazdrzhal": 1
+   "za": 121,
+   "protiv": 45,
+   "vazdrzhal": 4
   },
   "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 21,
-    "protiv": 19,
-    "vazdrzhal": 1
+    "za": 54,
+    "protiv": 0,
+    "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 42,
+    "za": 47,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 25,
+    "protiv": 34,
     "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 14,
+    "za": 20,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 11,
-    "protiv": 0,
-    "vazdrzhal": 0
+    "za": 0,
+    "protiv": 3,
+    "vazdrzhal": 4
    },
    {
     "party": "ИТН",
     "za": 0,
-    "protiv": 2,
+    "protiv": 8,
     "vazdrzhal": 0
    }
   ],
@@ -45930,47 +46014,47 @@
   "dv_idmat": 11598,
   "dv_mat": 214107,
   "votes": {
-   "za": 91,
-   "protiv": 32,
-   "vazdrzhal": 14
+   "za": 121,
+   "protiv": 0,
+   "vazdrzhal": 28
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 40,
+    "za": 43,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 3,
-    "protiv": 28,
-    "vazdrzhal": 1
-   },
-   {
-    "party": "ДПС",
-    "za": 18,
+    "za": 44,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
-    "party": "Възраждане",
+    "party": "ДПС",
     "za": 26,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
+    "party": "Възраждане",
+    "za": 0,
+    "protiv": 0,
+    "vazdrzhal": 26
+   },
+   {
     "party": "БСП",
     "za": 0,
     "protiv": 0,
-    "vazdrzhal": 12
+    "vazdrzhal": 2
    },
    {
     "party": "ИТН",
-    "za": 4,
-    "protiv": 4,
-    "vazdrzhal": 1
+    "za": 8,
+    "protiv": 0,
+    "vazdrzhal": 0
    }
   ],
   "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/59/ID/10893",
@@ -46772,41 +46856,47 @@
   "dv_idmat": 11546,
   "dv_mat": 212723,
   "votes": {
-   "za": 69,
-   "protiv": 31,
-   "vazdrzhal": 6
+   "za": 107,
+   "protiv": 8,
+   "vazdrzhal": 9
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 26,
-    "protiv": 2,
-    "vazdrzhal": 2
+    "za": 29,
+    "protiv": 0,
+    "vazdrzhal": 1
    },
    {
     "party": "ПП-ДБ",
-    "za": 33,
+    "za": 44,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ДПС",
+    "za": 2,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
-    "za": 0,
-    "protiv": 28,
-    "vazdrzhal": 2
-   },
-   {
-    "party": "БСП",
-    "za": 6,
+    "za": 32,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
+    "party": "БСП",
+    "za": 0,
+    "protiv": 0,
+    "vazdrzhal": 7
+   },
+   {
     "party": "ИТН",
-    "za": 4,
-    "protiv": 1,
-    "vazdrzhal": 2
+    "za": 0,
+    "protiv": 8,
+    "vazdrzhal": 1
    }
   ],
   "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/59/ID/10886",
@@ -50377,39 +50467,39 @@
   "dv_idmat": 11578,
   "dv_mat": 214320,
   "votes": {
-   "za": 148,
+   "za": 164,
    "protiv": 0,
    "vazdrzhal": 0
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 49,
+    "za": 52,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 38,
+    "za": 40,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 19,
+    "za": 26,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
-    "za": 22,
+    "za": 24,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 16,
+    "za": 18,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -52305,28 +52395,28 @@
   "dv_idmat": 11745,
   "dv_mat": 225780,
   "votes": {
-   "za": 120,
-   "protiv": 28,
-   "vazdrzhal": 5
+   "za": 118,
+   "protiv": 43,
+   "vazdrzhal": 19
   },
   "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 50,
+    "za": 62,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 27,
+    "za": 33,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 28,
+    "protiv": 36,
     "vazdrzhal": 0
    },
    {
@@ -52337,21 +52427,21 @@
    },
    {
     "party": "БСП",
-    "za": 5,
+    "za": 1,
     "protiv": 0,
-    "vazdrzhal": 0
+    "vazdrzhal": 3
    },
    {
     "party": "ИТН",
-    "za": 14,
-    "protiv": 0,
-    "vazdrzhal": 0
+    "za": 0,
+    "protiv": 1,
+    "vazdrzhal": 14
    },
    {
     "party": "независими",
-    "za": 8,
-    "protiv": 0,
-    "vazdrzhal": 5
+    "za": 6,
+    "protiv": 6,
+    "vazdrzhal": 2
    }
   ],
   "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/60/ID/10925",
@@ -52908,23 +52998,23 @@
   "dv_idmat": 11740,
   "dv_mat": 224247,
   "votes": {
-   "za": 156,
-   "protiv": 15,
-   "vazdrzhal": 2
+   "za": 157,
+   "protiv": 11,
+   "vazdrzhal": 10
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 56,
+    "za": 57,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 27,
-    "protiv": 1,
-    "vazdrzhal": 0
+    "za": 10,
+    "protiv": 11,
+    "vazdrzhal": 7
    },
    {
     "party": "Възраждане",
@@ -52934,7 +53024,7 @@
    },
    {
     "party": "ДПС",
-    "za": 13,
+    "za": 14,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -52946,15 +53036,15 @@
    },
    {
     "party": "ИТН",
-    "za": 13,
+    "za": 15,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "независими",
-    "za": 5,
-    "protiv": 14,
-    "vazdrzhal": 2
+    "za": 19,
+    "protiv": 0,
+    "vazdrzhal": 3
    }
   ],
   "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/60/ID/10921",
@@ -54785,33 +54875,33 @@
   "dv_idmat": 11740,
   "dv_mat": 224080,
   "votes": {
-   "za": 92,
-   "protiv": 40,
-   "vazdrzhal": 0
+   "za": 161,
+   "protiv": 0,
+   "vazdrzhal": 1
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 40,
+    "za": 51,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 15,
+    "za": 22,
+    "protiv": 0,
+    "vazdrzhal": 1
+   },
+   {
+    "party": "Възраждане",
+    "za": 34,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
-    "party": "Възраждане",
-    "za": 0,
-    "protiv": 37,
-    "vazdrzhal": 0
-   },
-   {
     "party": "ДПС",
-    "za": 12,
+    "za": 15,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -54823,13 +54913,13 @@
    },
    {
     "party": "ИТН",
-    "za": 7,
-    "protiv": 3,
+    "za": 14,
+    "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "независими",
-    "za": 11,
+    "za": 18,
     "protiv": 0,
     "vazdrzhal": 0
    }
@@ -55778,28 +55868,28 @@
   "dv_idmat": 11743,
   "dv_mat": 225082,
   "votes": {
-   "za": 122,
-   "protiv": 40,
-   "vazdrzhal": 3
+   "za": 118,
+   "protiv": 38,
+   "vazdrzhal": 4
   },
   "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 55,
+    "za": 54,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 23,
+    "za": 21,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 35,
+    "protiv": 36,
     "vazdrzhal": 0
    },
    {
@@ -55810,7 +55900,7 @@
    },
    {
     "party": "БСП",
-    "za": 2,
+    "za": 0,
     "protiv": 0,
     "vazdrzhal": 3
    },
@@ -55822,9 +55912,9 @@
    },
    {
     "party": "независими",
-    "za": 9,
-    "protiv": 5,
-    "vazdrzhal": 0
+    "za": 10,
+    "protiv": 2,
+    "vazdrzhal": 1
    }
   ],
   "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/60/ID/10923",
@@ -57313,51 +57403,51 @@
   "dv_idmat": 11820,
   "dv_mat": 228949,
   "votes": {
-   "za": 63,
-   "protiv": 28,
-   "vazdrzhal": 2
+   "za": 110,
+   "protiv": 0,
+   "vazdrzhal": 39
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 25,
+    "za": 48,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 15,
+    "za": 30,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
-    "za": 1,
-    "protiv": 28,
-    "vazdrzhal": 1
+    "za": 0,
+    "protiv": 0,
+    "vazdrzhal": 38
    },
    {
     "party": "ДПС",
-    "za": 3,
-    "protiv": 0,
-    "vazdrzhal": 0
-   },
-   {
-    "party": "БСП",
     "za": 4,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
+    "party": "БСП",
+    "za": 6,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
     "party": "ИТН",
-    "za": 8,
+    "za": 16,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "независими",
-    "za": 7,
+    "za": 6,
     "protiv": 0,
     "vazdrzhal": 1
    }
@@ -57655,7 +57745,7 @@
   "dv_idmat": 11764,
   "dv_mat": 228721,
   "votes": {
-   "za": 158,
+   "za": 161,
    "protiv": 2,
    "vazdrzhal": 4
   },
@@ -57663,31 +57753,31 @@
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 58,
+    "za": 55,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 20,
-    "protiv": 1,
-    "vazdrzhal": 3
+    "za": 21,
+    "protiv": 2,
+    "vazdrzhal": 1
    },
    {
     "party": "Възраждане",
-    "za": 32,
-    "protiv": 1,
+    "za": 33,
+    "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 10,
+    "za": 13,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 12,
+    "za": 9,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -57699,9 +57789,9 @@
    },
    {
     "party": "независими",
-    "za": 11,
+    "za": 15,
     "protiv": 0,
-    "vazdrzhal": 1
+    "vazdrzhal": 3
    }
   ],
   "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/60/ID/10934",
@@ -58717,33 +58807,33 @@
   "dv_idmat": 12058,
   "dv_mat": 236329,
   "votes": {
-   "za": 107,
-   "protiv": 29,
-   "vazdrzhal": 1
+   "za": 114,
+   "protiv": 0,
+   "vazdrzhal": 29
   },
   "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 55,
+    "za": 57,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 29,
-    "vazdrzhal": 0
+    "protiv": 0,
+    "vazdrzhal": 29
    },
    {
     "party": "ДПС",
-    "za": 22,
+    "za": 25,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 13,
+    "za": 15,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -58754,16 +58844,10 @@
     "vazdrzhal": 0
    },
    {
-    "party": "АПС",
+    "party": "независими",
     "za": 1,
     "protiv": 0,
     "vazdrzhal": 0
-   },
-   {
-    "party": "Величие",
-    "za": 0,
-    "protiv": 0,
-    "vazdrzhal": 1
    }
   ],
   "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/61/ID/11037",
@@ -59492,27 +59576,27 @@
   "dv_mat": 241234,
   "votes": {
    "za": 117,
-   "protiv": 33,
-   "vazdrzhal": 1
+   "protiv": 34,
+   "vazdrzhal": 0
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 57,
+    "za": 58,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 31,
+    "za": 29,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 29,
+    "protiv": 30,
     "vazdrzhal": 0
    },
    {
@@ -59529,9 +59613,9 @@
    },
    {
     "party": "ИТН",
-    "za": 0,
+    "za": 1,
     "protiv": 0,
-    "vazdrzhal": 1
+    "vazdrzhal": 0
    },
    {
     "party": "Величие",
@@ -60775,39 +60859,39 @@
   "dv_idmat": 12001,
   "dv_mat": 234478,
   "votes": {
-   "za": 125,
-   "protiv": 38,
+   "za": 138,
+   "protiv": 31,
    "vazdrzhal": 0
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 57,
+    "za": 59,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 22,
+    "za": 26,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 24,
+    "protiv": 25,
     "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 17,
+    "za": 19,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 14,
+    "za": 12,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -60819,8 +60903,8 @@
    },
    {
     "party": "МЕЧ",
-    "za": 0,
-    "protiv": 8,
+    "za": 7,
+    "protiv": 0,
     "vazdrzhal": 0
    },
    {
@@ -60959,58 +61043,58 @@
   "dv_idmat": 12039,
   "dv_mat": 235621,
   "votes": {
-   "za": 146,
-   "protiv": 19,
-   "vazdrzhal": 6
+   "za": 127,
+   "protiv": 5,
+   "vazdrzhal": 41
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 55,
+    "za": 57,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 11,
-    "protiv": 2,
-    "vazdrzhal": 2
-   },
-   {
-    "party": "Възраждане",
-    "za": 29,
+    "za": 23,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
+    "party": "Възраждане",
+    "za": 0,
+    "protiv": 0,
+    "vazdrzhal": 30
+   },
+   {
     "party": "ДПС",
-    "za": 22,
-    "protiv": 2,
-    "vazdrzhal": 2
+    "za": 21,
+    "protiv": 0,
+    "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 17,
+    "za": 12,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ИТН",
-    "za": 11,
+    "za": 13,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "МЕЧ",
     "za": 0,
-    "protiv": 9,
-    "vazdrzhal": 2
+    "protiv": 0,
+    "vazdrzhal": 11
    },
    {
     "party": "Величие",
     "za": 0,
-    "protiv": 6,
+    "protiv": 5,
     "vazdrzhal": 0
    },
    {
@@ -64481,39 +64565,39 @@
   "dv_idmat": 12381,
   "dv_mat": 241026,
   "votes": {
-   "za": 144,
+   "za": 158,
    "protiv": 0,
-   "vazdrzhal": 0
+   "vazdrzhal": 4
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 46,
+    "za": 51,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 22,
+    "za": 27,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
-    "za": 19,
+    "za": 25,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 19,
+    "za": 18,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 13,
+    "za": 14,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -64531,19 +64615,19 @@
    },
    {
     "party": "МЕЧ",
-    "za": 4,
+    "za": 5,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Величие",
-    "za": 2,
+    "za": 0,
     "protiv": 0,
-    "vazdrzhal": 0
+    "vazdrzhal": 4
    },
    {
     "party": "независими",
-    "za": 3,
+    "za": 2,
     "protiv": 0,
     "vazdrzhal": 0
    }
@@ -65614,59 +65698,59 @@
   "dv_idmat": 11945,
   "dv_mat": 233694,
   "votes": {
-   "za": 131,
-   "protiv": 34,
-   "vazdrzhal": 10
+   "za": 145,
+   "protiv": 60,
+   "vazdrzhal": 17
   },
   "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 61,
+    "za": 64,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
     "za": 1,
-    "protiv": 2,
-    "vazdrzhal": 1
+    "protiv": 15,
+    "vazdrzhal": 17
    },
    {
     "party": "Възраждане",
-    "za": 0,
-    "protiv": 25,
+    "za": 2,
+    "protiv": 29,
     "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 37,
+    "za": 44,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 15,
+    "za": 18,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ИТН",
-    "za": 17,
+    "za": 16,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "МЕЧ",
     "za": 0,
-    "protiv": 7,
+    "protiv": 6,
     "vazdrzhal": 0
    },
    {
     "party": "Величие",
     "za": 0,
-    "protiv": 0,
-    "vazdrzhal": 9
+    "protiv": 10,
+    "vazdrzhal": 0
    }
   ],
   "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/61/ID/10990",
@@ -65689,39 +65773,39 @@
   "dv_idmat": 11944,
   "dv_mat": 233618,
   "votes": {
-   "za": 161,
-   "protiv": 38,
-   "vazdrzhal": 1
+   "za": 147,
+   "protiv": 36,
+   "vazdrzhal": 33
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 61,
+    "za": 64,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 26,
-    "protiv": 0,
-    "vazdrzhal": 1
+    "za": 1,
+    "protiv": 2,
+    "vazdrzhal": 33
    },
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 22,
+    "protiv": 18,
     "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 42,
+    "za": 47,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 15,
+    "za": 18,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -65764,9 +65848,9 @@
   "dv_idmat": 11944,
   "dv_mat": 233617,
   "votes": {
-   "za": 162,
-   "protiv": 41,
-   "vazdrzhal": 1
+   "za": 145,
+   "protiv": 44,
+   "vazdrzhal": 42
   },
   "votesVerified": true,
   "votesByParty": [
@@ -65778,26 +65862,26 @@
    },
    {
     "party": "ПП-ДБ",
-    "za": 25,
-    "protiv": 0,
-    "vazdrzhal": 1
+    "za": 0,
+    "protiv": 2,
+    "vazdrzhal": 34
    },
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 31,
+    "protiv": 33,
     "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 39,
+    "za": 45,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 17,
-    "protiv": 1,
+    "za": 19,
+    "protiv": 0,
     "vazdrzhal": 0
    },
    {
@@ -65811,6 +65895,12 @@
     "za": 0,
     "protiv": 9,
     "vazdrzhal": 0
+   },
+   {
+    "party": "Величие",
+    "za": 0,
+    "protiv": 0,
+    "vazdrzhal": 8
    }
   ],
   "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/61/ID/10989",
@@ -66344,59 +66434,59 @@
   "dv_idmat": 12025,
   "dv_mat": 235575,
   "votes": {
-   "za": 116,
-   "protiv": 44,
-   "vazdrzhal": 0
+   "za": 132,
+   "protiv": 1,
+   "vazdrzhal": 45
   },
   "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 56,
+    "za": 59,
     "protiv": 0,
-    "vazdrzhal": 0
+    "vazdrzhal": 1
    },
    {
     "party": "ПП-ДБ",
-    "za": 7,
+    "za": 13,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 30,
-    "vazdrzhal": 0
+    "protiv": 0,
+    "vazdrzhal": 31
    },
    {
     "party": "ДПС",
-    "za": 23,
+    "za": 30,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 13,
+    "za": 14,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ИТН",
-    "za": 16,
+    "za": 15,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "МЕЧ",
     "za": 0,
-    "protiv": 9,
-    "vazdrzhal": 0
+    "protiv": 1,
+    "vazdrzhal": 7
    },
    {
     "party": "Величие",
     "za": 0,
-    "protiv": 5,
-    "vazdrzhal": 0
+    "protiv": 0,
+    "vazdrzhal": 6
    },
    {
     "party": "независими",
@@ -69219,23 +69309,29 @@
   "dv_idmat": 12062,
   "dv_mat": 236532,
   "votes": {
-   "za": 110,
-   "protiv": 0,
-   "vazdrzhal": 9
+   "za": 118,
+   "protiv": 1,
+   "vazdrzhal": 32
   },
   "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 47,
+    "za": 48,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 11,
+    "za": 12,
     "protiv": 0,
     "vazdrzhal": 0
+   },
+   {
+    "party": "Възраждане",
+    "za": 0,
+    "protiv": 1,
+    "vazdrzhal": 27
    },
    {
     "party": "ДПС",
@@ -69245,7 +69341,7 @@
    },
    {
     "party": "БСП",
-    "za": 10,
+    "za": 11,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -69263,15 +69359,15 @@
    },
    {
     "party": "МЕЧ",
-    "za": 0,
+    "za": 5,
     "protiv": 0,
-    "vazdrzhal": 5
+    "vazdrzhal": 0
    },
    {
     "party": "Величие",
     "za": 1,
     "protiv": 0,
-    "vazdrzhal": 4
+    "vazdrzhal": 5
    },
    {
     "party": "независими",
@@ -71583,39 +71679,39 @@
   "dv_idmat": 12225,
   "dv_mat": 240237,
   "votes": {
-   "za": 122,
+   "za": 160,
    "protiv": 7,
-   "vazdrzhal": 45
+   "vazdrzhal": 14
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 51,
+    "za": 54,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 22,
+    "za": 23,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
-    "za": 0,
+    "za": 31,
     "protiv": 0,
-    "vazdrzhal": 30
+    "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 19,
+    "za": 20,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 10,
+    "za": 11,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -71635,7 +71731,7 @@
     "party": "МЕЧ",
     "za": 0,
     "protiv": 0,
-    "vazdrzhal": 10
+    "vazdrzhal": 9
    },
    {
     "party": "Величие",
@@ -71645,7 +71741,7 @@
    },
    {
     "party": "независими",
-    "za": 3,
+    "za": 4,
     "protiv": 0,
     "vazdrzhal": 0
    }
@@ -72186,21 +72282,15 @@
   "dv_idmat": 12058,
   "dv_mat": 236330,
   "votes": {
-   "za": 113,
-   "protiv": 5,
-   "vazdrzhal": 43
+   "za": 112,
+   "protiv": 0,
+   "vazdrzhal": 31
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 59,
-    "protiv": 0,
-    "vazdrzhal": 0
-   },
-   {
-    "party": "ПП-ДБ",
-    "za": 7,
+    "za": 56,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -72208,43 +72298,37 @@
     "party": "Възраждане",
     "za": 0,
     "protiv": 0,
-    "vazdrzhal": 26
+    "vazdrzhal": 28
    },
    {
     "party": "ДПС",
-    "za": 22,
+    "za": 23,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 18,
+    "za": 15,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ИТН",
-    "za": 6,
+    "za": 16,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "АПС",
-    "za": 0,
+    "za": 1,
     "protiv": 0,
-    "vazdrzhal": 6
-   },
-   {
-    "party": "МЕЧ",
-    "za": 0,
-    "protiv": 0,
-    "vazdrzhal": 11
+    "vazdrzhal": 0
    },
    {
     "party": "Величие",
     "za": 0,
-    "protiv": 5,
-    "vazdrzhal": 0
+    "protiv": 0,
+    "vazdrzhal": 3
    },
    {
     "party": "независими",
@@ -73671,17 +73755,73 @@
   "dv_idmat": 12122,
   "dv_mat": 237771,
   "votes": {
-   "za": 180,
-   "protiv": 0,
-   "vazdrzhal": 10
+   "za": 112,
+   "protiv": 20,
+   "vazdrzhal": 50
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/61/ID/11055",
   "vnositel": "Обединен законопроект",
   "detailId": "act-166412",
   "cardShort": "устройство на територията",
   "cardTitle": "Рампи за инвалидни колички без разрешение",
-  "cardSummary": "Рампите и подемните платформи за достъпна среда до вход и за едно ниво стават преместваеми обекти с облекчен режим. Началникът на НСО влиза в съгласувателните процедури наравно със службите. Важно за хора с увреждания и етажни собственици."
+  "cardSummary": "Рампите и подемните платформи за достъпна среда до вход и за едно ниво стават преместваеми обекти с облекчен режим. Началникът на НСО влиза в съгласувателните процедури наравно със службите. Важно за хора с увреждания и етажни собственици.",
+  "votesByParty": [
+   {
+    "party": "ГЕРБ-СДС",
+    "za": 56,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ПП-ДБ",
+    "za": 0,
+    "protiv": 0,
+    "vazdrzhal": 21
+   },
+   {
+    "party": "Възраждане",
+    "za": 3,
+    "protiv": 0,
+    "vazdrzhal": 29
+   },
+   {
+    "party": "ДПС",
+    "za": 22,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "БСП",
+    "za": 13,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ИТН",
+    "za": 14,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "АПС",
+    "za": 4,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "МЕЧ",
+    "za": 0,
+    "protiv": 11,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "Величие",
+    "za": 0,
+    "protiv": 9,
+    "vazdrzhal": 0
+   }
+  ]
  },
  {
   "id": 166413,
@@ -75869,52 +76009,64 @@
   "dv_idmat": 12040,
   "dv_mat": 235736,
   "votes": {
-   "za": 97,
-   "protiv": 35,
-   "vazdrzhal": 0
+   "za": 134,
+   "protiv": 10,
+   "vazdrzhal": 31
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 48,
+    "za": 57,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 6,
+    "za": 20,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 24,
-    "vazdrzhal": 0
+    "protiv": 0,
+    "vazdrzhal": 31
    },
    {
     "party": "ДПС",
-    "za": 17,
+    "za": 22,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 11,
+    "za": 14,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "АПС",
+    "za": 4,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ИТН",
-    "za": 14,
+    "za": 16,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "МЕЧ",
     "za": 0,
-    "protiv": 11,
+    "protiv": 9,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "Величие",
+    "za": 0,
+    "protiv": 1,
     "vazdrzhal": 0
    },
    {
@@ -75990,17 +76142,79 @@
   "dv_idmat": 12122,
   "dv_mat": 237772,
   "votes": {
-   "za": 106,
-   "protiv": 53,
-   "vazdrzhal": 2
+   "za": 105,
+   "protiv": 1,
+   "vazdrzhal": 60
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/61/ID/11055",
   "vnositel": "Обединен законопроект",
   "detailId": "act-166495",
   "cardShort": "гражданското въздухоплаване",
   "cardTitle": "Киберсигурност по летищата",
-  "cardSummary": "Летищата и авиокомпаниите вече изпълняват задължителни мерки за киберсигурност, а наземните оператори работят по одобрена програма за сигурност. Осъвременяват се имената на министерствата и европейските препратки."
+  "cardSummary": "Летищата и авиокомпаниите вече изпълняват задължителни мерки за киберсигурност, а наземните оператори работят по одобрена програма за сигурност. Осъвременяват се имената на министерствата и европейските препратки.",
+  "votesByParty": [
+   {
+    "party": "ГЕРБ-СДС",
+    "za": 54,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ПП-ДБ",
+    "za": 0,
+    "protiv": 1,
+    "vazdrzhal": 16
+   },
+   {
+    "party": "Възраждане",
+    "za": 0,
+    "protiv": 0,
+    "vazdrzhal": 29
+   },
+   {
+    "party": "ДПС",
+    "za": 22,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "БСП",
+    "za": 12,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ИТН",
+    "za": 15,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "АПС",
+    "za": 1,
+    "protiv": 0,
+    "vazdrzhal": 4
+   },
+   {
+    "party": "МЕЧ",
+    "za": 0,
+    "protiv": 0,
+    "vazdrzhal": 5
+   },
+   {
+    "party": "Величие",
+    "za": 0,
+    "protiv": 0,
+    "vazdrzhal": 6
+   },
+   {
+    "party": "независими",
+    "za": 1,
+    "protiv": 0,
+    "vazdrzhal": 0
+   }
+  ]
  },
  {
   "id": 166496,
@@ -76338,11 +76552,11 @@
   "dv_idmat": 12060,
   "dv_mat": 236504,
   "votes": {
-   "za": 193,
-   "protiv": 0,
-   "vazdrzhal": 0
+   "za": 124,
+   "protiv": 61,
+   "vazdrzhal": 10
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
@@ -76352,33 +76566,33 @@
    },
    {
     "party": "ПП-ДБ",
-    "za": 30,
-    "protiv": 0,
+    "za": 0,
+    "protiv": 30,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
-    "za": 31,
-    "protiv": 0,
+    "za": 0,
+    "protiv": 31,
     "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 23,
+    "za": 24,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 12,
+    "za": 14,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ИТН",
-    "za": 17,
+    "za": 15,
     "protiv": 0,
-    "vazdrzhal": 0
+    "vazdrzhal": 1
    },
    {
     "party": "АПС",
@@ -76388,9 +76602,9 @@
    },
    {
     "party": "Величие",
-    "za": 9,
+    "za": 0,
     "protiv": 0,
-    "vazdrzhal": 0
+    "vazdrzhal": 9
    },
    {
     "party": "независими",
@@ -76421,9 +76635,9 @@
   "votes": {
    "za": 124,
    "protiv": 61,
-   "vazdrzhal": 31
+   "vazdrzhal": 28
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
@@ -76435,17 +76649,17 @@
     "party": "ПП-ДБ",
     "za": 0,
     "protiv": 2,
-    "vazdrzhal": 30
+    "vazdrzhal": 28
    },
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 32,
+    "protiv": 28,
     "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 27,
+    "za": 28,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -76457,15 +76671,15 @@
    },
    {
     "party": "ИТН",
-    "za": 15,
-    "protiv": 0,
+    "za": 14,
+    "protiv": 1,
     "vazdrzhal": 0
    },
    {
     "party": "АПС",
     "za": 0,
-    "protiv": 8,
-    "vazdrzhal": 1
+    "protiv": 10,
+    "vazdrzhal": 0
    },
    {
     "party": "МЕЧ",
@@ -76476,7 +76690,7 @@
    {
     "party": "Величие",
     "za": 0,
-    "protiv": 9,
+    "protiv": 10,
     "vazdrzhal": 0
    },
    {
@@ -76604,53 +76818,59 @@
   "dv_idmat": 12183,
   "dv_mat": 238811,
   "votes": {
-   "za": 109,
-   "protiv": 35,
-   "vazdrzhal": 0
+   "za": 112,
+   "protiv": 30,
+   "vazdrzhal": 27
   },
   "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 53,
+    "za": 56,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 13,
-    "protiv": 2,
-    "vazdrzhal": 0
+    "za": 0,
+    "protiv": 1,
+    "vazdrzhal": 19
    },
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 25,
+    "protiv": 29,
     "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 17,
+    "za": 22,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 11,
+    "za": 12,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ИТН",
-    "za": 14,
+    "za": 16,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "АПС",
+    "za": 5,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "МЕЧ",
     "za": 0,
-    "protiv": 8,
-    "vazdrzhal": 0
+    "protiv": 0,
+    "vazdrzhal": 8
    },
    {
     "party": "независими",
@@ -76787,69 +77007,69 @@
   "dv_idmat": 12046,
   "dv_mat": 236305,
   "votes": {
-   "za": 76,
-   "protiv": 40,
-   "vazdrzhal": 3
+   "za": 151,
+   "protiv": 6,
+   "vazdrzhal": 50
   },
   "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 33,
+    "za": 62,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 9,
-    "protiv": 0,
-    "vazdrzhal": 2
+    "za": 0,
+    "protiv": 1,
+    "vazdrzhal": 32
    },
    {
     "party": "Възраждане",
-    "za": 0,
-    "protiv": 29,
+    "za": 29,
+    "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 12,
+    "za": 26,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 9,
+    "za": 15,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ИТН",
-    "za": 9,
+    "za": 15,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "АПС",
-    "za": 1,
+    "za": 0,
     "protiv": 0,
-    "vazdrzhal": 1
+    "vazdrzhal": 10
    },
    {
     "party": "МЕЧ",
+    "za": 0,
+    "protiv": 0,
+    "vazdrzhal": 8
+   },
+   {
+    "party": "Величие",
     "za": 0,
     "protiv": 5,
     "vazdrzhal": 0
    },
    {
-    "party": "Величие",
-    "za": 0,
-    "protiv": 6,
-    "vazdrzhal": 0
-   },
-   {
     "party": "независими",
-    "za": 3,
+    "za": 4,
     "protiv": 0,
     "vazdrzhal": 0
    }
@@ -77780,9 +78000,9 @@
   "dv_idmat": 12060,
   "dv_mat": 236528,
   "votes": {
-   "za": 121,
-   "protiv": 41,
-   "vazdrzhal": 3
+   "za": 119,
+   "protiv": 45,
+   "vazdrzhal": 40
   },
   "votesVerified": true,
   "votesByParty": [
@@ -77794,44 +78014,50 @@
    },
    {
     "party": "ПП-ДБ",
-    "za": 9,
-    "protiv": 1,
-    "vazdrzhal": 2
+    "za": 2,
+    "protiv": 2,
+    "vazdrzhal": 24
    },
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 31,
+    "protiv": 33,
     "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 23,
+    "za": 24,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 13,
+    "za": 15,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ИТН",
-    "za": 13,
+    "za": 17,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "АПС",
-    "za": 2,
+    "za": 0,
     "protiv": 0,
-    "vazdrzhal": 1
+    "vazdrzhal": 6
+   },
+   {
+    "party": "МЕЧ",
+    "za": 0,
+    "protiv": 0,
+    "vazdrzhal": 10
    },
    {
     "party": "Величие",
     "za": 0,
-    "protiv": 9,
+    "protiv": 10,
     "vazdrzhal": 0
    },
    {
@@ -79948,27 +80174,21 @@
   "dv_idmat": 12219,
   "dv_mat": 239293,
   "votes": {
-   "za": 141,
+   "za": 153,
    "protiv": 0,
-   "vazdrzhal": 3
+   "vazdrzhal": 7
   },
   "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 51,
+    "za": 56,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
-    "party": "ПП-ДБ",
-    "za": 2,
-    "protiv": 0,
-    "vazdrzhal": 1
-   },
-   {
     "party": "Възраждане",
-    "za": 29,
+    "za": 32,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -79980,19 +80200,19 @@
    },
    {
     "party": "БСП",
-    "za": 15,
+    "za": 18,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ИТН",
-    "za": 14,
+    "za": 15,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "АПС",
-    "za": 5,
+    "za": 7,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -80000,7 +80220,7 @@
     "party": "МЕЧ",
     "za": 0,
     "protiv": 0,
-    "vazdrzhal": 2
+    "vazdrzhal": 7
    },
    {
     "party": "независими",
@@ -80924,23 +81144,23 @@
   "dv_idmat": 12181,
   "dv_mat": 238911,
   "votes": {
-   "za": 158,
+   "za": 154,
    "protiv": 1,
-   "vazdrzhal": 14
+   "vazdrzhal": 27
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 54,
+    "za": 57,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 17,
-    "protiv": 0,
-    "vazdrzhal": 1
+    "za": 0,
+    "protiv": 1,
+    "vazdrzhal": 17
    },
    {
     "party": "Възраждане",
@@ -80950,13 +81170,13 @@
    },
    {
     "party": "ДПС",
-    "za": 24,
+    "za": 27,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 13,
+    "za": 14,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -80968,9 +81188,9 @@
    },
    {
     "party": "АПС",
-    "za": 0,
-    "protiv": 1,
-    "vazdrzhal": 3
+    "za": 6,
+    "protiv": 0,
+    "vazdrzhal": 0
    },
    {
     "party": "МЕЧ",
@@ -81004,39 +81224,39 @@
   "dv_idmat": 12382,
   "dv_mat": 241067,
   "votes": {
-   "za": 166,
-   "protiv": 3,
-   "vazdrzhal": 9
+   "za": 161,
+   "protiv": 0,
+   "vazdrzhal": 12
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 57,
+    "za": 52,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 26,
+    "za": 24,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
-    "za": 26,
-    "protiv": 3,
+    "za": 30,
+    "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 14,
+    "za": 16,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 13,
+    "za": 14,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -81048,15 +81268,15 @@
    },
    {
     "party": "АПС",
-    "za": 5,
+    "za": 1,
     "protiv": 0,
-    "vazdrzhal": 0
+    "vazdrzhal": 4
    },
    {
     "party": "МЕЧ",
     "za": 0,
     "protiv": 0,
-    "vazdrzhal": 9
+    "vazdrzhal": 8
    },
    {
     "party": "Величие",
@@ -81066,7 +81286,7 @@
    },
    {
     "party": "независими",
-    "za": 2,
+    "za": 1,
     "protiv": 0,
     "vazdrzhal": 0
    }
@@ -81721,9 +81941,9 @@
   "dv_idmat": 12225,
   "dv_mat": 240167,
   "votes": {
-   "za": 132,
-   "protiv": 36,
-   "vazdrzhal": 1
+   "za": 131,
+   "protiv": 31,
+   "vazdrzhal": 4
   },
   "votesVerified": true,
   "votesByParty": [
@@ -81735,14 +81955,14 @@
    },
    {
     "party": "ПП-ДБ",
-    "za": 18,
-    "protiv": 1,
-    "vazdrzhal": 1
+    "za": 20,
+    "protiv": 0,
+    "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 29,
+    "protiv": 31,
     "vazdrzhal": 0
    },
    {
@@ -81753,37 +81973,31 @@
    },
    {
     "party": "БСП",
-    "za": 9,
+    "za": 8,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ИТН",
-    "za": 17,
+    "za": 15,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "АПС",
-    "za": 4,
+    "za": 5,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "МЕЧ",
     "za": 0,
-    "protiv": 4,
-    "vazdrzhal": 0
-   },
-   {
-    "party": "Величие",
-    "za": 0,
-    "protiv": 2,
-    "vazdrzhal": 0
+    "protiv": 0,
+    "vazdrzhal": 4
    },
    {
     "party": "независими",
-    "za": 3,
+    "za": 2,
     "protiv": 0,
     "vazdrzhal": 0
    }
@@ -81962,65 +82176,65 @@
   "dv_idmat": 12439,
   "dv_mat": 241742,
   "votes": {
-   "za": 98,
-   "protiv": 36,
-   "vazdrzhal": 1
+   "za": 106,
+   "protiv": 26,
+   "vazdrzhal": 17
   },
   "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 51,
+    "za": 57,
     "protiv": 0,
-    "vazdrzhal": 1
+    "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 13,
+    "za": 16,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "Възраждане",
     "za": 0,
-    "protiv": 25,
+    "protiv": 26,
     "vazdrzhal": 0
    },
    {
     "party": "ДПС",
-    "za": 21,
+    "za": 22,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 7,
+    "za": 8,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ИТН",
-    "za": 3,
-    "protiv": 0,
-    "vazdrzhal": 0
-   },
-   {
-    "party": "АПС",
     "za": 2,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
+    "party": "АПС",
+    "za": 0,
+    "protiv": 0,
+    "vazdrzhal": 3
+   },
+   {
     "party": "МЕЧ",
     "za": 0,
-    "protiv": 8,
-    "vazdrzhal": 0
+    "protiv": 0,
+    "vazdrzhal": 9
    },
    {
     "party": "Величие",
     "za": 0,
-    "protiv": 3,
-    "vazdrzhal": 0
+    "protiv": 0,
+    "vazdrzhal": 5
    },
    {
     "party": "независими",
@@ -82085,18 +82299,68 @@
   "dv_idmat": 12381,
   "dv_mat": 241045,
   "votes": {
-   "za": 125,
+   "za": 129,
    "protiv": 0,
-   "vazdrzhal": 0
+   "vazdrzhal": 1
   },
-  "votesVerified": "partial",
+  "votesVerified": true,
   "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/61/ID/11097",
   "vnositel": "Министерски съвет",
   "vnositelType": "МС",
   "detailId": "act-166718",
   "cardShort": "общите изисквания за безопасност при пре",
   "cardTitle": "Нови правила за увеселителни атракциони",
-  "cardSummary": "Приема се изцяло нов закон за безопасността на атракциони - от влакчета и виенски колела до бънджи и тандемни полети с парапланер. Въвеждат се разрешителни, технически прегледи и застраховки, а общините определят площадките. Важно за деца, туристи и собственици на паркове."
+  "cardSummary": "Приема се изцяло нов закон за безопасността на атракциони - от влакчета и виенски колела до бънджи и тандемни полети с парапланер. Въвеждат се разрешителни, технически прегледи и застраховки, а общините определят площадките. Важно за деца, туристи и собственици на паркове.",
+  "votesByParty": [
+   {
+    "party": "ГЕРБ-СДС",
+    "za": 52,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "Възраждане",
+    "za": 25,
+    "protiv": 0,
+    "vazdrzhal": 1
+   },
+   {
+    "party": "ДПС",
+    "za": 21,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "БСП",
+    "za": 8,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ИТН",
+    "za": 13,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "АПС",
+    "za": 2,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "МЕЧ",
+    "za": 7,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "независими",
+    "za": 1,
+    "protiv": 0,
+    "vazdrzhal": 0
+   }
+  ]
  },
  {
   "id": 166719,
@@ -83949,51 +84213,39 @@
   "dv_idmat": 12441,
   "dv_mat": 241886,
   "votes": {
-   "za": 112,
-   "protiv": 43,
-   "vazdrzhal": 7
+   "za": 121,
+   "protiv": 2,
+   "vazdrzhal": 11
   },
   "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 55,
+    "za": 57,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 19,
+    "za": 22,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
-    "party": "Възраждане",
-    "za": 0,
-    "protiv": 29,
-    "vazdrzhal": 0
-   },
-   {
     "party": "ДПС",
-    "za": 20,
+    "za": 27,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
     "za": 0,
-    "protiv": 11,
+    "protiv": 2,
     "vazdrzhal": 0
    },
    {
     "party": "ИТН",
-    "za": 13,
-    "protiv": 0,
-    "vazdrzhal": 0
-   },
-   {
-    "party": "АПС",
-    "za": 2,
+    "za": 14,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -84001,17 +84253,17 @@
     "party": "МЕЧ",
     "za": 0,
     "protiv": 0,
-    "vazdrzhal": 4
+    "vazdrzhal": 7
    },
    {
     "party": "Величие",
     "za": 0,
-    "protiv": 3,
-    "vazdrzhal": 3
+    "protiv": 0,
+    "vazdrzhal": 4
    },
    {
     "party": "независими",
-    "za": 3,
+    "za": 1,
     "protiv": 0,
     "vazdrzhal": 0
    }
@@ -86008,39 +86260,39 @@
   "dv_idmat": 12444,
   "dv_mat": 242169,
   "votes": {
-   "za": 154,
+   "za": 146,
    "protiv": 0,
-   "vazdrzhal": 11
+   "vazdrzhal": 8
   },
   "votesVerified": true,
   "votesByParty": [
    {
     "party": "ГЕРБ-СДС",
-    "za": 59,
+    "za": 60,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "ПП-ДБ",
-    "za": 4,
-    "protiv": 0,
-    "vazdrzhal": 2
-   },
-   {
-    "party": "Възраждане",
-    "za": 24,
+    "za": 1,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
+    "party": "Възраждане",
+    "za": 18,
+    "protiv": 0,
+    "vazdrzhal": 2
+   },
+   {
     "party": "ДПС",
-    "za": 22,
+    "za": 23,
     "protiv": 0,
     "vazdrzhal": 0
    },
    {
     "party": "БСП",
-    "za": 15,
+    "za": 14,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -86052,7 +86304,7 @@
    },
    {
     "party": "АПС",
-    "za": 5,
+    "za": 6,
     "protiv": 0,
     "vazdrzhal": 0
    },
@@ -86060,7 +86312,7 @@
     "party": "МЕЧ",
     "za": 0,
     "protiv": 0,
-    "vazdrzhal": 9
+    "vazdrzhal": 6
    },
    {
     "party": "Величие",
@@ -86070,7 +86322,7 @@
    },
    {
     "party": "независими",
-    "za": 3,
+    "za": 2,
     "protiv": 0,
     "vazdrzhal": 0
    }
@@ -94497,17 +94749,56 @@
   "dv_idmat": 12700,
   "dv_mat": 246208,
   "votes": {
-   "za": 105,
-   "protiv": 10,
-   "vazdrzhal": 2
+   "za": 165,
+   "protiv": 0,
+   "vazdrzhal": 10
   },
-  "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/undefined/ID/11179",
+  "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/62/ID/11179",
   "vnositel": "Министерски съвет",
   "vnositelType": "МС",
   "detailId": "act-167503",
   "cardShort": "гражданския процесуален кодекс",
   "cardTitle": "Щит срещу SLAPP: бързо отхвърляне на дела за сплашване",
-  "cardSummary": "МС внася, парламентът приема европейски щит срещу SLAPP дела в ГПК — бързо отхвърляне на искове за сплашване на журналисти."
+  "cardSummary": "МС внася, парламентът приема европейски щит срещу SLAPP дела в ГПК — бързо отхвърляне на искове за сплашване на журналисти.",
+  "votesVerified": true,
+  "votesByParty": [
+   {
+    "party": "ПБ",
+    "za": 119,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ГЕРБ-СДС",
+    "za": 14,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ДПС",
+    "za": 10,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ДБ",
+    "za": 12,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ПП",
+    "za": 10,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "Възраждане",
+    "za": 0,
+    "protiv": 0,
+    "vazdrzhal": 10
+   }
+  ]
  },
  {
   "id": 167504,
