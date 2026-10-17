@@ -93731,7 +93731,8 @@
   "dv_iss": "82",
   "dv_year": 2026,
   "dv_idmat": -1,
-  "dv_mat": 245785
+  "dv_mat": 245785,
+  "detailId": "act-167203"
  },
  {
   "id": 167204,
@@ -95434,7 +95435,8 @@
   "dv_iss": "89",
   "dv_year": 2026,
   "dv_idmat": -1,
-  "dv_mat": 246111
+  "dv_mat": 246111,
+  "detailId": "act-167540"
  },
  {
   "id": 167541,

@@ -98079,5 +98079,144 @@
     "sources": {
       "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246507"
     }
+  },
+  {
+    "id": "act-167203",
+    "lawId": "zakon-za-vavezhdane-na-evroto-v-republika-balgariya",
+    "shortTitle": "Промени в закона за въвеждане на еврото",
+    "fullTitle": "Закон за изменение и допълнение на Закона за въвеждане на еврото в Република България",
+    "dv": "ДВ, бр. 82/2026",
+    "dvLink": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=245785",
+    "dateAdopted": "2026-07-16",
+    "assemblyId": "52-ns",
+    "vnositel": "Димитър Бисеров Петров, Михаела Милчева Доцова, Стела Петкова Загорчева-Серафимова, Силвия Тошкова Христова, Милен Колев Трифонов, Александра Йовчева Вълчева, Надежда Борисова Колева-Стойчева, Олга Бориславова Борисова, Десислава Николаева Костова, Даниела Николова Николова-Кършева, Янка Тенева Тянкова, Иван Костадинов Вачев, Николета Костова Тодорова",
+    "vnositelType": "депутати",
+    "billSignatura": "52-654-01-98",
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/167203",
+    "votes": {
+      "za": 168,
+      "protiv": 0,
+      "vazdrzhal": 8
+    },
+    "votesByParty": [
+      {
+        "party": "ПБ",
+        "za": 119,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ГЕРБ-СДС",
+        "za": 19,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДПС",
+        "za": 10,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДБ",
+        "za": 14,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ПП",
+        "za": 6,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ВЪЗРАЖДАНЕ",
+        "za": 0,
+        "protiv": 0,
+        "vazdrzhal": 8
+      }
+    ],
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Изменения и допълнения в Закона за въвеждане на еврото в Република България. Приети на второ гласуване с 168 гласа „за“ и 8 „въздържали се“.",
+    "tags": [
+      "евро",
+      "ЕС",
+      "въвеждане"
+    ],
+    "detailLevel": "full",
+    "verified": true,
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=245785"
+    }
+  },
+  {
+    "id": "act-167540",
+    "lawId": "kodeks-truda",
+    "shortTitle": "Промени в Кодекса на труда",
+    "fullTitle": "Закон за изменение и допълнение на Кодекса на труда",
+    "dv": "ДВ, бр. 89/2026",
+    "dvLink": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246111",
+    "dateAdopted": "2026-09-10",
+    "assemblyId": "52-ns",
+    "vnositel": "Министерски съвет",
+    "vnositelType": "МС",
+    "billSignatura": "52-602-01-40",
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/167540",
+    "votes": {
+      "za": 121,
+      "protiv": 48,
+      "vazdrzhal": 11
+    },
+    "votesByParty": [
+      {
+        "party": "ПБ",
+        "za": 121,
+        "protiv": 0,
+        "vazdrzhal": 1
+      },
+      {
+        "party": "ГЕРБ-СДС",
+        "za": 0,
+        "protiv": 17,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДПС",
+        "za": 0,
+        "protiv": 13,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДБ",
+        "za": 0,
+        "protiv": 2,
+        "vazdrzhal": 10
+      },
+      {
+        "party": "ПП",
+        "za": 0,
+        "protiv": 6,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ВЪЗРАЖДАНЕ",
+        "za": 0,
+        "protiv": 10,
+        "vazdrzhal": 0
+      }
+    ],
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Изменения и допълнения в Кодекса на труда. Приети на второ гласуване с 121 гласа „за“, 48 „против“ и 11 „въздържали се“.",
+    "tags": [
+      "труд",
+      "Кодекс на труда"
+    ],
+    "detailLevel": "full",
+    "verified": true,
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246111"
+    }
   }
 ]
