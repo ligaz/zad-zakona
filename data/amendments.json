@@ -97935,5 +97935,149 @@
     "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/61/ID/11119",
     "vnositel": "Георги Георгиев, Томислав Дончев, Георг Георгиев и още 6",
     "vnositelType": "депутати"
+  },
+  {
+    "id": "act-167517",
+    "lawId": "ratifikatsii",
+    "shortTitle": "Монголия: въздушни съобщения",
+    "fullTitle": "Закон за ратифициране на Спогодбата за въздушни съобщения между правителството на Република България и правителството на Монголия, подписана на 21 ноември 2025 г. в гр. София",
+    "dv": "ДВ, бр. 95/2026",
+    "dvLink": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246506",
+    "dateAdopted": "2026-10-09",
+    "dateDV": "2026-10-16",
+    "dateEffective": "2026-10-16",
+    "assemblyId": "52-ns",
+    "vnositel": "Министерски съвет",
+    "vnositelType": "МС",
+    "billSignatura": "52-602-02-14",
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/167517",
+    "votes": {
+      "za": 158,
+      "protiv": 0,
+      "vazdrzhal": 0
+    },
+    "votesByParty": [
+      {
+        "party": "ПБ",
+        "za": 119,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ГЕРБ-СДС",
+        "za": 9,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДПС",
+        "za": 4,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДБ",
+        "za": 9,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ПП",
+        "za": 8,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ВЪЗРАЖДАНЕ",
+        "za": 9,
+        "protiv": 0,
+        "vazdrzhal": 0
+      }
+    ],
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Ратифицира Спогодбата за въздушни съобщения между правителството на Република България и правителството на Монголия, подписана на 21 ноември 2025 г. в София. Приета на второ гласуване с 158 гласа „за“.",
+    "tags": [
+      "Монголия",
+      "въздушни съобщения",
+      "ратификация"
+    ],
+    "detailLevel": "full",
+    "verified": true,
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246506"
+    }
+  },
+  {
+    "id": "act-167573",
+    "lawId": "ratifikatsii",
+    "shortTitle": "МБИС: окончателно уреждане на претенции",
+    "fullTitle": "Закон за ратифициране на Споразумението между Международната банка за икономическо сътрудничество (МБИС) и правителството на Република България за окончателно уреждане на взаимните претенции и задължения във връзка с оттеглянето на Република България от Споразумението за организацията и дейността на МБИС и от членството в МБИС",
+    "dv": "ДВ, бр. 95/2026",
+    "dvLink": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246507",
+    "dateAdopted": "2026-10-09",
+    "dateDV": "2026-10-16",
+    "dateEffective": "2026-10-16",
+    "assemblyId": "52-ns",
+    "vnositel": "Министерски съвет",
+    "vnositelType": "МС",
+    "billSignatura": "52-602-02-19",
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/167573",
+    "votes": {
+      "za": 170,
+      "protiv": 9,
+      "vazdrzhal": 0
+    },
+    "votesByParty": [
+      {
+        "party": "ПБ",
+        "za": 120,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ГЕРБ-СДС",
+        "za": 12,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДПС",
+        "za": 12,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДБ",
+        "za": 14,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ПП",
+        "za": 12,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ВЪЗРАЖДАНЕ",
+        "za": 0,
+        "protiv": 9,
+        "vazdrzhal": 0
+      }
+    ],
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Ратифицира Споразумението между Международната банка за икономическо сътрудничество (МБИС) и правителството на Република България за окончателно уреждане на взаимните претенции и задължения във връзка с оттеглянето на България от Споразумението за организацията и дейността на МБИС и от членството в МБИС. Приета на второ гласуване с 170 „за“ и 9 „против“.",
+    "tags": [
+      "МБИС",
+      "ратификация",
+      "претенции"
+    ],
+    "detailLevel": "full",
+    "verified": true,
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246507"
+    }
   }
 ]
