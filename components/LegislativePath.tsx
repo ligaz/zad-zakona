@@ -13,6 +13,12 @@ const daysBetween = (a: string, b: string) =>
       86400000
   );
 
+/** Как се назовава крайната стъпка в резюмето „От гласуване до …“ */
+const END_LABEL: Record<string, string> = {
+  effective: "влизане в сила",
+  dv: "обнародване",
+};
+
 /** Има ли реален брой на ДВ (не „очаква се“) */
 export function hasDv(a: Amendment): boolean {
   return /(\d{1,3})\/(\d{4})/.test(a.dv);
@@ -67,15 +73,23 @@ export function LegislativePath({ amendment: a }: { amendment: Amendment }) {
     sub: a.dv,
     tone: dvDate ? "done" : "pending",
   });
+  // Закон със задна дата (напр. данъчни промени в сила от 1 януари).
+  const retro = !!a.dateEffective && !!a.dateAdopted && a.dateEffective < a.dateAdopted;
   steps.push({
     key: "effective",
     label: "Влиза в сила",
     date: a.dateEffective ?? (isDecision ? a.dateAdopted : (a.dateDV ? a.dateDV : undefined)),
-    sub: isDecision ? (a.dateEffective ? undefined : "с приемането") : undefined,
+    sub: retro
+      ? "с обратна сила"
+      : isDecision
+        ? (a.dateEffective ? undefined : "с приемането")
+        : undefined,
     tone: (a.dateEffective || (isDecision ? true : !!a.dateDV)) ? "done" : "pending",
   });
 
-  const dated = steps.filter((s) => s.date);
+  // При обратна сила „от гласуване до влизане в сила“ е отрицателно число —
+  // мярката е от гласуване до обнародване.
+  const dated = steps.filter((s) => s.date && !(s.key === "effective" && retro));
   const total =
     dated.length >= 2
       ? daysBetween(dated[0].date!, dated[dated.length - 1].date!)
@@ -168,7 +182,7 @@ export function LegislativePath({ amendment: a }: { amendment: Amendment }) {
       </ol>
       {total !== null && (
         <p className="mt-3 rounded-xl bg-accent px-3 py-2 text-center text-xs font-semibold text-white">
-          От гласуване до {dated[dated.length - 1].key === "effective" ? "влизане в сила" : dated[dated.length - 1].label.toLowerCase()}:{" "}
+          От гласуване до {END_LABEL[dated[dated.length - 1].key] ?? dated[dated.length - 1].label.toLowerCase()}:{" "}
           {total} {total === 1 ? "ден" : "дни"} · {speed}
         </p>
       )}

@@ -1,5 +1,12 @@
 /**
  * Merge на курираните актове (worker outputs) в amendments.json + laws.json.
+ * Входни файлове:
+ *   /tmp/curate-merged.json — [{ actId, shortTitle, summary, tags, changes[], changedMembers[] }]
+ *   /tmp/act-dates.json — { "<actId>": "2026-03-12" | { date, dateDV?, decreeNo?, dateDecree?, dateEffective? } }
+ *     (ISO string за обратна съвместимост със стария формат)
+ * Записва в amendments.json и: fullTitle (окончателното заглавие от ДВ), dateDV,
+ * decreeNo, dateDecree, dateEffective (когато са налични в act-dates.json) и
+ * billSignatura (от curate-merged.json или fallback към sign в acts-index).
  * Употреба: node scripts/merge-curated.mjs [--dry]
  */
 import { readFileSync, writeFileSync } from "node:fs";
@@ -12,6 +19,12 @@ const idx = Object.fromEntries(
 );
 const merged = JSON.parse(readFileSync("/tmp/curate-merged.json", "utf8"));
 const dates = JSON.parse(readFileSync("/tmp/act-dates.json", "utf8"));
+// dates[actId]: ISO string (стар формат) ИЛИ обект { date, dateDV?, decreeNo?, dateDecree?, dateEffective? }
+const dateOf = (id) => {
+  const d = dates[String(id)];
+  return typeof d === "string" ? d : d?.date ?? null;
+};
+const dateInfo = (id) => (dates[String(id)] && typeof dates[String(id)] === "object" ? dates[String(id)] : null);
 const assemblies = JSON.parse(readFileSync("data/assemblies.json", "utf8"));
 
 const TR = { а: "a", б: "b", в: "v", г: "g", д: "d", е: "e", ж: "zh", з: "z", и: "i", й: "y", к: "k", л: "l", м: "m", н: "n", о: "o", п: "p", р: "r", с: "s", т: "t", у: "u", ф: "f", х: "h", ц: "ts", ч: "ch", ш: "sh", щ: "sht", ъ: "a", ь: "", ю: "yu", я: "ya" };
@@ -31,6 +44,7 @@ const CATS = [
   [/наказател|затвор|престъп/i, "Правосъдие"],
   [/здрав|лекар|болниц|медицин/i, "Здраве"],
   [/труд|работ|осигуряв|социалн|пенси/i, "Труд и социална политика"],
+  [/дискриминац/i, "Труд и социална политика"],
   [/движение|пътища|шофьор|автомобил|катастроф/i, "Транспорт"],
   [/избор|гласуване|парти/i, "Избори и власт"],
   [/чужден|миграц|убежище|виз/i, "Миграция"],
@@ -40,6 +54,7 @@ const CATS = [
   [/енерг|електрич|топло|газ/i, "Енергетика"],
   [/отбран|арми|войник|полиц|сигурност|вътрешни работи/i, "Сигурност"],
   [/съд|съдебн|адвокат|нотариус/i, "Правосъдие"],
+  [/прозрачност при представителство|представителство на интереси/i, "Правосъдие"],
   [/земедел|храни|фермер/i, "Земеделие"],
   [/култур|кино|меди|спорт|туризъм/i, "Култура и спорт"],
   [/търгов|икономик|предприят|инвестиц/i, "Икономика"],
@@ -74,6 +89,14 @@ const ALIAS = {
   "закон за движението по пътищата": "zdvp",
   "закон за чужденците": "zakon-chuzhdentsi",
   "закон за здравното осигуряване": "zzo",
+};
+
+// Ръчни изключения, когато заглавието не се резолвва автоматично към съществуващ
+// закон (напр. ЗСПР с дългото заглавие „... до приемането на Закона за държавния
+// бюджет ...“). Стойността е lawId от laws.json — ако не съществува, се ползва
+// нормалната резолюция.
+const LAW_BY_ACT = {
+  166872: "zakon-za-sabiraneto-na-prihodi-i-razhodi-do-priemane-na-byudzheta",
 };
 
 const byName = Object.fromEntries(laws.map((l) => [l.name.toLowerCase(), l]));
@@ -128,9 +151,12 @@ for (const o of merged) {
   const aid = `act-${o.actId}`;
   if (haveAmend.has(aid)) continue;
   let lawId;
+  const overrideLaw = LAW_BY_ACT[o.actId];
   if (isRat) {
     lawId = "ratifikatsii";
     nRat++;
+  } else if (overrideLaw && laws.some((l) => l.id === overrideLaw)) {
+    lawId = overrideLaw;
   } else {
     const pname = parentLaw(title);
     const aliasHit = (pname && ALIAS[pname.toLowerCase()]) || null;
@@ -147,7 +173,7 @@ for (const o of merged) {
           short: pname.replace(/^Закон за /, "").slice(0, 40),
           code: codeOf(pname),
           description: `Всички изменения на ${pname} — какво се промени, кой гласува и кой управляваше.`,
-          firstAdopted: (dates[String(o.actId)] || "2021").slice(0, 4),
+          firstAdopted: (dateOf(o.actId) || "2021").slice(0, 4),
           category: catOf(pname),
           amendments: [],
         };
@@ -160,13 +186,20 @@ for (const o of merged) {
     }
   }
   const dv = `ДВ, бр. ${x.dv_iss}/${x.dv_year}`;
-  const dateAdopted = dates[String(o.actId)] || null;
+  const dateAdopted = dateOf(o.actId);
+  const di = dateInfo(o.actId);
+  const billSignatura = o.billSignatura || x.sign || null;
   const rec = {
     id: aid,
     lawId,
     shortTitle: o.shortTitle || title.slice(0, 80),
+    fullTitle: title,
     dv,
     dateAdopted,
+    ...(di?.dateDV ? { dateDV: di.dateDV } : {}),
+    ...(di?.decreeNo ? { decreeNo: di.decreeNo } : {}),
+    ...(di?.dateDecree ? { dateDecree: di.dateDecree } : {}),
+    ...(di?.dateEffective ? { dateEffective: di.dateEffective } : {}),
     assemblyId: asmFor(dateAdopted) || "52-ns",
     detailLevel: "full",
     verified: true,
@@ -179,7 +212,7 @@ for (const o of merged) {
       bill: `https://www.parliament.bg/bg/laws/ID/${o.actId}`,
     },
     billUrl: `https://www.parliament.bg/bg/bills/ID/${o.actId}`,
-    ...(o.billSignatura ? { billSignatura: o.billSignatura } : {}),
+    ...(billSignatura ? { billSignatura } : {}),
   };
   if (x.votes) {
     rec.votes = x.votes;

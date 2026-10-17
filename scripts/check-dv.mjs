@@ -7,25 +7,48 @@
  *
  * ДВ няма публично API — страницата е JSP (dv.parliament.bg/DVWeb).
  * Скриптът е умишлено прост и без зависимости:
- *  1. тегли началната страница на ДВ и търси последните „бр. N/година“;
- *  2. изброява законите в data/laws.json и последното им изменение;
- *  3. принтира чеклист какво да провери човек ръчно.
+ *  1. тегли началната страница на ДВ (index.faces — ВНИМАНИЕ: https://dv.parliament.bg/
+ *     е само meta-refresh към нея; инцидент 10.2026) и търси последния „Брой: N/дата“;
+ *  2. сравнява броевете с индекса и проверява ПЪЛНОТО покритие на последния брой
+ *     (секция „Народно събрание“ в RSS vs актове в индекса — частично покритие,
+ *     напр. ДВ 30/2026: 7 закона в ДВ, 1 в индекса, не се хваща от „липсващ брой“);
+ *  3. изброява законите в data/laws.json и последното им изменение;
+ *  4. принтира чеклист какво да провери човек ръчно.
  *
  * Човешката проверка е задължителна: всяко изменение влиза в data/
  * само след сверка на дата, НС, указ и текст на параграфите.
  */
 import { readJsonArrayStream } from "./json-io.mjs";
 
-const DV_HOME = "https://dv.parliament.bg/";
+const DV_HOME = "https://dv.parliament.bg/DVWeb/index.faces";
+const DV_RSS = "https://dv.parliament.bg/DVWeb/rss_newspaper.jsp";
 const JSON_MODE = process.argv.includes("--json");
 
 /** Нормализира "бр. N/дата|година" до "година,брой" за сверка с индекса. */
 function issueKey(s) {
-  let m = s.match(/^(\d{1,3})\/(\d\d)\.(\d\d)\.(20\d\d)$/);
+  let m = s.match(/^(\d{1,3})\/(\d{1,2})\.(\d{1,2})\.(20\d\d)$/);
   if (m) return `${m[4]},${m[1]}`;
   m = s.match(/^(\d{1,3})\/(20\d\d)$/);
   if (m) return `${m[2]},${m[1]}`;
   return null;
+}
+
+/** Минимално decode на XML entities от RSS-а. */
+function decodeXml(s) {
+  return (s || "")
+    .replace(/<!\[CDATA\[|\]\]>/g, "")
+    .replace(/&ndash;/g, "–")
+    .replace(/&mdash;/g, "—")
+    .replace(/&bdquo;/g, "„")
+    .replace(/&ldquo;/g, "“")
+    .replace(/&rdquo;/g, "”")
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&amp;/g, "&")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 async function fetchText(url) {
@@ -44,20 +67,16 @@ async function main() {
   try {
     const html = await fetchText(DV_HOME);
     const issues = new Set();
-    const re = /бр\.\s*(\d{1,3})\s*(?:\/|от\s*дата\s*[\d.]+\s*г?.*?)?\s*(?:\/\s*)?(20\d\d)/g;
+    // „Брой: N, от дата D.M.YYYY“ — с главна/малка буква (index.faces пише „Брой:“)
+    const re = /брой:\s*(\d{1,3}),\s*от\s*дата\s*([\d.]+)/gi;
     let m;
-    // по-надеждно: търсим idMat връзки + „брой: N, от дата“
-    const re2 = /брой:\s*(\d{1,3}),\s*от\s*дата\s*([\d.]+)/g;
-    while ((m = re2.exec(html)) !== null) issues.add(`${m[1]}/${m[2]}`);
-    if (issues.size === 0) {
-      while ((m = re.exec(html)) !== null) issues.add(`${m[1]}/${m[2]}`);
-    }
+    while ((m = re.exec(html)) !== null) issues.add(`${m[1]}/${m[2]}`);
     homeIssues = [...issues];
     if (!JSON_MODE) {
       console.log(
         issues.size > 0
           ? `Намерени броеве на началната страница:\n  ${homeIssues.slice(0, 15).join(", ")}`
-          : "Не са разпознати броеве — отвори https://dv.parliament.bg/ ръчно."
+          : "Не са разпознати броеве — отвори https://dv.parliament.bg/DVWeb/index.faces ръчно."
       );
     }
   } catch (e) {
@@ -76,6 +95,7 @@ async function main() {
   const byId = Object.fromEntries(amendments.map((a) => [a.id, a]));
   // Индексът се чете стриймнато — трябват ни само агрегати, не целият масив.
   const idxIssues = new Set();
+  const idxCounts = new Map();
   let indexMaxId = 0;
   let indexSize = 0;
   let needDvMatTotal = 0;
@@ -83,13 +103,45 @@ async function main() {
   for await (const x of readJsonArrayStream("data/acts-index.json")) {
     indexSize++;
     if (x.id > indexMaxId) indexMaxId = x.id;
-    if (x.dv_iss && x.dv_year) idxIssues.add(`${x.dv_year},${x.dv_iss}`);
+    if (x.dv_iss && x.dv_year) {
+      const k = `${x.dv_year},${x.dv_iss}`;
+      idxIssues.add(k);
+      idxCounts.set(k, (idxCounts.get(k) || 0) + 1);
+    }
     if (x.dv_iss && !x.dv_mat) {
       needDvMatTotal++;
       if (needDvMatSample.length < 50) needDvMatSample.push(x.id);
     }
   }
   const missingIssues = homeIssues.map(issueKey).filter((k) => k && !idxIssues.has(k));
+
+  // 2. Пълно покритие на последния брой: RSS дава чистите заглавия на материалите
+  // от секция „Народно събрание“; сравняваме ги с актовете в индекса. Така се
+  // хваща и ЧАСТИЧНО покритие (missingIssues гледа само цели липсващи броеве).
+  let latestCoverage = null;
+  try {
+    const rss = await fetchText(DV_RSS);
+    const items = [...rss.matchAll(/<item>([\s\S]*?)<\/item>/g)].map((mm) => {
+      const g = (re) => (mm[1].match(re)?.[1] ?? "").trim();
+      return {
+        title: decodeXml(g(/<description>([\s\S]*?)<\/description>/)),
+        category: decodeXml(g(/<category>([\s\S]*?)<\/category>/)),
+        pubDate: g(/<pubDate>([\s\S]*?)<\/pubDate>/).slice(0, 10),
+      };
+    });
+    const ns = items.filter((i) => /събрание/i.test(i.category));
+    const latestKey = homeIssues.length ? issueKey(homeIssues[0]) : null;
+    const indexedCount = latestKey ? idxCounts.get(latestKey) || 0 : 0;
+    latestCoverage = {
+      issue: latestKey,
+      dvNsCount: ns.length,
+      indexCount: indexedCount,
+      ok: !latestKey || ns.length === 0 || indexedCount >= ns.length,
+      titles: ns.map((i) => i.title),
+    };
+  } catch (e) {
+    latestCoverage = { error: e.message };
+  }
 
   if (JSON_MODE) {
     const lawRows = laws.map((law) => {
@@ -106,6 +158,7 @@ async function main() {
         {
           dvHome: homeIssues,
           missingIssues,
+          latestCoverage,
           indexMaxId,
           indexSize,
           actsNeedingDvMat: { total: needDvMatTotal, sampleIds: needDvMatSample },
@@ -129,6 +182,19 @@ async function main() {
     console.log(`\nНови броеве извън индекса: ${missingIssues.join(" ")}`);
     console.log(`  → node scripts/resolve-dv-mat.mjs --only ${missingIssues.join(" ")}`);
   }
+  if (latestCoverage && !latestCoverage.error && latestCoverage.issue) {
+    console.log(
+      `\nПоследен брой ${latestCoverage.issue.replace(",", "/")}: ${latestCoverage.dvNsCount} материала в секция „Народно събрание“, ${latestCoverage.indexCount} акта в индекса.`
+    );
+    if (!latestCoverage.ok) {
+      console.log("⚠ Възможно НЕПЪЛНО покритие — провери ръчно:");
+      for (const t of latestCoverage.titles) console.log(`   - ${t}`);
+      console.log("  → липсващи връзки в източника се добавят с node scripts/backfill-dv-links.mjs (виж файла)");
+    } else {
+      console.log("✓ Покритието изглежда пълно.");
+    }
+  }
+  if (latestCoverage?.error) console.log(`\n⚠ RSS на ДВ: ${latestCoverage.error}`);
   if (needDvMatTotal > 0) {
     console.log(`Актове с ДВ без dv_mat: ${needDvMatTotal} (напр. ${needDvMatSample.slice(0, 5).join(", ")})`);
   }
