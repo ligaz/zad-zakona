@@ -41,7 +41,7 @@ description: Run the weekly new-acts check for zad-zakona (parliament.bg + ДВ)
    Обработва само актове с ДВ (type=1 с dv_iss). Актове без ДВ (bills/reports)
    пропуска — те остават bare метаданни.
 
-6. **Куриране** (ново — част от седмичния процес):
+6. **Куриране** (част от седмичния процес):
    6a. Прегледай `/tmp/weekly-new-acts.json`: за всеки запис провери
        `status`/`verified`/`pick.votes`/`pick.stenId`/`pick.parties`.
    6b. Обогатими (verified=true + votes + stenId + картичка в `/tmp/act-cards.json`):
@@ -53,8 +53,20 @@ description: Run the weekly new-acts check for zad-zakona (parliament.bg + ДВ)
    6d. Рутинни решения (type=2 без bill, напр. „Решение за работата на НС“):
        остават bare метаданни — последователно с останалите ~2370 bare акта.
        НЕ се обогатяват с вот (формалност).
-   6e. Провери `git diff --stat` — само очакваните файлове. Ако има неочаквани
-       промени (напр. conflict-откази), спри и отчети.
+   6e. **Detail pages (куриране на amendments):** за всеки нов акт type=1 с ДВ
+       без `detailId` (провери с `acts.filter(a => a.dv_iss && !a.detailId)`):
+       - ако законът е проследяван в `laws.json` → създай amendment entry
+         (`data/amendments.json`) с shortTitle/summary/tags/votes/vnositel/dates
+         + добави id в `laws.<lawId>.amendments` + задай `detailId = "act-<id>"`
+         на акта в `acts-index.json`.
+       - ако законът НЕ е проследяван → отбележи в отчета (не се добавя
+         автоматично; нужен е ръчен merge в laws.json).
+       - type=2 решения с ДВ → merge-decisions pipeline (curate-dec-out-*.json).
+   6f. **Формат при запис:** `acts-index.json` е с 1-space indent (пиши с
+       `JSON.stringify(items, null, 1)`, НЕ `writeJsonArrayFile` с indent=1,
+       който дава 2-space). `amendments.json`/`laws.json` с indent=2.
+   6g. Провери `git diff --stat` — само очакваните файлове. Ако има неочаквани
+       промени (напр. conflict-откази или reformat), спри и отчети.
 
 ## Правила за scope (задължителни)
 
