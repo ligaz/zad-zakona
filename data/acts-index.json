@@ -95030,7 +95030,54 @@
   "dv_iss": "95",
   "dv_year": 2026,
   "dv_idmat": 12703,
-  "dv_mat": 246506
+  "dv_mat": 246506,
+  "votes": {
+   "za": 158,
+   "protiv": 0,
+   "vazdrzhal": 0
+  },
+  "votesVerified": true,
+  "votesByParty": [
+   {
+    "party": "ПБ",
+    "za": 119,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ГЕРБ-СДС",
+    "za": 9,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ДПС",
+    "za": 4,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ДБ",
+    "za": 9,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ПП",
+    "za": 8,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "Възраждане",
+    "za": 9,
+    "protiv": 0,
+    "vazdrzhal": 0
+   }
+  ],
+  "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/62/ID/11185",
+  "vnositel": "Министерски съвет",
+  "vnositelType": "МС"
  },
  {
   "id": 167518,
@@ -95112,7 +95159,54 @@
   "dv_iss": "95",
   "dv_year": 2026,
   "dv_idmat": 12703,
-  "dv_mat": 246270
+  "dv_mat": 246270,
+  "votes": {
+   "za": 149,
+   "protiv": 0,
+   "vazdrzhal": 15
+  },
+  "votesVerified": true,
+  "votesByParty": [
+   {
+    "party": "ПБ",
+    "za": 121,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ГЕРБ-СДС",
+    "za": 0,
+    "protiv": 0,
+    "vazdrzhal": 14
+   },
+   {
+    "party": "ДПС",
+    "za": 5,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ДБ",
+    "za": 11,
+    "protiv": 0,
+    "vazdrzhal": 1
+   },
+   {
+    "party": "ПП",
+    "za": 4,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "Възраждане",
+    "za": 8,
+    "protiv": 0,
+    "vazdrzhal": 0
+   }
+  ],
+  "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/62/ID/11180",
+  "vnositel": "Петър Илиев Тодоров, Красимир Цеков Иванов, Емил Денков Денков, Георги Христов Митов, Цветомир Милотинов Цветанов, Даниела Андреева Георгиева, Светлана Русева Митошева",
+  "vnositelType": "депутати"
  },
  {
   "id": 167523,
@@ -95718,7 +95812,54 @@
   "dv_iss": "95",
   "dv_year": 2026,
   "dv_idmat": 12703,
-  "dv_mat": 246507
+  "dv_mat": 246507,
+  "votes": {
+   "za": 170,
+   "protiv": 9,
+   "vazdrzhal": 0
+  },
+  "votesVerified": true,
+  "votesByParty": [
+   {
+    "party": "ПБ",
+    "za": 120,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ГЕРБ-СДС",
+    "za": 12,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ДПС",
+    "za": 12,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ДБ",
+    "za": 14,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "ПП",
+    "za": 12,
+    "protiv": 0,
+    "vazdrzhal": 0
+   },
+   {
+    "party": "Възраждане",
+    "za": 0,
+    "protiv": 9,
+    "vazdrzhal": 0
+   }
+  ],
+  "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/62/ID/11185",
+  "vnositel": "Министерски съвет",
+  "vnositelType": "МС"
  },
  {
   "id": 167574,

@@ -18,7 +18,8 @@ import { readFileSync } from "node:fs";
 import { readJsonArrayStream, writeJsonArrayFile } from "./json-io.mjs";
 
 const OUT = "data/acts-index.json";
-const INPUT = "/tmp/verified-votes.json";
+const inputArg = process.argv.find((a) => a.startsWith("--input="));
+const INPUT = inputArg ? inputArg.slice("--input=".length) : "/tmp/verified-votes.json";
 const DRY = process.argv.includes("--dry");
 
 const NORM = {
@@ -61,12 +62,17 @@ for (const [id, v] of Object.entries(input)) {
   if (!v.stenDate) { console.error(`x ${id}: липсва stenDate — пропускам.`); bad++; continue; }
   const plen = plenIdFor(v.stenDate);
   if (!plen) { console.error(`x ${id}: няма НС за дата ${v.stenDate} — пропускам.`); bad++; continue; }
-  patches.set(Number(id), {
+  const patch = {
     votes: { za: votes.za, protiv: votes.protiv, vazdrzhal: votes.vazdrzhal },
     votesVerified: true,
     votesByParty: normParties(v.votesByParty),
     stenogramLink: `https://www.parliament.bg/bg/plenaryst/ns/${plen}/ID/${v.stenId}`,
-  });
+  };
+  if (v.vnositel) {
+    patch.vnositel = v.vnositel;
+    if (v.vnositelType) patch.vnositelType = v.vnositelType;
+  }
+  patches.set(Number(id), patch);
 }
 if (bad) { console.log(`Спирам: ${bad} записа с грешки във входа — нищо не е записано.`); process.exit(1); }
 
@@ -84,7 +90,8 @@ for (const x of items) {
   const newBp = patch.votesByParty.length;
   const dirty = oldVotes !== newVotes || oldLink !== patch.stenogramLink
     || JSON.stringify(x.votesByParty) !== JSON.stringify(patch.votesByParty)
-    || x.votesVerified !== true;
+    || x.votesVerified !== true
+    || (patch.vnositel && x.vnositel !== patch.vnositel);
   if (dirty) {
     changed++;
     console.log(`~ ${x.id}: votes ${oldVotes} -> ${newVotes}; link ${oldLink} -> ${patch.stenogramLink}; parties ${oldBp} -> ${newBp}`);
@@ -96,6 +103,11 @@ for (const x of items) {
     x.votesVerified = true;
     x.votesByParty = patch.votesByParty;
     x.stenogramLink = patch.stenogramLink;
+    if (patch.vnositel) {
+      x.vnositel = patch.vnositel;
+      if (patch.vnositelType) x.vnositelType = patch.vnositelType;
+      else delete x.vnositelType;
+    }
   }
 }
 for (const id of patches.keys()) {
