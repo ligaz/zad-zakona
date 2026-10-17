@@ -266,8 +266,17 @@ async function processAct(x) {
     }
   }
   if (allPicks.length) {
-    allPicks.sort((a, b) => dateDiff(a.stenDate) - dateDiff(b.stenDate));
-    pick = allPicks[0];
+    // Вотът на приемане: при законите с поредица текстове (второ гласуване)
+    // приемането се обявява след ПОСЛЕДНИЯ текстов вот — затова при равни дати
+    // печели вотът с най-голям номер. Процедурните вотове („процедура за допускане
+    // в зала“, програма и т.н., чиято тема споменава законопроекта) също завършват
+    // с „прието“ и заблуждават — изключват се, ако има друг кандидат
+    // (инцидент ДВ 30/2026: 4 от 6 закона бяха хванати на процедурен вот).
+    const voteNo = (t) => Number(/Номер \((\d+)\)/.exec(t || "")?.[1] || 0);
+    allPicks.sort((a, b) =>
+      (dateDiff(a.stenDate) - dateDiff(b.stenDate)) || (voteNo(b.topic) - voteNo(a.topic)));
+    const nonProc = allPicks.filter((p) => !/процедура/i.test(p.topic || ""));
+    pick = nonProc[0] || allPicks[0];
     stenBody = pick.body;
     stenDate = pick.stenDate;
     if (dateDiff(stenDate) > 4) {
