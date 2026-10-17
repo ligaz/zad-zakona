@@ -98287,5 +98287,63 @@
     "sources": {
       "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246270"
     }
+  },
+  {
+    "id": "act-167588",
+    "lawId": "resheniya-pravila",
+    "shortTitle": "Програма за работата на НС през октомври 2026",
+    "fullTitle": "Решение за работата на Народното събрание и парламентарните комисии през месец октомври 2026 г.",
+    "dv": "ДВ, бр. 94/2026",
+    "dvLink": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=12702",
+    "dateAdopted": "2026-10-09",
+    "assemblyId": "52-ns",
+    "vnositel": "Петър Витанов",
+    "vnositelType": "депутати",
+    "billSignatura": "52-654-02-99",
+    "billUrl": "https://www.parliament.bg/bg/laws/ID/167588",
+    "votes": {
+      "za": 132,
+      "protiv": 21,
+      "vazdrzhal": 1
+    },
+    "votesByParty": [
+      {
+        "party": "ПБ",
+        "za": 117,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ГЕРБ-СДС",
+        "za": 0,
+        "protiv": 21,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДПС",
+        "za": 3,
+        "protiv": 0,
+        "vazdrzhal": 1
+      },
+      {
+        "party": "ДБ",
+        "za": 12,
+        "protiv": 0,
+        "vazdrzhal": 0
+      }
+    ],
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Приема програмата за работата на Народното събрание и парламентарните комисии през месец октомври 2026 г. (заседанията се прекратяват от 21 до 30 октомври). Приета с 132 гласа „за“, 21 „против“ и 1 „въздържал се“.",
+    "tags": [
+      "програма",
+      "октомври 2026",
+      "правила на парламента"
+    ],
+    "detailLevel": "full",
+    "verified": true,
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=12702"
+    }
   }
 ]
