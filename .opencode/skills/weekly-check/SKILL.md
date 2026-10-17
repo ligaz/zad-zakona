@@ -6,8 +6,7 @@ description: Run the weekly new-acts check for zad-zakona (parliament.bg + ДВ)
 # Weekly check (нови актове)
 
 Автоматизираната част от седмичния процес (`docs/data-pipeline.md` → „Седмичен процес“).
-Цел: откриване на нови актове + материали + вотове. Курирането (changes, merge
-в `data/`) е отделно — този skill НЕ пипа `data/amendments.json` / `data/laws.json`.
+Цел: откриване на нови актове + материали + вотове + **куриране** на обогатимите.
 
 ## Ред (винаги в този ред, всяка стъпка зависи от предишната)
 
@@ -19,27 +18,72 @@ description: Run the weekly new-acts check for zad-zakona (parliament.bg + ДВ)
    Ако за брой има ДВ материали тип „Закон“, които липсват в индекса →
    `node scripts/backfill-dv-links.mjs [--dry]` (сверява брой+указ+заглавие
    срещу ДВ преди запис — никога само по заглавие).
+
 2. **Нови ID-та** (~1–3 мин):
    `node scripts/enumerate-acts.mjs`
    Без аргументи = auto-extend от max ID до 300 поредни липси. НЕ подавай `--to`
    (остарява). Дългите runs са нормални — чакай, не убивай процеса.
+
 3. **Retrofill** (~1–2 мин):
    `node scripts/enumerate-acts.mjs --refresh-missing`
    Хваща `L_Act_dv_iss`, попълнен СЛЕД индексирането. Гледай редовете `[+] ID получи ДВ`.
+
 4. **ДВ материали** (само за новите броеве!):
    `node scripts/resolve-dv-mat.mjs --only ГОДИНА,БРОЙ ... --jobs 3`
    НИКОГА bare run — пълният обход на 350+ броя е >10 мин. Ако се наложи:
    `nohup ... > /tmp/resolve-weekly.log 2>&1 &` и poll-вай лога. Изходът е
    винаги `/tmp/dv-materials.json` (default) — не в repo-то.
+   Ако `resolve-dv-mat` намери нови съвпадения → `backfill-dv-links.mjs --dry`
+   и преглед преди запис.
+
 5. **Вотове за новите актове** (изход САМО в /tmp, без merge):
    `node scripts/fetch-act-details.mjs --out /tmp/weekly-new-acts.json --only ID ... --jobs 2`
+   Обработва само актове с ДВ (type=1 с dv_iss). Актове без ДВ (bills/reports)
+   пропуска — те остават bare метаданни.
+
+6. **Куриране** (част от седмичния процес):
+   6a. Прегледай `/tmp/weekly-new-acts.json`: за всеки запис провери
+       `status`/`verified`/`pick.votes`/`pick.stenId`/`pick.parties`.
+   6b. Обогатими (verified=true + votes + stenId + картичка в `/tmp/act-cards.json`):
+       `node scripts/apply-act-details.mjs --dry` → преглед на конфликтите.
+       Ако няма конфликти → apply (без --dry). Ако има конфликти (полето вече
+       е попълнено) → пропусни, отбележи в отчета.
+   6c. Quarantine / no-vote / MISS записи: НЕ прилагай автоматично. Отбележи
+       ID + причина + `cands<stenId>` материал за ръчна сверка.
+   6d. Рутинни решения (type=2 без bill, напр. „Решение за работата на НС“):
+       остават bare метаданни — последователно с останалите ~2370 bare акта.
+       НЕ се обогатяват с вот (формалност).
+   6e. **Detail pages (куриране на amendments):** за всеки нов акт type=1 с ДВ
+       без `detailId` (провери с `acts.filter(a => a.dv_iss && !a.detailId)`):
+       - ако законът е проследяван в `laws.json` → създай amendment entry
+         (`data/amendments.json`) с shortTitle/summary/tags/votes/vnositel/dates
+         + добави id в `laws.<lawId>.amendments` + задай `detailId = "act-<id>"`
+         на акта в `acts-index.json`.
+       - ако законът НЕ е проследяван → отбележи в отчета (не се добавя
+         автоматично; нужен е ръчен merge в laws.json).
+       - type=2 решения с ДВ → merge-decisions pipeline (curate-dec-out-*.json).
+   6f. **Формат при запис:** `acts-index.json` е с 1-space indent (пиши с
+       `JSON.stringify(items, null, 1)`, НЕ `writeJsonArrayFile` с indent=1,
+       който дава 2-space). `amendments.json`/`laws.json` с indent=2.
+   6g. Провери `git diff --stat` — само очакваните файлове. Ако има неочаквани
+       промени (напр. conflict-откази или reformat), спри и отчети.
+   6h. **Проверка за пропуски (предотвратяване):** след курирането провери
+       `acts.filter(a => a.dv_iss && a.dv_year >= 2021 && !a.detailId)`. Ако
+       има такива — НЕ ги оставяй мълчаливо. За всеки: или курирай (амендмънт
+       + detailId), или отбележи в отчета като „очаква куриране“ с причина
+       (напр. „рутинно решение“, „в процес“, „липсва закон в laws.json“).
+       Цел: 0 некурирани актове с ДВ без обяснение.
 
 ## Правила за scope (задължителни)
 
 - `data/acts-index.json` се променя САМО през скриптовете (append/обогатяване).
   Никога ръчен edit. `dv_mat` се пише само при 1:1 title match (виж капаните).
 - Вот с `verified: true` НЕ значи „готов за merge“ — мини през капаните долу.
-- Статус `quarantine*` / `MISS` / грешки = за отчета, не за оправяне на момента.
+- Статус `quarantine*` / `MISS` / грешки = за отчета, не за оправяне на момента,
+  освен ако има ръчна сверка (виж капаните).
+- Курирането (стъпка 6) е част от седмичния процес, но НЕ пипа
+  `data/amendments.json` / `data/laws.json` — това е отделен merge-процес
+  (merge-decisions.mjs / merge-curated.mjs).
 
 ## Капани — флашвай в отчета, не премълчавай
 
@@ -63,4 +107,6 @@ description: Run the weekly new-acts check for zad-zakona (parliament.bg + ДВ)
 3. Нови броеве + материали (брой mats).
 4. Нови актове: ID, заглавие, `dv_mat`, вот + `verified`, или флаг за куриране
    (кой капан, кои кандидати).
-5. Време на изпълнение + остатъци (напр. 2020 backlog извън scope ≥2021).
+5. Куриране: обогатени (ID + какво), очакващи куриране (ID + причина), bare
+   (ID + „рутинно решение/в процес“).
+6. Време на изпълнение + остатъци (напр. 2020 backlog извън scope ≥2021).

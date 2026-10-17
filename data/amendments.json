@@ -97935,5 +97935,415 @@
     "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/61/ID/11119",
     "vnositel": "Георги Георгиев, Томислав Дончев, Георг Георгиев и още 6",
     "vnositelType": "депутати"
+  },
+  {
+    "id": "act-167517",
+    "lawId": "ratifikatsii",
+    "shortTitle": "Монголия: въздушни съобщения",
+    "fullTitle": "Закон за ратифициране на Спогодбата за въздушни съобщения между правителството на Република България и правителството на Монголия, подписана на 21 ноември 2025 г. в гр. София",
+    "dv": "ДВ, бр. 95/2026",
+    "dvLink": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246506",
+    "dateAdopted": "2026-10-09",
+    "dateDV": "2026-10-16",
+    "dateEffective": "2026-10-16",
+    "assemblyId": "52-ns",
+    "vnositel": "Министерски съвет",
+    "vnositelType": "МС",
+    "billSignatura": "52-602-02-14",
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/167517",
+    "votes": {
+      "za": 158,
+      "protiv": 0,
+      "vazdrzhal": 0
+    },
+    "votesByParty": [
+      {
+        "party": "ПБ",
+        "za": 119,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ГЕРБ-СДС",
+        "za": 9,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДПС",
+        "za": 4,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДБ",
+        "za": 9,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ПП",
+        "za": 8,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ВЪЗРАЖДАНЕ",
+        "za": 9,
+        "protiv": 0,
+        "vazdrzhal": 0
+      }
+    ],
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Ратифицира Спогодбата за въздушни съобщения между правителството на Република България и правителството на Монголия, подписана на 21 ноември 2025 г. в София. Приета на второ гласуване с 158 гласа „за“.",
+    "tags": [
+      "Монголия",
+      "въздушни съобщения",
+      "ратификация"
+    ],
+    "detailLevel": "full",
+    "verified": true,
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246506"
+    }
+  },
+  {
+    "id": "act-167573",
+    "lawId": "ratifikatsii",
+    "shortTitle": "МБИС: окончателно уреждане на претенции",
+    "fullTitle": "Закон за ратифициране на Споразумението между Международната банка за икономическо сътрудничество (МБИС) и правителството на Република България за окончателно уреждане на взаимните претенции и задължения във връзка с оттеглянето на Република България от Споразумението за организацията и дейността на МБИС и от членството в МБИС",
+    "dv": "ДВ, бр. 95/2026",
+    "dvLink": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246507",
+    "dateAdopted": "2026-10-09",
+    "dateDV": "2026-10-16",
+    "dateEffective": "2026-10-16",
+    "assemblyId": "52-ns",
+    "vnositel": "Министерски съвет",
+    "vnositelType": "МС",
+    "billSignatura": "52-602-02-19",
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/167573",
+    "votes": {
+      "za": 170,
+      "protiv": 9,
+      "vazdrzhal": 0
+    },
+    "votesByParty": [
+      {
+        "party": "ПБ",
+        "za": 120,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ГЕРБ-СДС",
+        "za": 12,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДПС",
+        "za": 12,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДБ",
+        "za": 14,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ПП",
+        "za": 12,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ВЪЗРАЖДАНЕ",
+        "za": 0,
+        "protiv": 9,
+        "vazdrzhal": 0
+      }
+    ],
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Ратифицира Споразумението между Международната банка за икономическо сътрудничество (МБИС) и правителството на Република България за окончателно уреждане на взаимните претенции и задължения във връзка с оттеглянето на България от Споразумението за организацията и дейността на МБИС и от членството в МБИС. Приета на второ гласуване с 170 „за“ и 9 „против“.",
+    "tags": [
+      "МБИС",
+      "ратификация",
+      "претенции"
+    ],
+    "detailLevel": "full",
+    "verified": true,
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246507"
+    }
+  },
+  {
+    "id": "act-167203",
+    "lawId": "zakon-za-vavezhdane-na-evroto-v-republika-balgariya",
+    "shortTitle": "Промени в закона за въвеждане на еврото",
+    "fullTitle": "Закон за изменение и допълнение на Закона за въвеждане на еврото в Република България",
+    "dv": "ДВ, бр. 82/2026",
+    "dvLink": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=245785",
+    "dateAdopted": "2026-07-16",
+    "assemblyId": "52-ns",
+    "vnositel": "Димитър Бисеров Петров, Михаела Милчева Доцова, Стела Петкова Загорчева-Серафимова, Силвия Тошкова Христова, Милен Колев Трифонов, Александра Йовчева Вълчева, Надежда Борисова Колева-Стойчева, Олга Бориславова Борисова, Десислава Николаева Костова, Даниела Николова Николова-Кършева, Янка Тенева Тянкова, Иван Костадинов Вачев, Николета Костова Тодорова",
+    "vnositelType": "депутати",
+    "billSignatura": "52-654-01-98",
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/167203",
+    "votes": {
+      "za": 168,
+      "protiv": 0,
+      "vazdrzhal": 8
+    },
+    "votesByParty": [
+      {
+        "party": "ПБ",
+        "za": 119,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ГЕРБ-СДС",
+        "za": 19,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДПС",
+        "za": 10,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДБ",
+        "za": 14,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ПП",
+        "za": 6,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ВЪЗРАЖДАНЕ",
+        "za": 0,
+        "protiv": 0,
+        "vazdrzhal": 8
+      }
+    ],
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Изменения и допълнения в Закона за въвеждане на еврото в Република България. Приети на второ гласуване с 168 гласа „за“ и 8 „въздържали се“.",
+    "tags": [
+      "евро",
+      "ЕС",
+      "въвеждане"
+    ],
+    "detailLevel": "full",
+    "verified": true,
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=245785"
+    }
+  },
+  {
+    "id": "act-167540",
+    "lawId": "kodeks-truda",
+    "shortTitle": "Промени в Кодекса на труда",
+    "fullTitle": "Закон за изменение и допълнение на Кодекса на труда",
+    "dv": "ДВ, бр. 89/2026",
+    "dvLink": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246111",
+    "dateAdopted": "2026-09-10",
+    "assemblyId": "52-ns",
+    "vnositel": "Министерски съвет",
+    "vnositelType": "МС",
+    "billSignatura": "52-602-01-40",
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/167540",
+    "votes": {
+      "za": 121,
+      "protiv": 48,
+      "vazdrzhal": 11
+    },
+    "votesByParty": [
+      {
+        "party": "ПБ",
+        "za": 121,
+        "protiv": 0,
+        "vazdrzhal": 1
+      },
+      {
+        "party": "ГЕРБ-СДС",
+        "za": 0,
+        "protiv": 17,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДПС",
+        "za": 0,
+        "protiv": 13,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДБ",
+        "za": 0,
+        "protiv": 2,
+        "vazdrzhal": 10
+      },
+      {
+        "party": "ПП",
+        "za": 0,
+        "protiv": 6,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ВЪЗРАЖДАНЕ",
+        "za": 0,
+        "protiv": 10,
+        "vazdrzhal": 0
+      }
+    ],
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Изменения и допълнения в Кодекса на труда. Приети на второ гласуване с 121 гласа „за“, 48 „против“ и 11 „въздържали се“.",
+    "tags": [
+      "труд",
+      "Кодекс на труда"
+    ],
+    "detailLevel": "full",
+    "verified": true,
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246111"
+    }
+  },
+  {
+    "id": "act-167522",
+    "lawId": "zakon-za-elektronnata-identifikatsiya",
+    "shortTitle": "Промени в Закона за електронната идентификация",
+    "fullTitle": "Закон за изменение и допълнение на Закона за електронната идентификация",
+    "dv": "ДВ, бр. 95/2026",
+    "dvLink": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246270",
+    "dateAdopted": "2026-08-28",
+    "assemblyId": "52-ns",
+    "vnositel": "Петър Илиев Тодоров, Красимир Цеков Иванов, Емил Денков Денков, Георги Христов Митов, Цветомир Милотинов Цветанов, Даниела Андреева Георгиева, Светлана Русева Митошева",
+    "vnositelType": "депутати",
+    "billSignatura": "52-654-01-121",
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/167522",
+    "votes": {
+      "za": 149,
+      "protiv": 0,
+      "vazdrzhal": 15
+    },
+    "votesByParty": [
+      {
+        "party": "ПБ",
+        "za": 121,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ГЕРБ-СДС",
+        "za": 0,
+        "protiv": 0,
+        "vazdrzhal": 14
+      },
+      {
+        "party": "ДПС",
+        "za": 5,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДБ",
+        "za": 11,
+        "protiv": 0,
+        "vazdrzhal": 1
+      },
+      {
+        "party": "ПП",
+        "za": 4,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "Възраждане",
+        "za": 8,
+        "protiv": 0,
+        "vazdrzhal": 0
+      }
+    ],
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Изменения и допълнения в Закона за електронната идентификация. Приети на второ гласуване с 149 гласа „за“ и 15 „въздържали се“.",
+    "tags": [
+      "електронна идентификация",
+      "ЕС"
+    ],
+    "detailLevel": "full",
+    "verified": true,
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246270"
+    }
+  },
+  {
+    "id": "act-167588",
+    "lawId": "resheniya-pravila",
+    "shortTitle": "Програма за работата на НС през октомври 2026",
+    "fullTitle": "Решение за работата на Народното събрание и парламентарните комисии през месец октомври 2026 г.",
+    "dv": "ДВ, бр. 94/2026",
+    "dvLink": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=12702",
+    "dateAdopted": "2026-10-09",
+    "assemblyId": "52-ns",
+    "vnositel": "Петър Витанов",
+    "vnositelType": "депутати",
+    "billSignatura": "52-654-02-99",
+    "billUrl": "https://www.parliament.bg/bg/laws/ID/167588",
+    "votes": {
+      "za": 132,
+      "protiv": 21,
+      "vazdrzhal": 1
+    },
+    "votesByParty": [
+      {
+        "party": "ПБ",
+        "za": 117,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ГЕРБ-СДС",
+        "za": 0,
+        "protiv": 21,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДПС",
+        "za": 3,
+        "protiv": 0,
+        "vazdrzhal": 1
+      },
+      {
+        "party": "ДБ",
+        "za": 12,
+        "protiv": 0,
+        "vazdrzhal": 0
+      }
+    ],
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Приема програмата за работата на Народното събрание и парламентарните комисии през месец октомври 2026 г. (заседанията се прекратяват от 21 до 30 октомври). Приета с 132 гласа „за“, 21 „против“ и 1 „въздържал се“.",
+    "tags": [
+      "програма",
+      "октомври 2026",
+      "правила на парламента"
+    ],
+    "detailLevel": "full",
+    "verified": true,
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=12702"
+    }
   }
 ]
