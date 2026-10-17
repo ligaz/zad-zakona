@@ -98218,5 +98218,74 @@
     "sources": {
       "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246111"
     }
+  },
+  {
+    "id": "act-167522",
+    "lawId": "zakon-za-elektronnata-identifikatsiya",
+    "shortTitle": "Промени в Закона за електронната идентификация",
+    "fullTitle": "Закон за изменение и допълнение на Закона за електронната идентификация",
+    "dv": "ДВ, бр. 95/2026",
+    "dvLink": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246270",
+    "dateAdopted": "2026-08-28",
+    "assemblyId": "52-ns",
+    "vnositel": "Петър Илиев Тодоров, Красимир Цеков Иванов, Емил Денков Денков, Георги Христов Митов, Цветомир Милотинов Цветанов, Даниела Андреева Георгиева, Светлана Русева Митошева",
+    "vnositelType": "депутати",
+    "billSignatura": "52-654-01-121",
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/167522",
+    "votes": {
+      "za": 149,
+      "protiv": 0,
+      "vazdrzhal": 15
+    },
+    "votesByParty": [
+      {
+        "party": "ПБ",
+        "za": 121,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ГЕРБ-СДС",
+        "za": 0,
+        "protiv": 0,
+        "vazdrzhal": 14
+      },
+      {
+        "party": "ДПС",
+        "za": 5,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДБ",
+        "za": 11,
+        "protiv": 0,
+        "vazdrzhal": 1
+      },
+      {
+        "party": "ПП",
+        "za": 4,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "Възраждане",
+        "za": 8,
+        "protiv": 0,
+        "vazdrzhal": 0
+      }
+    ],
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Изменения и допълнения в Закона за електронната идентификация. Приети на второ гласуване с 149 гласа „за“ и 15 „въздържали се“.",
+    "tags": [
+      "електронна идентификация",
+      "ЕС"
+    ],
+    "detailLevel": "full",
+    "verified": true,
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246270"
+    }
   }
 ]
