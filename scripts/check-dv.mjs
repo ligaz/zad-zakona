@@ -7,8 +7,10 @@
  *
  * ДВ няма публично API — страницата е JSP (dv.parliament.bg/DVWeb).
  * Скриптът е умишлено прост и без зависимости:
- *  1. тегли началната страница на ДВ (index.faces — ВНИМАНИЕ: https://dv.parliament.bg/
- *     е само meta-refresh към нея; инцидент 10.2026) и търси последния „Брой: N/дата“;
+ *  1. тегли списъка „Броеве“ (broeveList.faces — последните ~10 броеве; резервно
+ *     index.faces само с последния — ВНИМАНИЕ: https://dv.parliament.bg/ е само
+ *     meta-refresh към нея; инцидент 10.2026: бр. 96/2026 беше пропуснат между
+ *     две проверки точно заради това);
  *  2. сравнява броевете с индекса и проверява ПЪЛНОТО покритие на последния брой
  *     (секция „Народно събрание“ в RSS vs актове в индекса — частично покритие,
  *     напр. ДВ 30/2026: 7 закона в ДВ, 1 в индекса, не се хваща от „липсващ брой“);
@@ -21,6 +23,7 @@
 import { readJsonArrayStream } from "./json-io.mjs";
 
 const DV_HOME = "https://dv.parliament.bg/DVWeb/index.faces";
+const DV_ISSUES = "https://dv.parliament.bg/DVWeb/broeveList.faces";
 const DV_RSS = "https://dv.parliament.bg/DVWeb/rss_newspaper.jsp";
 const JSON_MODE = process.argv.includes("--json");
 
@@ -62,30 +65,47 @@ async function fetchText(url) {
 async function main() {
   if (!JSON_MODE) console.log("=== Зад Закона — седмична проверка на ДВ ===\n");
 
-  // 1. Последни броеве от началната страница на ДВ
+  // 1. Последни броеве — от списъка „Броеве" (broeveList.faces, последните ~10),
+  //    за да не се пропуска брой, излязъл между две седмични проверки.
+  //    Резервно: index.faces (само последния брой).
   let homeIssues = [];
-  try {
-    const html = await fetchText(DV_HOME);
-    const issues = new Set();
-    // „Брой: N, от дата D.M.YYYY“ — с главна/малка буква (index.faces пише „Брой:“)
-    const re = /брой:\s*(\d{1,3}),\s*от\s*дата\s*([\d.]+)/gi;
-    let m;
-    while ((m = re.exec(html)) !== null) issues.add(`${m[1]}/${m[2]}`);
-    homeIssues = [...issues];
+  let issuesSource = null;
+  {
+    const seen = new Set();
+    const addIssue = (num, date) => {
+      const k = `${num}/${date}`;
+      if (!seen.has(k)) { seen.add(k); homeIssues.push(k); }
+    };
+    for (const [url, re, src] of [
+      // „Брой 97, 23.10.2026 г.“ (бр. 90 е „… (извънреден)“ — суфиксът не пречи)
+      [DV_ISSUES, /брой\s+(\d{1,3}),\s*(\d{1,2}\.\d{1,2}\.20\d{2})/gi, "broeveList"],
+      // „Брой: 97, от дата 23.10.2026 г.“ (index.faces)
+      [DV_HOME, /брой:\s*(\d{1,3}),\s*от\s*дата\s*([\d.]+)/gi, "home"],
+    ]) {
+      if (homeIssues.length) break;
+      try {
+        const html = await fetchText(url);
+        let m;
+        while ((m = re.exec(html)) !== null) addIssue(m[1], m[2]);
+        if (homeIssues.length) issuesSource = src;
+      } catch (e) {
+        if (src === "home") {
+          if (JSON_MODE) {
+            console.log(JSON.stringify({ error: `DV issues: ${e.message}` }));
+            return;
+          }
+          console.log(`⚠ Не можах да изтегля броевете (broeveList.faces и index.faces): ${e.message}`);
+          console.log("  Провери ръчно: https://dv.parliament.bg/DVWeb/broeveList.faces");
+        }
+      }
+    }
     if (!JSON_MODE) {
       console.log(
-        issues.size > 0
-          ? `Намерени броеве на началната страница:\n  ${homeIssues.slice(0, 15).join(", ")}`
-          : "Не са разпознати броеве — отвори https://dv.parliament.bg/DVWeb/index.faces ръчно."
+        homeIssues.length > 0
+          ? `Намерени броеве (${issuesSource}):\n  ${homeIssues.slice(0, 15).join(", ")}`
+          : "Не са разпознати броеве — отвори https://dv.parliament.bg/DVWeb/broeveList.faces ръчно."
       );
     }
-  } catch (e) {
-    if (JSON_MODE) {
-      console.log(JSON.stringify({ error: `DV home: ${e.message}` }));
-      return;
-    }
-    console.log(`⚠ Не можах да изтегля ${DV_HOME}: ${e.message}`);
-    console.log("  Провери ръчно: https://dv.parliament.bg/ → 'Търсене' → 'Народно събрание'.");
   }
 
   // 2. Какво имаме в data/
@@ -157,6 +177,7 @@ async function main() {
       JSON.stringify(
         {
           dvHome: homeIssues,
+          issuesSource,
           missingIssues,
           latestCoverage,
           indexMaxId,

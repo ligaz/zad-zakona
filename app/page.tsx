@@ -81,7 +81,7 @@ export default function Home() {
                   <>
                     <span className="font-bold text-zinc-900 dark:text-zinc-100">{law.short}</span>
                     <span>·</span>
-                    <span>{bg(a.dateAdopted)}</span>
+                    <span>{bg(a.dateDV || a.dateAdopted)}</span>
                     <span>·</span>
                     <span>{a.dv}</span>
                     {a.verified && <span className="font-semibold text-emerald-600 dark:text-emerald-400">✓</span>}

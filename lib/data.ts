@@ -71,6 +71,9 @@ export function assemblyForDate(iso: string | null): Assembly | null {
 export const amendmentById = (id: string) =>
   amendments.find((a) => a.id === id);
 
+export const actById = (id: number | string): ActEntry | undefined =>
+  (actsIndexJson as ActEntry[]).find((a) => a.id === Number(id));
+
 export const verifiedCount = amendments.filter((a) => a.verified).length;
 
 export const lawsWithCounts = laws.map((l) => ({
@@ -80,9 +83,11 @@ export const lawsWithCounts = laws.map((l) => ({
   lastAmendment: amendmentById(l.amendments[0]),
 }));
 
-export const feedItems = [...amendments].sort((a, b) =>
-  String(b.dateAdopted || "").localeCompare(String(a.dateAdopted || ""))
-);
+export const feedItems = [...amendments].sort((a, b) => {
+  const da = a.dateDV || a.dateAdopted || "";
+  const db = b.dateDV || b.dateAdopted || "";
+  return String(db).localeCompare(String(da));
+});
 
 /** Пълен автоматичен индекс (parliament.bg API) — винаги НОВИТЕ НАПРЕД. */
 const numIss = (s: string | null) => {
