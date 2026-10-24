@@ -97,6 +97,16 @@ const ALIAS = {
 // нормалната резолюция.
 const LAW_BY_ACT = {
   166872: "zakon-za-sabiraneto-na-prihodi-i-razhodi-do-priemane-na-byudzheta",
+  167587: "resheniya-drugi",
+  167524: "resheniya-drugi",
+  167525: "resheniya-drugi",
+  166419: "resheniya-drugi",
+  166420: "resheniya-drugi",
+  166370: "resheniya-drugi",
+  166371: "resheniya-drugi",
+  166402: "resheniya-drugi",
+  166179: "resheniya-drugi",
+  166180: "resheniya-drugi",
 };
 
 const byName = Object.fromEntries(laws.map((l) => [l.name.toLowerCase(), l]));

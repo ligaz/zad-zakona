@@ -98345,5 +98345,714 @@
     "sources": {
       "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=12702"
     }
+  },
+  {
+    "id": "act-167528",
+    "lawId": "kodeks-za-zastrahovaneto",
+    "shortTitle": "Застраховане: ГО отговорност, Гаранционен фонд, обезпечения",
+    "fullTitle": "Закон за изменение и допълнение на Кодекса за застраховането",
+    "dv": "ДВ, бр. 97/2026",
+    "dateAdopted": "2026-10-15",
+    "dateDV": "2026-10-23",
+    "decreeNo": "325",
+    "dateDecree": "2026-10-16",
+    "dateEffective": "2026-10-23",
+    "assemblyId": "52-ns",
+    "detailLevel": "full",
+    "verified": true,
+    "changes": [
+      {
+        "member": "чл. 489 (ГО отговорност)",
+        "plain": "Застрахователят не може да откаже сключването на задължителна застраховка Гражданска отговорност за срок по-кратък от срока по ал. 1, но за не по-малко от 30 дни.",
+        "after": "застрахователят не може да откаже сключването на договор за задължителна застраховка Гражданска отговорност на автомобилистите за срок, по-кратък от срока по ал. 1, но за не по-малко от 30 дни"
+      },
+      {
+        "member": "чл. 565а (нов) - плащания вместо застраховател",
+        "plain": "Гаранционният фонд заплаща вместо застраховател с отнет лиценз - обезщетения, лихви и разноски във връзка с ликвидацията.",
+        "after": "Гаранционният фонд, когато е краен платец по чл. 567, ал. 1, т. 1 и 2 поради отнемане лиценза на застраховател, заплаща обезщетения за вреди, лихви и разноски във връзка с ликвидацията по застрахователни претенции"
+      },
+      {
+        "member": "чл. 597 ал. 6 (обезпечения)",
+        "plain": "При квестура не се допускат обезпечителни мерки върху имуществото на застрахователя.",
+        "after": "в случаите по ал. 3 за срока на квестурата не се допуска налагането на обезпечителни мерки по Гражданския процесуален кодекс върху имуществото на застрахователя или презастрахователя"
+      },
+      {
+        "member": "чл. 638 ал. 7 (глоби)",
+        "plain": "Глобите за нарушения на застрахователното законодателство стават 6000-23000 евро.",
+        "after": "дължимите вноски по чл. 554, т. 1 или по чл. 563, ал. 2 или 3; глоби от 6000 до 23000 евро"
+      },
+      {
+        "member": "чл. 523, 524, 529, 563, 565, 570г (технически)",
+        "plain": "Технически промени в правилата за фондовете, вноските и споразуменията с Гаранционния фонд.",
+        "after": "фондовете става фонда; годишни се заличава; индивидуални споразумения с Гаранционния фонд"
+      }
+    ],
+    "changedMembers": [
+      "чл. 489",
+      "чл. 523",
+      "чл. 524",
+      "чл. 529",
+      "чл. 563",
+      "чл. 565",
+      "чл. 565а",
+      "чл. 570г",
+      "чл. 597",
+      "чл. 638"
+    ],
+    "summary": "Застрахователят не може да откаже сключването на задължителна застраховка Гражданска отговорност за срок под 30 дни. Гаранционният фонд заплаща вместо застраховател с отнет лиценз (нов чл. 565а) и може да сключва индивидуални споразумения. Не се допускат обезпечителни мерки върху имуществото при квестура по чл. 597 ал. 3. Глобите по чл. 638 ал. 7 стават 6000-23000 евро. Преходни правила за плащания вместо застраховател с отнет лиценз и за наложените обезпечения.",
+    "tags": [
+      "застраховки",
+      "гаранционен фонд",
+      "гражданска отговорност"
+    ],
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246630",
+      "bill": "https://www.parliament.bg/bg/laws/ID/167528"
+    },
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/167528",
+    "billSignatura": "52-654-01-123",
+    "votes": {
+      "za": 161,
+      "protiv": 1,
+      "vazdrzhal": 18
+    },
+    "votesByParty": [
+      {
+        "party": "ПБ",
+        "za": 122,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ГЕРБ-СДС",
+        "za": 1,
+        "protiv": 1,
+        "vazdrzhal": 18
+      },
+      {
+        "party": "ДПС",
+        "za": 10,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДБ",
+        "za": 15,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ПП",
+        "za": 6,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "Възраждане",
+        "za": 7,
+        "protiv": 0,
+        "vazdrzhal": 0
+      }
+    ],
+    "votesVerified": true,
+    "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/62/ID/11188",
+    "vnositel": "Даниел Парушев, Стефан Белчев, Константин Проданов и още 2",
+    "vnositelType": "депутати"
+  },
+  {
+    "id": "act-167587",
+    "lawId": "resheniya-drugi",
+    "shortTitle": "ЗРК: приемане на актуализиран проект за инвестиционен разход",
+    "fullTitle": "Решение за приемане на актуализиран Проект за инвестиционен разход \"Придобиване на зенитно-ракетни комплекси\"",
+    "dv": "ДВ, бр. 96/2026",
+    "dateAdopted": "2026-10-07",
+    "dateDV": "2026-10-20",
+    "dateEffective": "2026-10-20",
+    "assemblyId": "52-ns",
+    "detailLevel": "full",
+    "verified": true,
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Приема се актуализиран проект за инвестиционен разход за придобиване на зенитно-ракетни комплекси.",
+    "tags": [
+      "отбрана",
+      "инвестиции"
+    ],
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246631",
+      "bill": "https://www.parliament.bg/bg/laws/ID/167587"
+    },
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/167587",
+    "billSignatura": "52-602-03-12"
+  },
+  {
+    "id": "act-167209",
+    "lawId": "ratifikatsii",
+    "shortTitle": "Ратификация: споразумение за ниво на обслужване с ООН (UNODC)",
+    "fullTitle": "Закон за ратифициране на Споразумението за ниво на обслужване, стандартен пакет, продължаване на услуги между Държавна агенция „Национална сигурност“ на Република България и Организацията на обединените нации, представлявана от Службата на ООН по наркотиците и престъпността (UNODC), Отдел за управление (DM), Служба за информационни технологии (ITS), относно предоставяне на услуги за информационно-комуникационни технологии, свързани с продължаването на използването и поддръжката на приложението goAML на ООН, подписано на 11 февруари 2026 г. за Службата по наркотиците и престъпността на ООН и на 16 февруари 2026 г. за Държавна агенция „Национална сигурност“",
+    "dv": "ДВ, бр. 82/2026",
+    "dateAdopted": "2026-08-27",
+    "dateDV": "2026-08-21",
+    "dateEffective": "2026-08-21",
+    "assemblyId": "52-ns",
+    "detailLevel": "full",
+    "verified": true,
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Ратифицира се споразумение за ниво на обслужване между ДАНС и ООН (UNODC) за информационно-комуникационни технологии, свързани с приложението goAML, подписано през февруари 2026 г.",
+    "tags": [
+      "ратификация",
+      "ООН",
+      "сигурност"
+    ],
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=245668",
+      "bill": "https://www.parliament.bg/bg/laws/ID/167209"
+    },
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/167209",
+    "billSignatura": "52-602-02-9",
+    "votes": {
+      "za": 150,
+      "protiv": 0,
+      "vazdrzhal": 0
+    },
+    "votesVerified": "partial",
+    "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/62/ID/11162"
+  },
+  {
+    "id": "act-167524",
+    "lawId": "resheniya-drugi",
+    "shortTitle": "Избор на управител на НЗОК",
+    "fullTitle": "Решение за избор на управител на Националната здравноосигурителна каса",
+    "dv": "ДВ, бр. 82/2026",
+    "dateAdopted": "2026-09-03 (DV)",
+    "dateDV": "2026-08-21",
+    "dateEffective": "2026-08-21",
+    "assemblyId": "52-ns",
+    "detailLevel": "full",
+    "verified": true,
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Избира се управител на Националната здравноосигурителна каса.",
+    "tags": [
+      "здраве",
+      "НЗОК",
+      "избори"
+    ],
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=245810",
+      "bill": "https://www.parliament.bg/bg/laws/ID/167524"
+    },
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/167524",
+    "billSignatura": "52-653-15-10",
+    "votes": {
+      "za": 114,
+      "protiv": 54,
+      "vazdrzhal": 2
+    },
+    "votesVerified": true,
+    "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/62/ID/11165"
+  },
+  {
+    "id": "act-167525",
+    "lawId": "resheniya-drugi",
+    "shortTitle": "Избор на подуправител на НЗОК",
+    "fullTitle": "Решение за избор на подуправител на Националната здравноосигурителна каса",
+    "dv": "ДВ, бр. 82/2026",
+    "dateAdopted": "2026-09-03 (DV)",
+    "dateDV": "2026-08-21",
+    "dateEffective": "2026-08-21",
+    "assemblyId": "52-ns",
+    "detailLevel": "full",
+    "verified": true,
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Избира се подуправител на Националната здравноосигурителна каса.",
+    "tags": [
+      "здраве",
+      "НЗОК",
+      "избори"
+    ],
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=245811",
+      "bill": "https://www.parliament.bg/bg/laws/ID/167525"
+    },
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/167525",
+    "billSignatura": "52-653-15-11",
+    "votes": {
+      "za": 114,
+      "protiv": 54,
+      "vazdrzhal": 2
+    },
+    "votesVerified": true,
+    "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/62/ID/11165"
+  },
+  {
+    "id": "act-166201",
+    "lawId": "ratifikatsii",
+    "shortTitle": "Ратификация: Устав на Асоциация FOEDUS European Organ Exchange",
+    "fullTitle": "Закон за ратифициране на Устава на Асоциация „FOEDUS European Organ Exchange“",
+    "dv": "ДВ, бр. 54/2025",
+    "dateAdopted": "2025-06-25",
+    "dateDV": "2025-07-25",
+    "dateEffective": "2025-07-25",
+    "assemblyId": "51-ns",
+    "detailLevel": "full",
+    "verified": true,
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Ратифицира се Уставът на Асоциация FOEDUS European Organ Exchange.",
+    "tags": [
+      "ратификация",
+      "ЕС"
+    ],
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=235703",
+      "bill": "https://www.parliament.bg/bg/laws/ID/166201"
+    },
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/166201",
+    "billSignatura": "51-502-02-8"
+  },
+  {
+    "id": "act-166419",
+    "lawId": "resheniya-drugi",
+    "shortTitle": "Избор на член на Комисията за защита на конкуренцията",
+    "fullTitle": "Решение за избиране на член на Комисията за защита на конкуренцията",
+    "dv": "ДВ, бр. 44/2025",
+    "dateAdopted": "2025-05-23 (DV)",
+    "dateDV": "2025-05-23",
+    "dateEffective": "2025-05-23",
+    "assemblyId": "51-ns",
+    "detailLevel": "full",
+    "verified": true,
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Избира се член на Комисията за защита на конкуренцията.",
+    "tags": [
+      "конкуренция",
+      "избори"
+    ],
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=235098",
+      "bill": "https://www.parliament.bg/bg/laws/ID/166419"
+    },
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/166419",
+    "votes": {
+      "za": 120,
+      "protiv": 93,
+      "vazdrzhal": 1
+    },
+    "votesByParty": [
+      {
+        "party": "ГЕРБ-СДС",
+        "za": 62,
+        "protiv": 0,
+        "vazdrzhal": 1
+      },
+      {
+        "party": "ПП-ДБ",
+        "za": 0,
+        "protiv": 32,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "Възраждане",
+        "za": 0,
+        "protiv": 32,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДПС",
+        "za": 27,
+        "protiv": 14,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "БСП",
+        "za": 16,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ИТН",
+        "za": 15,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "МЕЧ",
+        "za": 0,
+        "protiv": 6,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "Величие",
+        "za": 0,
+        "protiv": 9,
+        "vazdrzhal": 0
+      }
+    ],
+    "votesVerified": true,
+    "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/61/ID/11012"
+  },
+  {
+    "id": "act-166420",
+    "lawId": "resheniya-drugi",
+    "shortTitle": "Избор на член на Комисията за защита на конкуренцията",
+    "fullTitle": "Решение за избиране на член на Комисията за защита на конкуренцията",
+    "dv": "ДВ, бр. 44/2025",
+    "dateAdopted": "2025-05-23 (DV)",
+    "dateDV": "2025-05-23",
+    "dateEffective": "2025-05-23",
+    "assemblyId": "51-ns",
+    "detailLevel": "full",
+    "verified": true,
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Избира се член на Комисията за защита на конкуренцията.",
+    "tags": [
+      "конкуренция",
+      "избори"
+    ],
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=235098",
+      "bill": "https://www.parliament.bg/bg/laws/ID/166420"
+    },
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/166420",
+    "votes": {
+      "za": 120,
+      "protiv": 93,
+      "vazdrzhal": 1
+    },
+    "votesByParty": [
+      {
+        "party": "ГЕРБ-СДС",
+        "za": 62,
+        "protiv": 0,
+        "vazdrzhal": 1
+      },
+      {
+        "party": "ПП-ДБ",
+        "za": 0,
+        "protiv": 32,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "Възраждане",
+        "za": 0,
+        "protiv": 32,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДПС",
+        "za": 27,
+        "protiv": 14,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "БСП",
+        "za": 16,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ИТН",
+        "za": 15,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "МЕЧ",
+        "za": 0,
+        "protiv": 6,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "Величие",
+        "za": 0,
+        "protiv": 9,
+        "vazdrzhal": 0
+      }
+    ],
+    "votesVerified": true,
+    "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/61/ID/11012"
+  },
+  {
+    "id": "act-166370",
+    "lawId": "resheniya-drugi",
+    "shortTitle": "Избор на член на Комисията за защита на личните данни",
+    "fullTitle": "Решение за избиране на член на Комисията за защита на личните данни",
+    "dv": "ДВ, бр. 40/2025",
+    "dateAdopted": "2025-05-09 (DV)",
+    "dateDV": "2025-05-09",
+    "dateEffective": "2025-05-09",
+    "assemblyId": "51-ns",
+    "detailLevel": "full",
+    "verified": true,
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Избира се член на Комисията за защита на личните данни.",
+    "tags": [
+      "лични данни",
+      "избори"
+    ],
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=234736",
+      "bill": "https://www.parliament.bg/bg/laws/ID/166370"
+    },
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/166370",
+    "votes": {
+      "za": 122,
+      "protiv": 56,
+      "vazdrzhal": 12
+    },
+    "votesVerified": "partial",
+    "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/61/ID/11008"
+  },
+  {
+    "id": "act-166371",
+    "lawId": "resheniya-drugi",
+    "shortTitle": "Избор на член на Комисията за защита на личните данни",
+    "fullTitle": "Решение за избиране на член на Комисията за защита на личните данни",
+    "dv": "ДВ, бр. 40/2025",
+    "dateAdopted": "2025-05-09 (DV)",
+    "dateDV": "2025-05-09",
+    "dateEffective": "2025-05-09",
+    "assemblyId": "51-ns",
+    "detailLevel": "full",
+    "verified": true,
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Избира се член на Комисията за защита на личните данни.",
+    "tags": [
+      "лични данни",
+      "избори"
+    ],
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=234736",
+      "bill": "https://www.parliament.bg/bg/laws/ID/166371"
+    },
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/166371",
+    "votes": {
+      "za": 122,
+      "protiv": 56,
+      "vazdrzhal": 12
+    },
+    "votesVerified": "partial",
+    "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/61/ID/11008"
+  },
+  {
+    "id": "act-166402",
+    "lawId": "resheniya-drugi",
+    "shortTitle": "Избор на член на Националното бюро за контрол на СРС",
+    "fullTitle": "Решение за избиране на член на Националното бюро за контрол на специалните разузнавателни средства",
+    "dv": "ДВ, бр. 40/2025",
+    "dateAdopted": "2025-05-08 (DV)",
+    "dateDV": "2025-05-09",
+    "dateEffective": "2025-05-09",
+    "assemblyId": "51-ns",
+    "detailLevel": "full",
+    "verified": true,
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Избира се член на Националното бюро за контрол на специалните разузнавателни средства.",
+    "tags": [
+      "специални разузнавателни средства",
+      "избори"
+    ],
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=234731",
+      "bill": "https://www.parliament.bg/bg/laws/ID/166402"
+    },
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/166402",
+    "votes": {
+      "za": 118,
+      "protiv": 46,
+      "vazdrzhal": 34
+    },
+    "votesVerified": "partial",
+    "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/61/ID/11005"
+  },
+  {
+    "id": "act-166179",
+    "lawId": "resheniya-drugi",
+    "shortTitle": "Избор на член на Фискалния съвет",
+    "fullTitle": "Решение за избиране на член на Фискалния съвет",
+    "dv": "ДВ, бр. 29/2025",
+    "dateAdopted": "2025-03-27 (DV)",
+    "dateDV": "2025-03-27",
+    "dateEffective": "2025-03-27",
+    "assemblyId": "51-ns",
+    "detailLevel": "full",
+    "verified": true,
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Избира се член на Фискалния съвет.",
+    "tags": [
+      "фискален съвет",
+      "избори"
+    ],
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=233829",
+      "bill": "https://www.parliament.bg/bg/laws/ID/166179"
+    },
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/166179",
+    "votes": {
+      "za": 169,
+      "protiv": 25,
+      "vazdrzhal": 0
+    },
+    "votesVerified": "partial",
+    "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/61/ID/10992"
+  },
+  {
+    "id": "act-166180",
+    "lawId": "resheniya-drugi",
+    "shortTitle": "Избор на член на Фискалния съвет",
+    "fullTitle": "Решение за избиране на член на Фискалния съвет",
+    "dv": "ДВ, бр. 29/2025",
+    "dateAdopted": "2025-03-27 (DV)",
+    "dateDV": "2025-03-27",
+    "dateEffective": "2025-03-27",
+    "assemblyId": "51-ns",
+    "detailLevel": "full",
+    "verified": true,
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Избира се член на Фискалния съвет.",
+    "tags": [
+      "фискален съвет",
+      "избори"
+    ],
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=233829",
+      "bill": "https://www.parliament.bg/bg/laws/ID/166180"
+    },
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/166180",
+    "votes": {
+      "za": 169,
+      "protiv": 25,
+      "vazdrzhal": 0
+    },
+    "votesVerified": "partial",
+    "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/61/ID/10992"
+  },
+  {
+    "id": "act-167108",
+    "lawId": "zakon-za-chastnata-ohranitelna-deynost",
+    "shortTitle": "Частна охрана: нови прагове в евро, подизпълнение на дейността",
+    "fullTitle": "Закон за изменение и допълнение на Закона за частната охранителна дейност",
+    "dv": "ДВ, бр. 96/2026",
+    "dateAdopted": "2026-10-07",
+    "dateDV": "2026-10-20",
+    "decreeNo": "324",
+    "dateDecree": "2026-10-16",
+    "dateEffective": "2026-10-20",
+    "assemblyId": "52-ns",
+    "detailLevel": "full",
+    "verified": true,
+    "changes": [
+      {
+        "member": "чл. 36 (прагове)",
+        "plain": "Границите за ценни пратки стават до 1 млн евро и над 1 млн евро.",
+        "after": "чл. 36: до 1 000 000 евро и над 1 000 000 евро"
+      },
+      {
+        "member": "чл. 37 (транспорт)",
+        "plain": "Ценните пратки се транспортират в специализирани автомобили клас FB2-FB4 с видеонаблюдение; над 2,5 млн - със съпътстващ автомобил.",
+        "after": "чл. 37: FB2 до 500 000 евро, FB3 от 500 000 до 1 000 000, FB4 от 1 000 000 до 2 500 000, FB4+съпътстващ над 2 500 000"
+      },
+      {
+        "member": "чл. 39а-б (подизпълнение)",
+        "plain": "Част от дейността може да се възлага на подизпълнител само с писмено съгласие на възложителя и съответния лиценз.",
+        "after": "чл. 39а: подизпълнение само при дейност по чл. 5 ал. 1 т. 3 и изрично съгласие; чл. 39б: отговорност на изпълнителя и подизпълнителя"
+      },
+      {
+        "member": "чл. 24-26, 38-39 (отмяна)",
+        "plain": "Отменя се охраната на обекти - недвижими имоти и на селскостопанско имущество.",
+        "after": "глава втора раздел V и раздел IX се отменят"
+      },
+      {
+        "member": "чл. 41 (лицензи)",
+        "plain": "Лицензионните заявления се подават до ГД Национална полиция или по електронен път; разширени условия за публични задължения.",
+        "after": "заявление до директора на ГД Национална полиция при МВР, включително по електронен път"
+      }
+    ],
+    "changedMembers": [
+      "чл. 4",
+      "чл. 5",
+      "чл. 6",
+      "чл. 7",
+      "чл. 9",
+      "чл. 24",
+      "чл. 25",
+      "чл. 26",
+      "чл. 36",
+      "чл. 37",
+      "чл. 38",
+      "чл. 39",
+      "чл. 39а",
+      "чл. 39б",
+      "чл. 41"
+    ],
+    "summary": "Нови прагове за ценните пратки и товари в евро (чл. 36: до 1 млн; чл. 37: транспорт в специализирани автомобили клас FB2-FB4 с видеонаблюдение, над 2,5 млн евро - със съпътстващ автомобил и двама пазачи). Възлагане на част от дейността на подизпълнител само с изричното съгласие на възложителя и съответния лиценз (нови чл. 39а-б). Отменя се охраната на обекти - недвижими имоти и на селскостопанско имущество. Лицензионни заявления до ГД Национална полиция или по електронен път; за удостоверение се събира държавна такса.",
+    "tags": [
+      "частна охрана",
+      "лицензи",
+      "транспорт"
+    ],
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=246470",
+      "bill": "https://www.parliament.bg/bg/laws/ID/167108"
+    },
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/167108",
+    "billSignatura": "52-602-01-14",
+    "votes": {
+      "za": 124,
+      "protiv": 0,
+      "vazdrzhal": 43
+    },
+    "votesByParty": [
+      {
+        "party": "ПБ",
+        "za": 114,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ГЕРБ-СДС",
+        "za": 0,
+        "protiv": 0,
+        "vazdrzhal": 14
+      },
+      {
+        "party": "ДПС",
+        "za": 0,
+        "protiv": 0,
+        "vazdrzhal": 12
+      },
+      {
+        "party": "ДБ",
+        "za": 10,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ПП",
+        "za": 0,
+        "protiv": 0,
+        "vazdrzhal": 8
+      },
+      {
+        "party": "Възраждане",
+        "za": 0,
+        "protiv": 0,
+        "vazdrzhal": 9
+      }
+    ],
+    "votesVerified": true,
+    "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/62/ID/11183",
+    "vnositel": "Министерски съвет",
+    "vnositelType": "МС"
   }
 ]
