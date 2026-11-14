@@ -48,17 +48,36 @@ description: Run the weekly new-acts check for zad-zakona (parliament.bg + ДВ)
        `node scripts/apply-act-details.mjs --dry` → преглед на конфликтите.
        Ако няма конфликти → apply (без --dry). Ако има конфликти (полето вече
        е попълнено) → пропусни, отбележи в отчета.
+       ⚠️ `apply-act-details` пише и `detailId = "act-<id>"`, т.е. картичката в
+       `/aktove` вече води към `/promeni/act-<id>`. Тази страница съществува
+       САМО ако има запис в `amendments.json`. Затова 6b **никога не е
+       самостоятелна стъпка**: в същия commit задължително следва 6e
+       (`merge-curated.mjs`). Ако курирането не може да се довърши → не
+       пускай 6b за този акт (остава с външна връзка към parliament.bg).
+       Инцидент 01.11.2026 (166945/167533): detailId без amendment = 404 в
+       продукция.
+       Картичката (`cardTitle`/`cardSummary`) = `shortTitle`/`summary` от
+       курирането — НЕ шаблон от типа „ЗИД на Закона за … — промени в режима
+       на …“. Затова пиши `act-cards.json` СЛЕД като имаш текста от ДВ.
    6c. Quarantine / no-vote / MISS записи: НЕ прилагай автоматично. Отбележи
        ID + причина + `cands<stenId>` материал за ръчна сверка.
    6d. Рутинни решения (type=2 без bill, напр. „Решение за работата на НС“):
        остават bare метаданни — последователно с останалите ~2370 bare акта.
        НЕ се обогатяват с вот (формалност).
    6e. **Detail pages (куриране на amendments):** за всеки нов акт type=1 с ДВ
-       без `detailId` (провери с `acts.filter(a => a.dv_iss && !a.detailId)`):
-       - ако законът е проследяван в `laws.json` → създай amendment entry
-         (`data/amendments.json`) с shortTitle/summary/tags/votes/vnositel/dates
-         + добави id в `laws.<lawId>.amendments` + задай `detailId = "act-<id>"`
-         на акта в `acts-index.json`.
+       без amendment (както тези без `detailId`, така и тези от 6b):
+       - `dv_mat` първо: добави 1:1 съвпадението (брой + указ + заглавие) в
+         `MAP` на `backfill-dv-links.mjs` → `--dry` → apply. `merge-curated`
+         взима линка към ДВ (`sources.dv`) от `dv_mat`. Без него amendment-ът
+         остава без официален източник. `dv_idmat` е ID на БРОЯ, не ползвай.
+       - Прочети текста на материала (`showMaterialDV.jsp?idMat=<dv_mat>`):
+         указ №, дата на указа, дата на приемане, влизане в сила (ако има
+         изрична разпоредба) → `/tmp/act-dates.json`; changes/summary/tags по
+         текста → `/tmp/curate-merged.json`.
+       - ако законът е проследяван в `laws.json` → `node scripts/merge-curated.mjs
+         --dry` → apply. Скриптът създава amendment entry и добавя id в
+         `laws.<lawId>.amendments` (сортирани нови → стари). Вотът/вносителят
+         се копират от индекса, затова 6b трябва да е минала преди това.
        - ако законът НЕ е проследяван → отбележи в отчета (не се добавя
          автоматично; нужен е ръчен merge в laws.json).
        - type=2 решения с ДВ → merge-decisions pipeline (curate-dec-out-*.json).
@@ -67,6 +86,14 @@ description: Run the weekly new-acts check for zad-zakona (parliament.bg + ДВ)
        който дава 2-space). `amendments.json`/`laws.json` с indent=2.
    6g. Провери `git diff --stat` — само очакваните файлове. Ако има неочаквани
        промени (напр. conflict-откази или reformat), спри и отчети.
+       Ако има нов `detailId` в `acts-index.json`, но `data/amendments.json`
+       и `data/laws.json` НЕ са в diff-а → курирането не е merge-нато. Спри.
+   6g'. **Задължителна врата преди commit:** `npm run check:links`
+       (`scripts/check-detail-links.mjs`). Трябва да е ✓. Проверява, че всеки
+       `detailId` има amendment и всеки amendment е в своя закон. Пуска се и
+       автоматично като `prebuild`, така че висяща връзка чупи build-а. Не я
+       заобикаляй с махане на prebuild. При ✗ → довърши 6e или махни
+       `detailId` от съответния акт.
    6h. **Проверка за пропуски (предотвратяване):** след курирането провери
        `acts.filter(a => a.dv_iss && a.dv_year >= 2021 && !a.detailId)`. Ако
        има такива — НЕ ги оставяй мълчаливо. За всеки: или курирай (амендмънт
@@ -81,9 +108,10 @@ description: Run the weekly new-acts check for zad-zakona (parliament.bg + ДВ)
 - Вот с `verified: true` НЕ значи „готов за merge“ — мини през капаните долу.
 - Статус `quarantine*` / `MISS` / грешки = за отчета, не за оправяне на момента,
   освен ако има ръчна сверка (виж капаните).
-- Курирането (стъпка 6) е част от седмичния процес, но НЕ пипа
-  `data/amendments.json` / `data/laws.json` — това е отделен merge-процес
-  (merge-decisions.mjs / merge-curated.mjs).
+- `data/amendments.json` / `data/laws.json` се пипат САМО през
+  `merge-curated.mjs` / `merge-decisions.mjs` (никога ръчно). Merge-ът е
+  част от стъпка 6 и влиза в СЪЩИЯ commit като `detailId`-ите от 6b.
+  Commit с `detailId` без merge е забранен (виж 6g').
 
 ## Капани — флашвай в отчета, не премълчавай
 
@@ -99,6 +127,16 @@ description: Run the weekly new-acts check for zad-zakona (parliament.bg + ДВ)
 - **Провалени рундове**: кандидати със `za < no` преди финалния вот (напр. 30/162)
   означават прегласуване — финалният вот е последният ПРИЕТ, сверен с обявлението.
 - `cands<stenId>` в записа е материалът за ръчна сверка — цитирай го в отчета.
+- **Висящ detailId** (01.11.2026, 166945/167533): `apply-act-details` пусната
+  без `merge-curated` → картичките водят към несъществуващи `/promeni/act-*`.
+  Сигнал: diff само на `acts-index.json`, плюс шаблонен `cardSummary`.
+  Хваща се от `npm run check:links`.
+- **Quarantine с ясен победител** (01.11.2026, 167527 ЗЖТ): `quarantine` при
+  два кандидата в една стенограма често е процедурният вот (допуск в залата)
+  преди анблок вота. Сверка: в стенограмата намери „Поставям на гласуване
+  анблок … § N“ + „Гласували … Предложението е прието“ и сравни числата.
+  Ако съвпадат → `/tmp/act-picks-override.json` с `votesVerified: true` и
+  `_note` с цитата.
 
 ## Формат на отчета
 
@@ -109,4 +147,5 @@ description: Run the weekly new-acts check for zad-zakona (parliament.bg + ДВ)
    (кой капан, кои кандидати).
 5. Куриране: обогатени (ID + какво), очакващи куриране (ID + причина), bare
    (ID + „рутинно решение/в процес“).
-6. Време на изпълнение + остатъци (напр. 2020 backlog извън scope ≥2021).
+6. `npm run check:links` → резултат (✓ / списък).
+7. Време на изпълнение + остатъци (напр. 2020 backlog извън scope ≥2021).
