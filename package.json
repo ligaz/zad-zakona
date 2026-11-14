@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prebuild": "node scripts/check-detail-links.mjs",
     "build": "next build",
     "dev": "next dev",
     "check:dv": "node scripts/check-dv.mjs",
+    "check:links": "node scripts/check-detail-links.mjs",
     "start": "next start",
     "lint": "eslint"
   },
