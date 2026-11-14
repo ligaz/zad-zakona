@@ -78,6 +78,9 @@ const MAP = [
     final: "Закон за изменение и допълнение на Закона за управление на отпадъците" },
   { act: 167527, iss: "99", year: 2026, mat: 246674, decree: "331",
     final: "Закон за изменение и допълнение на Закона за железопътния транспорт" },
+  // Бр. 102/2026 (10.11.2026) — решение (без указ); dv_iss/dv_year от refresh-missing:
+  { act: 167083, iss: "102", year: 2026, mat: 247370, decree: null,
+    final: "Решение по Годишния доклад за дейността на Българската академия на науките за 2025 г." },
 ];
 
 const norm = (s) => (s || "").replace(/<[^>]+>/g, " ").replace(/&nbsp;|&#160;|&#xa0;/gi, " ")
@@ -92,7 +95,8 @@ async function verifyMaterial({ iss, mat, decree, final }) {
   if (!r.ok) return `HTTP ${r.status}`;
   const t = norm(await r.text());
   if (!new RegExp(`брой:\\s*${iss},\\s*от\\s*дата`, "i").test(t)) return "броят не съвпада";
-  if (!t.toUpperCase().includes(`УКАЗ № ${decree}`)) return `липсва указ № ${decree}`;
+  // Решенията на НС не се обнародват с указ → decree: null; сверяват се брой + заглавие.
+  if (decree !== null && !t.toUpperCase().includes(`УКАЗ № ${decree}`)) return `липсва указ № ${decree}`;
   const definite = final.replace(/^Закон /, "Законът ");
   const low = t.toLowerCase();
   if (!low.includes(final.toLowerCase()) && !low.includes(definite.toLowerCase())) return "заглавието не се среща";

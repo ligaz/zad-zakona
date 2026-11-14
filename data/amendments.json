@@ -99398,5 +99398,76 @@
     "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/62/ID/11189",
     "vnositel": "Министерски съвет",
     "vnositelType": "МС"
+  },
+  {
+    "id": "act-167083",
+    "lawId": "resheniya-drugi",
+    "shortTitle": "Приема Годишния доклад за дейността на БАН за 2025 г.",
+    "fullTitle": "Решение по Годишния доклад за дейността на Българската академия на науките за 2025 г.",
+    "dv": "ДВ, бр. 102/2026",
+    "dateAdopted": "2026-11-05",
+    "dateDV": "2026-11-10",
+    "assemblyId": "52-ns",
+    "detailLevel": "full",
+    "verified": true,
+    "changes": [],
+    "changedMembers": [],
+    "summary": "Народното събрание приема Годишния доклад за дейността на Българската академия на науките за 2025 г. Докладът е внесен от председателя на БАН и обсъден от Комисията по образованието и науката; решението е прието единодушно (169 гласа „за“).",
+    "tags": [
+      "БАН",
+      "наука",
+      "доклад"
+    ],
+    "sources": {
+      "dv": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=247370",
+      "bill": "https://www.parliament.bg/bg/laws/ID/167083"
+    },
+    "billUrl": "https://www.parliament.bg/bg/bills/ID/167083",
+    "billSignatura": "51-605-00-1",
+    "votes": {
+      "za": 169,
+      "protiv": 0,
+      "vazdrzhal": 0
+    },
+    "votesByParty": [
+      {
+        "party": "ПБ",
+        "za": 118,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ГЕРБ-СДС",
+        "za": 13,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДПС",
+        "za": 13,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ДБ",
+        "za": 8,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "ПП",
+        "za": 7,
+        "protiv": 0,
+        "vazdrzhal": 0
+      },
+      {
+        "party": "Възраждане",
+        "za": 10,
+        "protiv": 0,
+        "vazdrzhal": 0
+      }
+    ],
+    "votesVerified": true,
+    "stenogramLink": "https://www.parliament.bg/bg/plenaryst/ns/62/ID/11193"
   }
 ]

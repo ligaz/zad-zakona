@@ -1,5 +1,7 @@
 /**
  * Merge на курираните РЕШЕНИЯ в amendments.json + тематични law entries.
+ * Вход: /tmp/curate-dec-out-{0..7}.json + /tmp/dec-dates.json ({ actId: ISO | { date, dateDV } }).
+ * Пише и fullTitle (= final от индекса) и dateDV, когато са налични.
  * Употреба: node scripts/merge-decisions.mjs [--dry]
  */
 import { readFileSync, writeFileSync } from "node:fs";
@@ -76,14 +78,19 @@ for (const o of curated) {
   const title = x.final || x.title || "";
   const lawId = groupOf(title);
   const dv = x.dv_iss && x.dv_year ? `ДВ, бр. ${x.dv_iss}/${x.dv_year}` : (o.dv ? `ДВ, бр. ${o.dv}` : "");
-  const dd = dates[String(o.actId)];
+  // dec-dates[actId]: ISO string (стар формат) ИЛИ { date, dateDV? } (като act-dates в merge-curated)
+  const raw = dates[String(o.actId)];
+  const dd = raw && typeof raw === "object" ? raw.date : raw;
   const dateAdopted = dd && dd !== "NONE" && dd !== "ERR" ? dd : null;
+  const dateDV = raw && typeof raw === "object" ? raw.dateDV : null;
   const rec = {
     id: aid,
     lawId,
     shortTitle: o.shortTitle || title.slice(0, 80),
+    ...(x.final ? { fullTitle: x.final } : {}),
     dv,
     dateAdopted,
+    ...(dateDV ? { dateDV } : {}),
     assemblyId: asmFor(dateAdopted) || "52-ns",
     detailLevel: "full",
     verified: true,
