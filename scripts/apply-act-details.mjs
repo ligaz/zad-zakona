@@ -76,7 +76,9 @@ for (const [id, v] of Object.entries(weekly)) {
   const votes = ov.votes || p.votes;
   const parties = ov.votesByParty || p.parties;
   const stenId = ov.stenId || p.stenId;
-  const stenDate = p.stenDate || v.adoptGuess;
+  // override.stenDate — за ръчно намерени вотове (extract-vote.mjs по дата), когато
+  // fetch-act-details е MISS/no-vote и няма нито pick, нито adoptGuess.
+  const stenDate = ov.stenDate || p.stenDate || v.adoptGuess;
   if (!votes || !stenId) {
     console.error(`✗ ${id}: липсва вот (нито pick, нито override) — не пипам.`);
     process.exitCode = 1;
@@ -88,8 +90,12 @@ for (const [id, v] of Object.entries(weekly)) {
     process.exitCode = 1;
     continue;
   }
-  const [vnositel, vnositelType] = vnositelOf(ov.vnositel ?? v.vnositel ?? "MC");
-  if (!vnositel) {
+  // `vnositel: null` в override = вносителят не е МС/депутати/union (напр. „Председателят
+  // на БАН“, сигнатура x05) → пропуска се (правило: не гадаем; страницата показва „предстои“).
+  // Иначе fetch-act-details връща "MC" по подразбиране и щеше да запише грешен МС.
+  const skipVnositel = Object.prototype.hasOwnProperty.call(ov, "vnositel") && ov.vnositel === null;
+  const [vnositel, vnositelType] = skipVnositel ? [null, null] : vnositelOf(ov.vnositel ?? v.vnositel ?? "MC");
+  if (!vnositel && !skipVnositel) {
     console.error(`✗ ${id}: неразпознат вносител ${JSON.stringify(v.vnositel)} — не пипам.`);
     process.exitCode = 1;
     continue;
@@ -112,7 +118,7 @@ for (const [id, v] of Object.entries(weekly)) {
     votesVerified: true,
     votesByParty: normParties(parties),
     stenogramLink: `https://www.parliament.bg/bg/plenaryst/ns/${plen}/ID/${stenId}`,
-    vnositel,
+    ...(vnositel ? { vnositel } : {}),
     ...(vnositelType ? { vnositelType } : {}),
     detailId: `act-${id}`,
     cardShort: c.cardShort,
@@ -144,7 +150,7 @@ if (process.exitCode) {
     }
     if (dirty) {
       changed++;
-      console.log(`+ ${x.id}: ${patch.votes.za}/${patch.votes.protiv}/${patch.votes.vazdrzhal}, вносител „${patch.vnositel}“, детайл ${patch.detailId}`);
+      console.log(`+ ${x.id}: ${patch.votes.za}/${patch.votes.protiv}/${patch.votes.vazdrzhal}, вносител „${patch.vnositel ?? "— (пропуснат)"}“, детайл ${patch.detailId}`);
     }
   }
   for (const id of patches.keys()) {

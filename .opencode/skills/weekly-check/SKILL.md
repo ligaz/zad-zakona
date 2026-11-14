@@ -35,6 +35,12 @@ description: Run the weekly new-acts check for zad-zakona (parliament.bg + ДВ)
    винаги `/tmp/dv-materials.json` (default) — не в repo-то.
    Ако `resolve-dv-mat` намери нови съвпадения → `backfill-dv-links.mjs --dry`
    и преглед преди запис.
+   ⚠️ `--only` обхожда само броеве, които ВЕЧЕ имат акт в индекса. Брой от
+   `missingIssues` без нито един акт се прескача мълчаливо (`нови: 0`), а точно
+   там би се скрил закон, който API-то не е вързало (инцидент ДВ 30/2026).
+   За такива броеве провери секция „Народно събрание“ с временно копие на
+   скрипта в scratchpad, в което списъкът с броеве е зададен изрично
+   (14.11.2026: 98/100/101/103 → 0 материала на НС, т.е. чисто).
 
 5. **Вотове за новите актове** (изход САМО в /tmp, без merge):
    `node scripts/fetch-act-details.mjs --out /tmp/weekly-new-acts.json --only ID ... --jobs 2`
@@ -80,7 +86,21 @@ description: Run the weekly new-acts check for zad-zakona (parliament.bg + ДВ)
          се копират от индекса, затова 6b трябва да е минала преди това.
        - ако законът НЕ е проследяван → отбележи в отчета (не се добавя
          автоматично; нужен е ръчен merge в laws.json).
-       - type=2 решения с ДВ → merge-decisions pipeline (curate-dec-out-*.json).
+       - type=2 решения с ДВ → merge-decisions pipeline:
+         `dv_mat` през `backfill-dv-links.mjs` с `decree: null` (решенията нямат
+         указ; сверяват се брой + заглавие) → вот (`fetch-act-details` обикновено
+         е `no-vote` за доклади/решения без стенограма в bill-а → ръчно
+         `extract-vote.mjs <НС> <дата на приемане от ДВ> <думи>`, сверка с
+         обявлението) → `/tmp/act-picks-override.json` с `votes`, `votesByParty`,
+         `stenId`, `stenDate`, `votesVerified: true` → `apply-act-details` →
+         `/tmp/curate-dec-out-0.json` (`{actId, shortTitle, summary, tags,
+         billSignatura}`) + `/tmp/dec-dates.json` (`{ "<id>": { date, dateDV } }`)
+         → `merge-decisions.mjs --dry` → apply.
+       - **Вносител извън МС/депутати/union** (напр. „Председателят на БАН“,
+         сигн. `x-605-…`): `fetch-act-details` връща `"MC"` по подразбиране.
+         НЕ го оставяй: в override сложи `"vnositel": null` → полето се пропуска
+         (правилото от docs: не гадаем). Провери вносителя в стенограмата
+         („Вносители – …“) за всеки акт, чийто код не е x02/002.
    6f. **Формат при запис:** `acts-index.json` е с 1-space indent (пиши с
        `JSON.stringify(items, null, 1)`, НЕ `writeJsonArrayFile` с indent=1,
        който дава 2-space). `amendments.json`/`laws.json` с indent=2.
